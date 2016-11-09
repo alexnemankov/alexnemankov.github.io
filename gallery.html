@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Галерея</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Официальный сайт фотошколы SnapShot">
+    <meta name="author" content="Alexander Nemankov">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link href="css/least.min.css" rel="stylesheet" /> </head>
+
+<body>
+    <header>
+        <div class="menu">
+            <div class="logo"><img src="img/logomo.gif" alt="Логотип" title="Логотип"></div>
+            <ul class="menu-list">
+                <li><a href="index.html" title="Главная страница">Главная</a></li>
+                <li><a href="kursy.html" title="Список курсов">Курсы</a></li>
+                <li><a href="raspisanie.html" title="Расписание занятий">Расписание</a></li>
+                <li><a href="ceny.html" title="Цены занятий">Цены</a></li>
+                <li><a href="gallery.html" title="Примеры работ учеников">Галлерея</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="portfolio">Примеры работ наших учеников.</div>
+    <section id="least">
+        <div class="least-preview"></div>
+        <ul class="least-gallery">
+            <li>
+                <a href="media/big/01.jpg" title="Скейт" data-subtitle="Автор Диана Лимон"> <img src="media/thumbnails/01.jpg" alt="Alt Image Text" /> </a>
+            </li>
+            <li>
+                <a href="media/big/02.jpg" title="Пути" data-subtitle="Автор Александр Розембаум"> <img src="media/thumbnails/02.jpg" alt="Alt Image Text" /> </a>
+            </li>
+            <li>
+                <a href="media/big/03.jpg" title="Работа" data-subtitle="Автор Шеф"> <img src="media/thumbnails/03.jpg" alt="Alt Image Text" /> </a>
+            </li>
+            <li>
+                <a href="media/big/04.jpg" title="Дорога" data-subtitle="Автор Джек Керуак"> <img src="media/thumbnails/04.jpg" alt="Alt Image Text" /> </a>
+            </li>
+            <li>
+                <a href="media/big/05.jpg" title="Пустыня" data-subtitle="Автор Верблюд"> <img src="media/thumbnails/05.jpg" alt="Alt Image Text" /> </a>
+            </li>
+            <li>
+                <a href="media/big/06.jpg" title="Дерево" data-subtitle="Автор Неизвестен"> <img src="media/thumbnails/06.jpg" alt="Alt Image Text" /> </a>
+            </li>
+            <li>
+                <a href="media/big/07.jpg" title="Макбук" data-subtitle="Автор Стив Джобс"> <img src="media/thumbnails/07.jpg" alt="Alt Image Text" /> </a>
+            </li>
+            <li>
+                <a href="media/big/08.jpg" title="Часы" data-subtitle="Автор Время"> <img src="media/thumbnails/08.jpg" alt="Alt Image Text" /> </a>
+            </li>
+            <li>
+                <a href="media/big/09.jpg" title="Зло" data-subtitle="Автор Стив Джобс"> <img src="media/thumbnails/09.jpg" alt="Alt Image Text" /> </a>
+            </li>
+            <li>
+                <a href="media/big/10.jpg" title="New York" data-subtitle="Автор Джеймс Джонс"> <img src="media/thumbnails/10.jpg" alt="Alt Image Text" /> </a>
+            </li>
+        </ul>
+    </section>
+    <script src="js/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="js/libs/least/least.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.least-gallery').least();
+        });
+    </script>
+    <footer>
+        <div class="madeby">
+            <div class="alex">made by alexander_nemankov</div>
+        </div>
+    </footer>
+</body>
+
+</html>
