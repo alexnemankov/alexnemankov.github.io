@@ -1,34 +1,38 @@
 /* Код для подключения шрифта в /css/stylename.css */
+
+
 /* font-family: "SourceSansProRegular"; */
+
 @font-face {
     font-family: "SourceSansProRegular";
     src: url("../fonts/SourceSansProRegular/SourceSansProRegular.eot");
-    src: url("../fonts/SourceSansProRegular/SourceSansProRegular.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/SourceSansProRegular/SourceSansProRegular.woff") format("woff"),
-    url("../fonts/SourceSansProRegular/SourceSansProRegular.ttf") format("truetype");
+    src: url("../fonts/SourceSansProRegular/SourceSansProRegular.eot?#iefix")format("embedded-opentype"), url("../fonts/SourceSansProRegular/SourceSansProRegular.woff") format("woff"), url("../fonts/SourceSansProRegular/SourceSansProRegular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
+
+
 /* font-family: "SourceSansProLight"; */
+
 @font-face {
     font-family: "SourceSansProLight";
     src: url("../fonts/SourceSansProLight/SourceSansProLight.eot");
-    src: url("../fonts/SourceSansProLight/SourceSansProLight.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/SourceSansProLight/SourceSansProLight.woff") format("woff"),
-    url("../fonts/SourceSansProLight/SourceSansProLight.ttf") format("truetype");
+    src: url("../fonts/SourceSansProLight/SourceSansProLight.eot?#iefix")format("embedded-opentype"), url("../fonts/SourceSansProLight/SourceSansProLight.woff") format("woff"), url("../fonts/SourceSansProLight/SourceSansProLight.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
+
+
 /* font-family: "SourceSansProBold"; */
+
 @font-face {
     font-family: "SourceSansProBold";
     src: url("../fonts/SourceSansProBold/SourceSansProBold.eot");
-    src: url("../fonts/SourceSansProBold/SourceSansProBold.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/SourceSansProBold/SourceSansProBold.woff") format("woff"),
-    url("../fonts/SourceSansProBold/SourceSansProBold.ttf") format("truetype");
+    src: url("../fonts/SourceSansProBold/SourceSansProBold.eot?#iefix")format("embedded-opentype"), url("../fonts/SourceSansProBold/SourceSansProBold.woff") format("woff"), url("../fonts/SourceSansProBold/SourceSansProBold.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
+
 body {
     font-family: 'SourceSansProRegular', sans-serif;
     font-size: 20px;
@@ -36,18 +40,19 @@ body {
     line-height: 1.45;
     background: #d42077;
     color: white;
-    
 }
-.works{
-        position: absolute;
+
+.works {
+    position: absolute;
     left: 87%;
     font-style: italic;
     color: white;
     transition: 0.3s;
     font-size: 28px;
 }
-.works::before{
-        content: "";
+
+.works::before {
+    content: "";
     position: absolute;
     top: 3px;
     left: -35px;
@@ -56,67 +61,114 @@ body {
     background-image: url(../img/img-3.svg);
     background-repeat: no-repeat;
 }
-.works:hover{
+
+.works:hover {
     color: #eca9cf;
 }
+
 .main-content {
     text-align: center;
     margin-top: 40px;
     height: 95vh;
-  
 }
-@keyframes spin {
+
+@-ms-keyframes spin {
     from {
-        transform:rotate(0deg);
+        -ms-transform: rotate(0deg);
     }
     to {
-        transform:rotate(360deg);
+        -ms-transform: rotate(360deg);
     }
 }
-.main-img img{
+
+@-moz-keyframes spin {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.main-img img {
     -webkit-animation-name: spin;
     -webkit-animation-duration: 10000ms;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
-width: 299px;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 10000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 10000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    animation-name: spin;
+    animation-duration: 600ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    width: 299px;
+}
 
+.main-img {
+    min-height: 297px;
 }
-.main-img{
-            min-height: 297px;
-}
-.text-nelly, .text-nerv{
+
+.text-nelly,
+.text-nerv {
     position: absolute;
     text-align: center;
 }
-.text-nelly{
-        font-size: 121px;
+
+.text-nelly {
+    font-size: 121px;
     font-style: italic;
     top: 380px;
     left: 31%;
 }
-.text-nerv{
-        font-size: 53px;
+
+.text-nerv {
+    font-size: 53px;
     top: 570px;
     left: 42%;
-    font-family: "SourceSansProLight",sans-serif;
+    font-family: "SourceSansProLight", sans-serif;
 }
-.main-img-2{
-    height:384px; 
+
+.main-img-2 {
+    height: 384px;
     background-image: url(../img/img-2.png);
     background-repeat: no-repeat;
     background-position: top center;
 }
 
-@media screen and (max-width: 1240px)  {
-    .text-nerv{
-    font-size: 40px;
-    top: 580px;
-    left: 42%;
-}
-    .text-nelly{
+@media screen and (max-width: 1240px) {
+    .text-nerv {
+        font-size: 40px;
+        top: 580px;
+        left: 42%;
+    }
+    .text-nelly {
         font-size: 121px;
-    font-style: italic;
-    top: 380px;
-    left: 20%;
-}
+        font-style: italic;
+        top: 380px;
+        left: 20%;
+    }
 }
