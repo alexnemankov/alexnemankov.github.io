@@ -13,22 +13,52 @@
     <meta http-equiv="x-rim-auto-match" content="none">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script src="js/modernizr.custom.70736.js"></script>
-    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="shortcut icon" href="img/icon.png" />
     <link rel="stylesheet" href="libs/bootstrap/bootstrap-grid-3.3.1.min.css" />
     <link rel="stylesheet" href="libs/font-awesome-4.2.0/css/font-awesome.min.css" />
     <!--				for owlcarousel-->
-    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="libs/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="libs/owlcarousel/owl.theme.default.min.css">
     <!--				/for owlcarousel-->
     <!--				for modal-->
-    <link rel="stylesheet" type="text/css" href="modal/default.css" />
-    <link rel="stylesheet" type="text/css" href="modal/component.css" />
+    <link rel="stylesheet" type="text/css" href="libs/modal/default.css" />
+    <link rel="stylesheet" type="text/css" href="libs/modal/component.css" />
     <!--				/for modal-->
-    <link rel="stylesheet" href="css/main.css" /> </head>
+    <link rel="stylesheet" href="libs/wow/animate.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+<!--    <link rel="stylesheet" href="css/hover.css" />-->
+     
+    <link rel="stylesheet" href="css/main.css" /> 
+    <link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css"/></head>
 
 <body>
+    <!--   attached menu-->
+    <div id="hellopreloader">
+        <div id="hellopreloader_preload"></div>
+    </div>
+    <script type="text/javascript">
+        var hellopreloader = document.getElementById("hellopreloader_preload");
+
+        function fadeOutnojquery(el) {
+            el.style.opacity = 1;
+            var interhellopreloader = setInterval(function () {
+                el.style.opacity = el.style.opacity - 0.05;
+                if (el.style.opacity <= 0.05) {
+                    clearInterval(interhellopreloader);
+                    hellopreloader.style.display = "none";
+                }
+            }, 16);
+        }
+        window.onload = function () {
+            setTimeout(function () {
+                fadeOutnojquery(hellopreloader);
+            }, 1000);
+        };
+    </script>
     <header class="menu">
         <div class="container">
             <div class="row">
@@ -46,16 +76,20 @@
             </div>
         </div>
     </header>
+    <!--  end attached menu-->
+    <!--   main content-->
     <section class="main-cont">
-        <div class="lamp"><img src="img/img-2.png" alt=""></div>
+        <div class="lamp"><img src="img/img-2.png" alt="" class="wow bounceInLeft"></div>
         <div class="duray-text">Светильники премиум класса</div>
         <div class="duray-img"><img src="img/img-3.png" alt="логотип duray"></div>
     </section>
+    <!--end   main content-->
+    <!--   preimuschestva-->
     <section class="benefits">
         <div class="container">
             <div class="row">
                 <div class="col-md-1"></div>
-                <div class="benefits-bl col-md-10">
+                <div class="benefits-bl col-md-10 ">
                     <div class="one-ben">
                         <div class="one-ben-img-1"></div>
                         <div class="one-ben-title">7 уровней</div>
@@ -91,751 +125,1146 @@
             <div class="col-md-1"></div>
         </div>
     </section>
-    <section class="winner">
+    <!-- end  preimuschestva-->
+    <!--    start pobeditel full-width-->
+    <section class="winner wow bounceInRight" data-wow-offset="20">
         <div class="container">
-            <div class="row">
-                <div class="col-md-offset-1 col-md-1"><img src="img/img-4.png" alt="winner"></div>
-                <div class=" col-md-10">Победитель международной светотехнической премии ENES в номинациях: энергоэффективность, лучшие параметры, оптимальный выбор.</div>
+            <div class="row winner-pad">
+                <div class="col-md-offset-1 col-md-1"><div class="hvr-bounce-in"><img src="img/img-4.png" alt="winner"></div></div>
+                <div class=" col-md-10 text-left">Победитель международной светотехнической премии ENES в номинациях: энергоэффективность, лучшие параметры, оптимальный выбор.</div>
             </div>
         </div>
     </section>
-    <div class="info-left">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4"><img src="img/img-5.jpg" alt="elbrus"></div>
-                <div class="col-md-8">
-                    <div class="info-title">Уличные светильники <span class="blue">«Эльбрус»</span></div>
-                    <div class="info-text">Широкая линейка уличных светодиодных светильников Эльбрус способна полностью заменить традиционные источники света в наружном освещении. Высокие светотехнические характеристики светодиодов Nichia последнего поколения и многоуровневая система защиты позволяют создать максимально стабильную и энергоэффективную систему уличного освещения городской и транспортной инфраструктуры.</div>
-                    <div class="info-button"><a href="#elb">Ассортимент</a></div>
+    <!--    end pobeditel full-width-->
+    <!--    start opisanie svetilnikov-->
+    <div class="opisanie">Описание светильников Duray</div>
+    <div id="tabs">
+        <div class="navi">
+            <ul>
+                <li><a href="#tabs-1">Офисные</a></li>
+                <li><a href="#tabs-2">Общественные</a></li>
+                <li><a href="#tabs-3">Торговые</a></li>
+                <li><a href="#tabs-4">Уличные</a></li>
+                <li><a href="#tabs-5">Промышленные</a></li>
+                <li><a href="#tabs-6">ЖКХ и АЗС</a></li>
+            </ul>
+        </div>
+        <div id="tabs-4">
+            <div class="info-left">
+                <div class="container">
+<!--
+                    <div class="row">
+                                                
+                        <div class="col-md-12">
+                            <div class="info-title">Уличные светильники <span class="blue">«Эльбрус»</span></div>
+                            <div class="info-text">Широкая линейка уличных светодиодных светильников Эльбрус способна полностью заменить традиционные источники света в наружном освещении. Высокие светотехнические характеристики светодиодов Nichia последнего поколения и многоуровневая система защиты позволяют создать максимально стабильную и энергоэффективную систему уличного освещения городской и транспортной инфраструктуры.</div>
+                        </div>
+                    </div>
+-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="info-mini-left">
+                                <div class="info-mini-left-title">КЛЕМНЫЕ ЗАЖИМЫ</div>
+                                <div class="info-mini-left-strana">Производство: Германия</div>
+                                <div class="info-mini-left-text">Быстросъемные. Сокращают время монтажа в 3 раза. Позволяют совершить подключение светильника без дополнительного инструмента.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-mini-right">
+                                <div class="info-mini-left-title">РАССЕИВАТЕЛЬ</div>
+                                <div class="info-mini-left-strana">Производство: РФ</div>
+                                <div class="info-mini-right-text">Cветотехнический полистирол NovattroPrism. Повышенная светопропускаемость: 93%. Гарантия от пожелтения 20 лет. Повышенная ударопрочность.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="info-mini-left">
+                                <div class="info-mini-left-title">СВЕТОДИОДЫ</div>
+                                <div class="info-mini-left-strana">Производство: Япония</div>
+                                <div class="info-mini-left-text">Светодиоды NICHIA последнего поколения с керамическими контактными элементами обладают повышенной надежностью при работе в критических температурах окружающей среды. Являются максимально эффективными светодиодами в серийном производстве - 200 Лм/Вт.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 pad-img-1"><img src="img/img-19.png" alt="elbrus"></div>
+                        <div class="col-md-4">
+                            <div class="info-mini-right">
+                                <div class="info-mini-left-title">ИСТОЧНИКИ ПИТАНИЯ</div>
+                                <div class="info-mini-left-strana">Производство: РФ</div>
+                                <div class="info-mini-right-text">Защита от перенапряжения до 420В и импульса скачков до 1000В, обеспечивает доловременную и бесперебойную работу светильников.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="info-mini-left">
+                                <div class="info-mini-left-title">КОРПУС </div>
+                                <div class="info-mini-left-strana">Производство: Япония</div>
+                                <div class="info-mini-left-text">Выполнен из алюминиевого сплава с последующим анодированием толщиной 15-20 мкм, для стойкости к агрессивным средам. Алюминий обеспечивает эффективную систему теплоотвода, при которой сохраняется необходимая температура кристалла светодиодов, что предотвращаяет скорую деградацию и значительно увеличивает ресурс работы светильника до 100 000 часов.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-mini-right">
+                                <div class="info-mini-left-title">ПЛАТЫ</div>
+                                <div class="info-mini-left-strana">Производство: РФ</div>
+                                <div class="info-mini-right-text">Алюминевые платы толщиной 1,5 мм. c керамическим диэлектриком обеспечивают равномерный и быстрый теплоотвод, сохраняя оптимальный температурный режим светодиодов и световые характеристики светильника.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--
+                            
+-->
                 </div>
             </div>
         </div>
-    </div>
-    <div class="info-left">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="info-title">Офисные светильники <span class="blue">«Байкал»</span></div>
-                    <div class="info-text">Благодаря широкому диапазону светового потока офисные светодиодные светильники серии Байкал успешно применяются при создании системы внутреннего освещения любой сложности: от технологических помещений до выставочных залов со сложной геометрией и высоким уровнем потолков. Минимальный коэффициент пульсации 1% и высокий уровень цветопередачи 80 Ra делают освещение однородным и максимально схожим с естественным светом.</div>
-                    <div class="info-button"><a href="#bai">Ассортимент</a></div>
+        <div id="tabs-1">
+            <div class="info-left">
+                <div class="container">
+<!--
+                    <div class="row">
+                        
+                        <div class="col-md-12">
+                            <div class="info-title">Офисные светильники <span class="blue">«Байкал»</span></div>
+                            <div class="info-text">Благодаря широкому диапазону светового потока офисные светодиодные светильники серии Байкал успешно применяются при создании системы внутреннего освещения любой сложности: от технологических помещений до выставочных залов со сложной геометрией и высоким уровнем потолков. Минимальный коэффициент пульсации менее 1% и высокий уровень цветопередачи 80 Ra делают освещение однородным и максимально схожим с естественным светом.</div>
+                        </div>
+                    </div>
+-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="info-mini-left">
+                                <div class="info-mini-left-title">КЛЕМНЫЕ ЗАЖИМЫ</div>
+                                <div class="info-mini-left-strana">Производство: Германия</div>
+                                <div class="info-mini-left-text">Быстросъемные. Сокращают время монтажа в 3 раза. Позволяют совершить подключение светильника без дополнительного инструмента.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-mini-right">
+                                <div class="info-mini-left-title">РАССЕИВАТЕЛЬ</div>
+                                <div class="info-mini-left-strana">Производство: РФ</div>
+                                <div class="info-mini-right-text">Cветотехнический полистирол NovattroPrism. Повышенная светопропускаемость: 91%. Гарантия от пожелтения 20 лет.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="info-mini-left">
+                                <div class="info-mini-left-title">СВЕТОДИОДЫ</div>
+                                <div class="info-mini-left-strana">Производство: Япония</div>
+                                <div class="info-mini-left-text">Светодиоды NICHIA обладают наиболее узкой фильтрацией по цветовой температуре - 600 K. На данный моент являются максимально эффективными светодиодами в серийном производстве - 200 Лм/Вт.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 pad-img-2"><img src="img/img-20.png" alt="elbrus"></div>
+                        <div class="col-md-4">
+                            <div class="info-mini-right">
+                                <div class="info-mini-left-title">ИСТОЧНИКИ ПИТАНИЯ</div>
+                                <div class="info-mini-left-strana">Производство: РФ</div>
+                                <div class="info-mini-right-text">Защита от перенапряжения до 420В и импульса скачков до 1000В, обеспечивает доловременную и бесперебойную работу светильников.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="info-mini-left">
+                                <div class="info-mini-left-title">КОРПУС </div>
+                                <div class="info-mini-left-strana">Производство: Япония</div>
+                                <div class="info-mini-left-text">Выполнен из облегченной листовой стали 0,5 мм, покрыт экологичной полимерной краской, обладающей повышенной адгезией и стойкостью к пожелтению. Поворотная планка позволяет легко демонтировать рассеиватель для последующей чистки светильника.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-mini-right">
+                                <div class="info-mini-left-title">ПЛАТЫ</div>
+                                <div class="info-mini-left-strana">Производство: РФ</div>
+                                <div class="info-mini-right-text">Алюминевые платы толщиной 1 мм. обеспечивают равномерное и быстрое распределение тепла от светодиодов к корпусу светильника, сохраняя требуемую температуру кристалла, что предотвращает скорую деградацию светодиодов.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--
+                            
+-->
                 </div>
-                <div class="col-md-4"><img src="img/img-7.jpg" alt="elbrus"></div>
             </div>
         </div>
-    </div>
-    <div class="info-left">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4"><img src="img/img-8.jpg" alt="elbrus"></div>
-                <div class="col-md-8">
-                    <div class="info-title">Промышленные светильники <span class="blue">«Енисей»</span></div>
-                    <div class="info-text">Разработаны для замены традиционных светильников на люминесцентных лампах ЛПО 2х58 типа РСП. Промышленные светодиодные светильники, представленные в серии Енисей, обладают степенью защиты IP67 и эффективной системой теплоотвода, что позволяет использовать их для освещения промышленных помещений с повышенным уровнем пыле- и влагозащиты и высоким температурным режимом. При оснащении креплением П-образного типа могут быть использованы в архитектурной и рекламной подсветке.</div>
-                    <div class="info-button"><a href="#eni">Ассортимент</a></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="info-left">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="info-title">Светильники <span class="blue">«Каспий»</span></div>
-                    <div class="info-text">Многофункциональные светильники с наиболее обширной областью применения. используются в качестве энергоэффективной замены люминесцентных светильников типа ЛПО. Высокий индекс цветопередачи > 80 Ra и минимальный коэффициент пульсации 1% делают светильники серии "Каспий" идеальным источником света для общеобразовательных учреждений и заведений общественного питания. Также возможно применение в промышленных помещениях, где не требуется повышенный уровень пыле-влаго защиты. Гарантированный ресурс работы 100 000 часов.</div>
-                    <div class="info-button"><a href="#kas">Ассортимент</a></div>
-                </div>
-                <div class="col-md-4"><img src="img/img-9.jpg" alt="elbrus"></div>
-            </div>
-        </div>
-    </div>
-    <div class="info-left">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4"><img src="img/img-10.jpg" alt="elbrus"></div>
-                <div class="col-md-8">
-                    <div class="info-title">Торговые светильники <span class="blue">«Казбек»</span></div>
-                    <div class="info-text">Высокий индекс цветопередачи и мощные световые характеристики светильников серии Казбек позволят сделать комфортный и свежий свет. Конструкция светильника рассчитана как для создания модульной системы освещения торговых залов и помещений, так и индивидуального использования cветильников во внутренних помещениях любого типа.</div>
-                    <div class="info-button"><a href="#kaz">Ассортимент</a></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="info-left">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="info-title">ЖКХ светильники <span class="blue">«Алтай»</span></div>
-                    <div class="info-text">Минимальное энергопотребление, повышенная ударопрочность и естественный свет делают светильники Алтай максимально полезными в сфере ЖКХ для повышения энергоэффективности зданий жилого сектора</div>
-                    <div class="info-button"><a href="#alt">Ассортимент</a></div>
-                </div>
-                <div class="col-md-4"><img src="img/img-11.jpg" alt="elbrus"></div>
-            </div>
-        </div>
-    </div>
-    <section class="winner">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-offset-4 col-md-1"><img src="img/img-12.png" alt="winner"></div>
-                <div class="col-md-6">Каталог продукции</div>
-            </div>
-        </div>
-    </section>
-    <!-- Start - Уличные светильники-->
-    <section id="products">
-        <div class="container">
-            <div class="row">
-                <div class="large-12 columns">
-                    <div class="products-main" id="elb">Уличные светильники</div>
-                    <div class="owl-carousel owl-theme">
-                        <div class="item-1"> <img src="img/img-12.jpg" alt="">
-                            <div class="products-name">Эльбрус 16.3500.30</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
+        <div id="tabs-3">
+            <div class="info-left">
+                <div class="container">
+<!--
+                    <div class="row">
+                        
+                        <div class="col-md-12">
+                            <div class="info-title">Торговые светильники <span class="blue">«Казбек»</span></div>
+                            <div class="info-text">Высокий индекс цветопередачи и мощные световые характеристики светильников серии Казбек позволят сделать комфортный и свежий свет. Конструкция светильника рассчитана как для создания модульной системы освещения торговых залов и помещений, так и индивидуального использования cветильников во внутренних помещениях любого типа.</div>
+                        </div>
+                    </div>
+-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="info-mini-left">
+                                <div class="info-mini-left-title">КЛЕМНЫЕ ЗАЖИМЫ</div>
+                                <div class="info-mini-left-strana">Производство: Германия</div>
+                                <div class="info-mini-left-text">Быстросъемные. Сокращают время монтажа в 3 раза. Позволяют совершить подключение светильника без дополнительного инструмента.</div>
                             </div>
                         </div>
-                        <div class="item-1"> <img src="img/img-12.jpg" alt="">
-                            <div class="products-name">Эльбрус 16.3500.30</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                        <div class="col-md-6">
+                            <div class="info-mini-right">
+                                <div class="info-mini-left-title">РАССЕИВАТЕЛЬ</div>
+                                <div class="info-mini-left-strana">Производство: РФ</div>
+                                <div class="info-mini-right-text">Cветотехнический полистирол NovattroPrism. Повышенная светопропускаемость: 91%. Гарантия от пожелтения 20 лет.</div>
                             </div>
                         </div>
-                        <div class="item-1"> <img src="img/img-12.jpg" alt="">
-                            <div class="products-name">Эльбрус 16.3500.30</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="info-mini-left">
+                                <div class="info-mini-left-title">СВЕТОДИОДЫ</div>
+                                <div class="info-mini-left-strana">Производство: Япония</div>
+                                <div class="info-mini-left-text">Светодиоды NICHIA обладают наиболее узкой фильтрацией по цветовой температуре - 600 K. На данный моент являются максимально эффективными светодиодами в серийном производстве - 200 Лм/Вт.</div>
                             </div>
                         </div>
-                        <div class="item-1"> <img src="img/img-12.jpg" alt="">
-                            <div class="products-name">Эльбрус 16.3500.30</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                        <div class="col-md-4 pad-img-3"><img src="img/img-23.png" alt="elbrus"></div>
+                        <div class="col-md-4">
+                            <div class="info-mini-right">
+                                <div class="info-mini-left-title">ИСТОЧНИКИ ПИТАНИЯ</div>
+                                <div class="info-mini-left-strana">Производство: РФ</div>
+                                <div class="info-mini-right-text">Защита от перенапряжения до 420В и импульса скачков до 1000В, обеспечивает доловременную и бесперебойную работу светильников.</div>
                             </div>
                         </div>
-                        <div class="item-1"> <img src="img/img-12.jpg" alt="">
-                            <div class="products-name">Эльбрус 16.3500.30</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="info-mini-left">
+                                <div class="info-mini-left-title">КОРПУС </div>
+                                <div class="info-mini-left-strana">Производство: Япония</div>
+                                <div class="info-mini-left-text">Выполнен из облегченной листовой стали 0,5 мм, покрыт экологичной полимерной краской, обладающей повышенной адгезией и стойкостью к пожелтению. Поворотная планка позволяет легко демонтировать рассеиватель для последующей чистки светильника.</div>
                             </div>
                         </div>
-                        <div class="item-1"> <img src="img/img-12.jpg" alt="">
-                            <div class="products-name">Эльбрус 16.3500.30</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-12.jpg" alt="">
-                            <div class="products-name">Эльбрус 16.3500.30</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-12.jpg" alt="">
-                            <div class="products-name">Эльбрус 16.3500.30</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-12.jpg" alt="">
-                            <div class="products-name">Эльбрус 16.3500.30</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-12.jpg" alt="">
-                            <div class="products-name">Эльбрус 16.3500.30</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                        <div class="col-md-6">
+                            <div class="info-mini-right">
+                                <div class="info-mini-left-title">ПЛАТЫ</div>
+                                <div class="info-mini-left-strana">Производство: РФ</div>
+                                <div class="info-mini-right-text">Алюминевые платы толщиной 1 мм. обеспечивают равномерное и быстрое распределение тепла от светодиодов к корпусу светильника, сохраняя требуемую температуру кристалла, что предотвращает скорую деградацию светодиодов.</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- End - Уличные светильники-->
-    <!-- Start - Офисные светильники-->
-    <section id="products">
-        <div class="container">
-            <div class="row">
-                <div class="large-12 columns">
-                    <div class="products-main" id="bai">Офисные светильники</div>
-                    <div class="owl-carousel owl-theme">
-                        <div class="item-1"> <img src="img/img-13.jpg" alt="Байкал">
-                            <div class="products-name">Байкал 32.1800.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
+        <div id="tabs-5">
+            <div class="info-left">
+                <div class="container">
+<!--
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="info-title">Промышленные светильники <span class="blue">«Енисей»</span></div>
+                            <div class="info-text">Широкая линейка уличных светодиодных светильников Эльбрус способна полностью заменить традиционные источники света в наружном освещении. Высокие светотехнические характеристики светодиодов Nichia последнего поколения и многоуровневая система защиты позволяют создать максимально стабильную и энергоэффективную систему уличного освещения городской и транспортной инфраструктуры.</div>
+                        </div>
+                    </div>
+-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="info-mini-left">
+                                <div class="info-mini-left-title">КЛЕМНЫЕ ЗАЖИМЫ</div>
+                                <div class="info-mini-left-strana">Производство: Германия</div>
+                                <div class="info-mini-left-text">Быстросъемные. Сокращают время монтажа в 3 раза. Позволяют совершить подключение светильника без дополнительного инструмента.</div>
                             </div>
                         </div>
-                        <div class="item-1"> <img src="img/img-13.jpg" alt="Байкал">
-                            <div class="products-name">Байкал 32.1800.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-13.jpg" alt="Байкал">
-                            <div class="products-name">Байкал 32.1800.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-13.jpg" alt="Байкал">
-                            <div class="products-name">Байкал 32.1800.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-13.jpg" alt="Байкал">
-                            <div class="products-name">Байкал 32.1800.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-13.jpg" alt="Байкал">
-                            <div class="products-name">Байкал 32.1800.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-13.jpg" alt="Байкал">
-                            <div class="products-name">Байкал 32.1800.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-13.jpg" alt="Байкал">
-                            <div class="products-name">Байкал 32.1800.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-13.jpg" alt="Байкал">
-                            <div class="products-name">Байкал 32.1800.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-13.jpg" alt="Байкал">
-                            <div class="products-name">Байкал 32.1800.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-13.jpg" alt="Байкал">
-                            <div class="products-name">Байкал 32.1800.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-13.jpg" alt="Байкал">
-                            <div class="products-name">Байкал 32.1800.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                        <div class="col-md-6">
+                            <div class="info-mini-right">
+                                <div class="info-mini-left-title">РАССЕИВАТЕЛЬ</div>
+                                <div class="info-mini-left-strana">Производство: РФ</div>
+                                <div class="info-mini-right-text">Cветотехнический полистирол NovattroPrism. Повышенная светопропускаемость: 93%. Гарантия от пожелтения 20 лет. Повышенная ударопрочность.</div>
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="info-mini-left">
+                                <div class="info-mini-left-title">СВЕТОДИОДЫ</div>
+                                <div class="info-mini-left-strana">Производство: Япония</div>
+                                <div class="info-mini-left-text">Светодиоды NICHIA последнего поколения с керамическими контактными элементами обладают повышенной надежностью при работе в критических температурах окружающей среды. Являются максимально эффективными светодиодами в серийном производстве - 200 Лм/Вт.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 pad-img-4"><img src="img/img-24.png" alt="elbrus"></div>
+                        <div class="col-md-4">
+                            <div class="info-mini-right">
+                                <div class="info-mini-left-title">ИСТОЧНИКИ ПИТАНИЯ</div>
+                                <div class="info-mini-left-strana">Производство: РФ</div>
+                                <div class="info-mini-right-text">Защита от перенапряжения до 420В и импульса скачков до 1000В, обеспечивает доловременную и бесперебойную работу светильников.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="info-mini-left">
+                                <div class="info-mini-left-title">КОРПУС </div>
+                                <div class="info-mini-left-strana">Производство: Япония</div>
+                                <div class="info-mini-left-text">Выполнен из алюминиевого сплава с последующим анодированием толщиной 15-20 мкм, для стойкости к агрессивным средам. Алюминий обеспечивает эффективную систему теплоотвода, при которой сохраняется необходимая температура кристалла светодиодов, что предотвращаяет скорую деградацию и значительно увеличивает ресурс работы светильника до 100 000 часов.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-mini-right">
+                                <div class="info-mini-left-title">ПЛАТЫ</div>
+                                <div class="info-mini-left-strana">Производство: РФ</div>
+                                <div class="info-mini-right-text">Алюминевые платы толщиной 1,5 мм. c керамическим диэлектриком обеспечивают равномерный и быстрый теплоотвод, сохраняя оптимальный температурный режим светодиодов и световые характеристики светильника.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--
+                            
+-->
                 </div>
             </div>
         </div>
-    </section>
-    <!-- End - Офисные светильники-->
-    <!-- Start - Промышленные светильники-->
-    <section id="products">
-        <div class="container">
-            <div class="row">
-                <div class="large-12 columns">
-                    <div class="products-main" id="eni">Промышленые светильники</div>
-                    <div class="owl-carousel owl-theme">
-                        <div class="item-1"> <img src="img/img-14.jpg" alt="Енисей">
-                            <div class="products-name">Енисей 16.3500.30</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-14.jpg" alt="Енисей">
-                            <div class="products-name">Енисей 16.3500.30</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-14.jpg" alt="Енисей">
-                            <div class="products-name">Енисей 16.3500.30</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-14.jpg" alt="Енисей">
-                            <div class="products-name">Енисей 16.3500.30</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-14.jpg" alt="Енисей">
-                            <div class="products-name">Енисей 16.3500.30</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-14.jpg" alt="Енисей">
-                            <div class="products-name">Енисей 16.3500.30</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-14.jpg" alt="Енисей">
-                            <div class="products-name">Енисей 16.3500.30</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-14.jpg" alt="Енисей">
-                            <div class="products-name">Енисей 16.3500.30</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-14.jpg" alt="Енисей">
-                            <div class="products-name">Енисей 16.3500.30</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-14.jpg" alt="Енисей">
-                            <div class="products-name">Енисей 16.3500.30</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-14.jpg" alt="Енисей">
-                            <div class="products-name">Енисей 16.3500.30</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-14.jpg" alt="Енисей">
-                            <div class="products-name">Енисей 16.3500.30</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <!-- End - Промышленные светильники-->
-    <!-- Start - Многофун светильники-->
-    <section id="products">
-        <div class="container">
-            <div class="row">
-                <div class="large-12 columns">
-                    <div class="products-main" id="kas">Многофункциональные светильники</div>
-                    <div class="owl-carousel owl-theme">
-                        <div class="item-1"> <img src="img/img-15.jpg" alt="Енисей">
-                            <div class="products-name">Каспий 32.1800.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-15.jpg" alt="Енисей">
-                            <div class="products-name">Каспий 32.1800.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-15.jpg" alt="Енисей">
-                            <div class="products-name">Каспий 32.1800.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-15.jpg" alt="Енисей">
-                            <div class="products-name">Каспий 32.1800.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-15.jpg" alt="Енисей">
-                            <div class="products-name">Каспий 32.1800.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-15.jpg" alt="Енисей">
-                            <div class="products-name">Каспий 32.1800.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-15.jpg" alt="Енисей">
-                            <div class="products-name">Каспий 32.1800.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-15.jpg" alt="Енисей">
-                            <div class="products-name">Каспий 32.1800.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-15.jpg" alt="Енисей">
-                            <div class="products-name">Каспий 32.1800.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-15.jpg" alt="Енисей">
-                            <div class="products-name">Каспий 32.1800.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-15.jpg" alt="Енисей">
-                            <div class="products-name">Каспий 32.1800.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-15.jpg" alt="Енисей">
-                            <div class="products-name">Каспий 32.1800.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <!-- End - Многофункциональные светильники-->
-    <!-- Start - Торговые светильники-->
-    <section id="products">
-        <div class="container">
-            <div class="row">
-                <div class="large-12 columns">
-                    <div class="products-main" id="kaz">Торговые светильники</div>
-                    <div class="owl-carousel owl-theme">
-                        <div class="item-1"> <img src="img/img-16.jpg" alt="Енисей">
-                            <div class="products-name">Крым 32.1600.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-16.jpg" alt="Енисей">
-                            <div class="products-name">Крым 32.1600.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-16.jpg" alt="Енисей">
-                            <div class="products-name">Крым 32.1600.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-16.jpg" alt="Енисей">
-                            <div class="products-name">Крым 32.1600.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-16.jpg" alt="Енисей">
-                            <div class="products-name">Крым 32.1600.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-16.jpg" alt="Енисей">
-                            <div class="products-name">Крым 32.1600.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-16.jpg" alt="Енисей">
-                            <div class="products-name">Крым 32.1600.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-16.jpg" alt="Енисей">
-                            <div class="products-name">Крым 32.1600.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-16.jpg" alt="Енисей">
-                            <div class="products-name">Крым 32.1600.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-16.jpg" alt="Енисей">
-                            <div class="products-name">Крым 32.1600.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-16.jpg" alt="Енисей">
-                            <div class="products-name">Крым 32.1600.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-16.jpg" alt="Енисей">
-                            <div class="products-name">Крым 32.1600.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <!-- End - Торговые светильники-->
-    <!-- Start - ЖКХ светильники-->
-    <section id="products">
-        <div class="container">
-            <div class="row">
-                <div class="large-12 columns">
-                    <div class="products-main" id="alt">ЖКХ и АЗС светильники</div>
-                    <div class="owl-carousel owl-theme">
-                        <div class="item-1"> <img src="img/img-17.jpg" alt="Алтай">
-                            <div class="products-name">Крым 32.1600.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-17.jpg" alt="Алтай">
-                            <div class="products-name">Крым 32.1600.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-17.jpg" alt="Алтай">
-                            <div class="products-name">Крым 32.1600.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                        <div class="item-1"> <img src="img/img-17.jpg" alt="Алтай">
-                            <div class="products-name">Крым 32.1600.16</div>
-                            <div class="products-price">260 руб.</div>
-                            <div class="products-link">
-                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <!-- End - ЖКХ светильники-->
-    <!-- MODAL WINDOW-->
-    <div class="md-modal md-effect-1" id="modal-1">
-        <div class="md-content">
-            <h3>Ваш заказ</h3>
-            <button class="md-close close"><i class="fa fa-times"></i></button>
-            <div class="md-content-form">
-                <form method="POST" id="feedback-form">
-                    <input type="text" name="nameFF" required placeholder="Ваше имя" x-autocompletetype="name">
-                    <input type="email" name="contactFF" required placeholder="Ваш e-mail" x-autocompletetype="email">
-                    <textarea placeholder="Сообщение" name="messageFF" required rows="5"></textarea>
-                    <input type="submit" value="Отправить"> </form>
-            </div>
-        </div>
-    </div>
-    <div class="md-modal md-effect-1" id="modal-2">
-        <div class="md-content">
-            <h3>Карта</h3>
-            <button class="md-close close"><i class="fa fa-times"></i></button>
-            <section class="map">
+        <div id="tabs-2">
             
-          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=tL9863999gybNq3s1Ho33_IK7HFOGS5y&amp;width=630&amp;height=320&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script></section>
-        </div>
-    </div>
-    <!-- /MODAL WINDOW-->
-    <!-- info about delivery-->
-    <section class="dostavka">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-offset-3 col-md-1"><img src="img/img-18.png" alt="winner"></div>
-                <div class="col-md-6 catalog">Информация об оплате и доставке</div>
+            <div class="info-left">
+                <div class="container">
+<!--
+                    <div class="row">
+                        
+                        <div class="col-md-12">
+                            <div class="info-title">Светильники <span class="blue">«Каспий»</span></div>
+                            <div class="info-text">Многофункциональные светильники с наиболее обширной областью применения. используются в качестве энергоэффективной замены люминесцентных светильников типа ЛПО. Высокий индекс цветопередачи > 80 Ra и минимальный коэффициент пульсации 1% делают светильники серии "Каспий" идеальным источником света для общеобразовательных учреждений и заведений общественного питания. Также возможно применение в промышленных помещениях, где не требуется повышенный уровень пыле-влаго защиты. Гарантированный ресурс работы 100 000 часов.</div>
+                        </div>
+                    </div>
+-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="info-mini-left">
+                                <div class="info-mini-left-title">КЛЕМНЫЕ ЗАЖИМЫ</div>
+                                <div class="info-mini-left-strana">Производство: Германия</div>
+                                <div class="info-mini-left-text">Быстросъемные. Сокращают время монтажа в 3 раза. Позволяют совершить подключение светильника без дополнительного инструмента.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-mini-right">
+                                <div class="info-mini-left-title">РАССЕИВАТЕЛЬ</div>
+                                <div class="info-mini-left-strana">Производство: РФ</div>
+                                <div class="info-mini-right-text">Cветотехнический полистирол NovattroPrism. Повышенная светопропускаемость: 91%. Гарантия от пожелтения 20 лет.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="info-mini-left">
+                                <div class="info-mini-left-title">СВЕТОДИОДЫ</div>
+                                <div class="info-mini-left-strana">Производство: Япония</div>
+                                <div class="info-mini-left-text">Светодиоды NICHIA обладают наиболее узкой фильтрацией по цветовой температуре - 600 K. На данный моент являются максимально эффективными светодиодами в серийном производстве - 200 Лм/Вт.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 pad-img-5"><img src="img/img-25.png" alt="elbrus"></div>
+                        <div class="col-md-4">
+                            <div class="info-mini-right">
+                                <div class="info-mini-left-title">ИСТОЧНИКИ ПИТАНИЯ</div>
+                                <div class="info-mini-left-strana">Производство: РФ</div>
+                                <div class="info-mini-right-text">Защита от перенапряжения до 420В и импульса скачков до 1000В, обеспечивает доловременную и бесперебойную работу светильников.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="info-mini-left">
+                                <div class="info-mini-left-title">КОРПУС </div>
+                                <div class="info-mini-left-strana">Производство: Япония</div>
+                                <div class="info-mini-left-text">Выполнен из облегченной листовой стали 0,5 мм, покрыт экологичной полимерной краской, обладающей повышенной адгезией и стойкостью к пожелтению. Поворотная планка позволяет легко демонтировать рассеиватель для последующей чистки светильника.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-mini-right">
+                                <div class="info-mini-left-title">ПЛАТЫ</div>
+                                <div class="info-mini-left-strana">Производство: РФ</div>
+                                <div class="info-mini-right-text">Алюминевые платы толщиной 1 мм. обеспечивают равномерное и быстрое распределение тепла от светодиодов к корпусу светильника, сохраняя требуемую температуру кристалла, что предотвращает скорую деградацию светодиодов.</div>
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
             </div>
         </div>
+        <div id="tabs-6">
+            <!--
+            <div class="info-left">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="info-title">ЖКХ светильники <span class="blue">«Алтай»</span></div>
+                            <div class="info-text">Минимальное энергопотребление, повышенная ударопрочность и естественный свет делают светильники Алтай максимально полезными в сфере ЖКХ для повышения энергоэффективности зданий жилого сектора</div>
+                            <div class="info-button"><a href="#alt">Ассортимент</a></div>
+                        </div>
+                        <div class="col-md-4"><img src="img/img-11.jpg" alt="elbrus"></div>
+                    </div>
+                </div>
+            </div>
+-->
+            <div class="info-left">
+                <div class="container">
+<!--
+                    <div class="row">
+                       
+                        <div class="col-md-12">
+                            <div class="info-title">ЖКХ светильники <span class="blue">«Алтай»</span></div>
+                            <div class="info-text">Минимальное энергопотребление, повышенная ударопрочность и естественный свет делают светильники Алтай максимально полезными в сфере ЖКХ для повышения энергоэффективности зданий жилого сектора.</div>
+                        </div>
+                    </div>
+-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="info-mini-left">
+                                <div class="info-mini-left-title">КЛЕМНЫЕ ЗАЖИМЫ</div>
+                                <div class="info-mini-left-strana">Производство: Германия</div>
+                                <div class="info-mini-left-text">Быстросъемные. Сокращают время монтажа в 3 раза. Позволяют совершить подключение светильника без дополнительного инструмента.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-mini-right">
+                                <div class="info-mini-left-title">РАССЕИВАТЕЛЬ</div>
+                                <div class="info-mini-left-strana">Производство: РФ</div>
+                                <div class="info-mini-right-text">Cветотехнический полистирол NovattroPrism. Повышенная светопропускаемость: 91%. Гарантия от пожелтения 20 лет.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="info-mini-left">
+                                <div class="info-mini-left-title">СВЕТОДИОДЫ</div>
+                                <div class="info-mini-left-strana">Производство: Корея</div>
+                                <div class="info-mini-left-text">Корейские светодиоды Seoul Semiconductor обладают высокими показателями индекса цветопередачи >80 Ra, что позволяет создавать максимально естественный цвет. Имеют энергоэффективность - 180 Лм/Вт.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 pad-img-6"><img src="img/img-26.png" alt="elbrus"></div>
+                        <div class="col-md-4">
+                            <div class="info-mini-right">
+                                <div class="info-mini-left-title">ИСТОЧНИКИ ПИТАНИЯ</div>
+                                <div class="info-mini-left-strana">Производство: РФ</div>
+                                <div class="info-mini-right-text">Защита от перенапряжения до 420В и импульса скачков до 1000В, обеспечивает доловременную и бесперебойную работу светильников.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="info-mini-left">
+                                <div class="info-mini-left-title">КОРПУС </div>
+                                <div class="info-mini-left-strana">Производство: Япония</div>
+                                <div class="info-mini-left-text">За счет высоких характеристик алюминия, обеспечивается эффективная система теплоотвода при которой сохраняется необходимая температура кристалла светодиодов, что предотвращает скорую деградацию и значительно увеличивает ресурс работы светильника до 100 000 часов. </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-mini-right">
+                                <div class="info-mini-left-title">ПЛАТЫ</div>
+                                <div class="info-mini-left-strana">Производство: РФ</div>
+                                <div class="info-mini-right-text">Алюминевые платы толщиной 1 мм. обеспечивают равномерное и быстрое распределение тепла от светодиодов к корпусу светильника, сохраняя требуемую температуру кристалла, что предотвращает скорую деградацию светодиодов.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--
+                            
+-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sertificates">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-3 bold">Сертификаты</div>
+                                <div class="col-md-3">
+                                    <a target="_blank" href="img/sertificate/ser-baikal.pdf">
+                                        <div class="sert-ic">Экспертное заключение Э3 "Байкал"</div>
+                                    </a>
+                                </div>
+                                <div class="col-md-6">Подтверждает соответствие светильников DURAY всем необходимым нормам и требованиям для освещения детских дошкольных учреждений, учреждений общего, начального, среднего и высшего образования, учреждений здравоохранения.</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-offset-3 col-md-3">
+                                    <a target="_blank" href="img/sertificate/ser-kaspii.pdf">
+                                        <div class="sert-ic">Экспертное заключение Э3 "Каспий"</div>
+                                    </a>
+                                </div>
+                                <div class="col-md-6">Подтверждает соответствие светильников DURAY всем необходимым нормам и требованиям для освещения детских дошкольных учреждений, учреждений общего, начального, среднего и высшего образования, учреждений здравоохранения.</div>
+                            </div>
+                        </div>
+                    </div>
+    <!--    end opisanie svetilnikov-->
+    <section class="winner wow bounceInRight" data-wow-offset="20">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="dostavka-title">ОПЛАТА</div>
-                    <br>1) Безналичный расчет для юридических лиц
-                    <br> 2) Наличными, банковской картой в офисе продаж
-                    <br> 3) Оплата через систему «Расчет» (ЕРИП)
-                    <br> 4) Оплата банковской картой онлайн
-                    <br> 5) Наложенный платеж
-                    <br>
-                    <br>*более детальную информацию уточняете у менеджера по телефону
-                    <br>
-                    <div class="dostavka-tel">+375 (44) 544-12-24</div>
-                </div>
-                <div class="col-md-6">
-                    <div class="dostavka-title">ДОСТАВКА</div>
-                    <br> По согласованию с менеджером Отдела логистики Компании ООО «АЛТЕХНОТРЕЙД» осуществим БЕСПЛАТНУЮ доставку товара в пределах Республики Беларусь в самые короткие сроки до дверей офиса клиента, указанного здания (склада), по г. Минску и Республике Беларусь (при наличии товара на складе поставка осуществляется на следующий день после оплаты).
-                    <br>
-                    <br> Услуга является БЕСПЛАТНОЙ и осуществляется при соблюдении следующих условий:
-                    <br>
-                    <br> 1) 100% предоплата за товар.
-                    <br> 2) При заказе на сумму не менее 500 белорусских рублей в пределах города Минска и 1,500 белорусских рублей в пределах Республики Беларусь </div>
+                <div class="col-md-12 bold goods"><div class="hvr-bob"><img src="img/list.png" alt="list"></div>Каталог продукции</div>
             </div>
         </div>
     </section>
-    <!-- /info about delivery-->
-    <!-- yandex map-->
-    <div class="yandex-info"><span class="yandex-adress">Мы находимся по адресу: г.Минск, ул. Казинца д.4, оф. 102</span></div>
-    <div class="yandex-map">
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=fE-TlW0YgcBYXLAUVnoOQ8aORZhncWOR&amp;width=100%25&amp;height=320&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=false"></script>
-    </div>
-    <!-- /yandex map-->
-    <!-- footer-->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">ООО «АЛТЕХНОТРЕЙД»</div>
-                <div class="col-md-6 text-right">Все права защищены © 2017</div>
-            </div>
+    <div id="tabs2">
+        <div class="navi">
+            <ul>
+                <li><a href="#tabs-1">Офисные</a></li>
+                <li><a href="#tabs-2">Общественные</a></li>
+                <li><a href="#tabs-3">Торговые</a></li>
+                <li><a href="#tabs-4">Уличные</a></li>
+                <li><a href="#tabs-5">Промышленные</a></li>
+                <li><a href="#tabs-6">ЖКХ и АЗС</a></li>
+            </ul>
         </div>
-    </footer>
-    <!-- /footer-->
-    <!--				for owlcarousel-->
-    <script src="owlcarousel/jquery.min.js"></script>
-    <script src="owlcarousel/owl.carousel.min.js"></script>
-    <script src="libs/bootstrap-toolkit/bootstrap-toolkit.min.js"></script>
-    <!--				/for owlcarousel-->
-    <!--				for modalwind-->
-    <script src="modal/classie.js"></script>
-    <script src="modal/modalEffects.js"></script>
-    <script>
-        // this is important for IEs
-        var polyfilter_scriptpath = '/js/';
-    </script>
-    <script src="modal/cssParser.js"></script>
-    <script src="modal/css-filters-polyfill.js"></script>
-    <!--				for modalwind-->
-    <script>
-        $(document).ready(function () {
-            $('.owl-carousel').owlCarousel({
-                loop: true
-                , margin: 10
-                , responsiveClass: true
-                , responsive: {
-                    0: {
-                        items: 1
-                        , nav: false
-                    }
-                    , 600: {
-                        items: 3
-                        , nav: false
-                    }
-                    , 1000: {
-                        items: 4
-                        , nav: false
-                        , loop: false
-                        , margin: 20
-                    }
-                }
-            })
-        })
-    </script>
-    <!--Скрипт для валидации формы http://shpargalkablog.ru/2014/01/feedback-form.html-->
-    <script>
-        document.getElementById('feedback-form').addEventListener('submit', function (evt) {
-            var http = new XMLHttpRequest()
-                , f = this;
-            evt.preventDefault();
-            http.open("POST", "contacts.php", true);
-            http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            http.send("nameFF=" + f.nameFF.value + "&contactFF=" + f.contactFF.value + "&messageFF=" + f.messageFF.value);
-            http.onreadystatechange = function () {
-                if (http.readyState == 4 && http.status == 200) {
-                    alert(http.responseText + ', Ваше сообщение получено.\nНаши специалисты ответят Вам в течении 2-х дней.\nБлагодарим за интерес к нашей фирме!');
-                    f.messageFF.removeAttribute('value'); // очистить поле сообщения (две строки)
-                    f.messageFF.value = '';
-                }
-            }
-            http.onerror = function () {
-                alert('Извините, данные не были переданы');
-            }
-        }, false);
-    </script>
-    <!--///Скрипт для валидации формы-->
-    <!--Плавный переход по якорям (нужно подключение jQuery) http://bortvlad.ru/jquery/plavnaya-prokrutka-yakor-jquery/-->
-    <script>
-        $(document).ready(function () {
-            $('a[href^="#"]').click(function () {
-                var el = $(this).attr('href');
-                $('body').animate({
-                    scrollTop: $(el).offset().top
-                }, 1000);
-                return false;
-            });
-        });
-    </script>
-    <!--///Плавный переход по якорям (нужно подключение jQuery)-->
+        <div id="tabs-4">
+            <!-- Start - Уличные светильники-->
+            <section id="products">
+                <div class="container">
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <div class="products-main" id="elb">Уличные светильники</div>
+                            <div class="owl-carousel owl-theme">
+                                <div class="item-1">
+                                    <!--                                    <div class="lable-gar"><img src="img/img-21.png" alt="gar"></div>--><img src="img/tovar/elbrus/1.jpg" alt="">
+                                    <div class="products-name">Эльбрус 16.3500.30</div>
+                                    <div class="products-price">196 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1"> <img src="img/tovar/elbrus/2.jpg" alt="">
+                                    <div class="products-name">Эльбрус 24.5250.45 </div>
+                                    <div class="products-price">261 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1">
+                                    <div class="lable-lider"><img src="img/img-22.png" alt="lider"></div> <img src="img/tovar/elbrus/3.jpg" alt="">
+                                    <div class="products-name">Эльбрус 32.7000.60 </div>
+                                    <div class="products-price">330 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1"> <img src="img/tovar/elbrus/4.jpg" alt="">
+                                    <div class="products-name">Эльбрус 40.8750.75 </div>
+                                    <div class="products-price">390 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1">
+                                    <div class="lable-lider"><img src="img/img-22.png" alt="lider"></div> <img src="img/tovar/elbrus/5.jpg" alt="">
+                                    <div class="products-name">Эльбрус 48.10500.90 </div>
+                                    <div class="products-price">454 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1">
+                                    <div class="lable-lider"><img src="img/img-22.png" alt="lider"></div> <img src="img/tovar/elbrus/6.jpg" alt="">
+                                    <div class="products-name">Эльбрус 64.14000.120 </div>
+                                    <div class="products-price">621 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1"> <img src="img/tovar/elbrus/7.jpg" alt="">
+                                    <div class="products-name">Эльбрус 80.17500.150 </div>
+                                    <div class="products-price">675 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1"> <img src="img/tovar/elbrus/8.jpg" alt="">
+                                    <div class="products-name">Эльбрус 96.21000.180 </div>
+                                    <div class="products-price">843 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1"> <img src="img/tovar/elbrus/9.jpg" alt="">
+                                    <div class="products-name">Эльбрус 120.26250.225 </div>
+                                    <div class="products-price">950 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1"> <img src="img/tovar/elbrus/10.jpg" alt="">
+                                    <div class="products-name">Эльбрус 144.31500.270 </div>
+                                    <div class="products-price">1100 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End - Уличные светильники-->
+        </div>
+        <div id="tabs-1">
+            <!-- Start - Офисные светильники-->
+            <section id="products">
+                <div class="container">
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <div class="products-main" id="bai">Офисные светильники</div>
+                            <div class="owl-carousel owl-theme">
+                                <div class="item-1"> <img src="img/tovar/baikal/1.jpg" alt="Байкал">
+                                    <div class="products-name">Байкал 32.1600.16</div>
+                                    <div class="products-price">60 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1"> <img src="img/tovar/baikal/2.jpg" alt="Байкал">
+                                    <div class="products-name">Байкал 48.2700.24 </div>
+                                    <div class="products-price">65 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1"> <img src="img/tovar/baikal/3.jpg" alt="Байкал">
+                                    <div class="products-name">Байкал 48.2700.24 </div>
+                                    <div class="products-price">111 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1">
+                                    <div class="lable-lider"><img src="img/img-22.png" alt="lider"></div> <img src="img/tovar/baikal/4.jpg" alt="Байкал">
+                                    <div class="products-name">Байкал 64.3600.32 </div>
+                                    <div class="products-price">81 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1"> <img src="img/tovar/baikal/5.jpg" alt="Байкал">
+                                    <div class="products-name">Байкал 96.6000.58 </div>
+                                    <div class="products-price">158 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1"> <img src="img/tovar/baikal/6.jpg" alt="Байкал">
+                                    <div class="products-name">Байкал 128.7200.64 </div>
+                                    <div class="products-price">179 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1"> <img src="img/tovar/baikal/7.jpg" alt="Байкал">
+                                    <div class="products-name">Байкал 192.12000.116 </div>
+                                    <div class="products-price">251 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1"> <img src="img/tovar/baikal/8.jpg" alt="Байкал">
+                                    <div class="products-name">Байкал 48.2700.24 </div>
+                                    <div class="products-price">68 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1"> <img src="img/tovar/baikal/8.jpg" alt="Байкал">
+                                    <div class="products-name">Байкал 64.3600.32 </div>
+                                    <div class="products-price">125 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1"> <img src="img/tovar/baikal/10.jpg" alt="Байкал">
+                                    <div class="products-name">Байкал 96.6000.58 </div>
+                                    <div class="products-price">115 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1"> <img src="img/tovar/baikal/11.jpg" alt="Байкал">
+                                    <div class="products-name">Байкал 96.6000.58 </div>
+                                    <div class="products-price">158 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End - Офисные светильники-->
+        </div>
+        <div id="tabs-5">
+            <!-- Start - Промышленные светильники-->
+            <section id="products">
+                <div class="container">
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <div class="products-main" id="eni">Промышленые светильники</div>
+                            <div class="owl-carousel owl-theme">
+                                <div class="item-1"> <img src="img/tovar/enisei/1.jpg" alt="Енисей">
+                                    <div class="products-name">Енисей 16.3500.30</div>
+                                    <div class="products-price">176 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1"> <img src="img/tovar/enisei/2.jpg" alt="Енисей">
+                                    <div class="products-name">Енисей 24.5250.45 </div>
+                                    <div class="products-price">240 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1">
+                                    <div class="lable-lider"><img src="img/img-22.png" alt="lider"></div> <img src="img/tovar/enisei/3.jpg" alt="Енисей">
+                                    <div class="products-name">Енисей 32.7000.60 </div>
+                                    <div class="products-price">312 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1"> <img src="img/tovar/enisei/4.jpg" alt="Енисей">
+                                    <div class="products-name">Енисей 40.8750.75 </div>
+                                    <div class="products-price">367 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1">
+                                    <div class="lable-lider"><img src="img/img-22.png" alt="lider"></div> <img src="img/tovar/enisei/5.jpg" alt="Енисей">
+                                    <div class="products-name">Енисей 48.10500.90 </div>
+                                    <div class="products-price">447 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1"> <img src="img/tovar/enisei/6.jpg" alt="Енисей">
+                                    <div class="products-name">Енисей 64.14000.120 </div>
+                                    <div class="products-price">546 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1"> <img src="img/tovar/enisei/7.jpg" alt="Енисей">
+                                    <div class="products-name">Енисей 80.17500.150 </div>
+                                    <div class="products-price">655 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1">
+                                    <div class="lable-lider"><img src="img/img-22.png" alt="lider"></div> <img src="img/tovar/enisei/8.jpg" alt="Енисей">
+                                    <div class="products-name">Енисей 96.21000.180 </div>
+                                    <div class="products-price">260 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1"> <img src="img/tovar/enisei/9.jpg" alt="Енисей">
+                                    <div class="products-name">Енисей 120.26250.225 </div>
+                                    <div class="products-price">745 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1"> <img src="img/tovar/enisei/10.jpg" alt="Енисей">
+                                    <div class="products-name">Енисей 144.31500.270 </div>
+                                    <div class="products-price">1340 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1"> <img src="img/tovar/enisei/11.jpg" alt="Енисей">
+                                    <div class="products-name">Енисей 160.35000.300 </div>
+                                    <div class="products-price">1384 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                                <div class="item-1"> <img src="img/tovar/enisei/12.jpg" alt="Енисей">
+                                    <div class="products-name">Енисей 192.42000.360 </div>
+                                    <div class="products-price">1639 руб.</div>
+                                    <div class="products-link">
+                                        <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <!-- End - Промышленные светильники-->
+            </div>
+            <div id="tabs-2">
+                <!-- Start - Многофун светильники-->
+                <section id="products">
+                    <div class="container">
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <div class="products-main" id="kas">Общественные светильники</div>
+                                <div class="owl-carousel owl-theme">
+                                    <div class="item-1"> <img src="img/tovar/kaspii/1.jpg" alt="Енисей">
+                                        <div class="products-name">Каспий 32.1800.16</div>
+                                        <div class="products-price">60 руб.</div>
+                                        <div class="products-link">
+                                            <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                        </div>
+                                    </div>
+                                    <div class="item-1"> <img src="img/tovar/kaspii/2.jpg" alt="Енисей">
+                                        <div class="products-name">Каспий 48.2700.24 </div>
+                                        <div class="products-price">65 руб.</div>
+                                        <div class="products-link">
+                                            <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                        </div>
+                                    </div>
+                                    <div class="item-1">
+                                        <div class="lable-lider"><img src="img/img-22.png" alt="lider"></div> <img src="img/tovar/kaspii/3.jpg" alt="Енисей">
+                                        <div class="products-name">Каспий 64.3600.32 </div>
+                                        <div class="products-price">81 руб.</div>
+                                        <div class="products-link">
+                                            <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                        </div>
+                                    </div>
+                                    <div class="item-1">
+                                        <div class="lable-lider"><img src="img/img-22.png" alt="lider"></div> <img src="img/tovar/kaspii/4.jpg" alt="Енисей">
+                                        <div class="products-name">Каспий 64.3600.32 </div>
+                                        <div class="products-price">125 руб.</div>
+                                        <div class="products-link">
+                                            <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                        </div>
+                                    </div>
+                                    <div class="item-1"> <img src="img/tovar/kaspii/5.jpg" alt="Енисей">
+                                        <div class="products-name">Каспий 96.6000.58 </div>
+                                        <div class="products-price">114 руб.</div>
+                                        <div class="products-link">
+                                            <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                        </div>
+                                    </div>
+                                    <div class="item-1"> <img src="img/tovar/kaspii/6.jpg" alt="Енисей">
+                                        <div class="products-name">Каспий 64.3600.32 </div>
+                                        <div class="products-price">81 руб.</div>
+                                        <div class="products-link">
+                                            <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                        </div>
+                                    </div>
+                                    <div class="item-1"> <img src="img/tovar/kaspii/7.jpg" alt="Енисей">
+                                        <div class="products-name">Каспий 96.6000.58</div>
+                                        <div class="products-price">158 руб.</div>
+                                        <div class="products-link">
+                                            <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+                <!-- End - Многофункциональные светильники-->
+                </div>
+                <div id="tabs-3">
+                    <!-- Start - Торговые светильники-->
+                    <section id="products">
+                        <div class="container">
+                            <div class="row">
+                                <div class="large-12 columns">
+                                    <div class="products-main" id="kaz">Торговые светильники</div>
+                                    <div class="owl-carousel owl-theme">
+                                        <div class="item-1"> <img src="img/tovar/kazbek/1.jpg" alt="Енисей">
+                                            <div class="products-name">Казбек 32.1600.16</div>
+                                            <div class="products-price">76 руб.</div>
+                                            <div class="products-link">
+                                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                            </div>
+                                        </div>
+                                        <div class="item-1"> <img src="img/tovar/kazbek/2.jpg" alt="Енисей">
+                                            <div class="products-name">Казбек 48.2400.24</div>
+                                            <div class="products-price">91 руб.</div>
+                                            <div class="products-link">
+                                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                            </div>
+                                        </div>
+                                        <div class="item-1">
+                                            <div class="lable-lider"><img src="img/img-22.png" alt="lider"></div><img src="img/tovar/kazbek/3.jpg" alt="Енисей">
+                                            <div class="products-name">Казбек 32.1600.16</div>
+                                            <div class="products-price">82 руб.</div>
+                                            <div class="products-link">
+                                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                            </div>
+                                        </div>
+                                        <div class="item-1">
+                                            <div class="lable-lider"><img src="img/img-22.png" alt="lider"></div> <img src="img/tovar/kazbek/4.jpg" alt="Енисей">
+                                            <div class="products-name">Казбек 64.3200.32</div>
+                                            <div class="products-price">102 руб.</div>
+                                            <div class="products-link">
+                                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                            </div>
+                                        </div>
+                                        <div class="item-1"> <img src="img/tovar/kazbek/5.jpg" alt="Енисей">
+                                            <div class="products-name">Казбек 96.5400.58</div>
+                                            <div class="products-price">135 руб.</div>
+                                            <div class="products-link">
+                                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                            </div>
+                                        </div>
+                                        <div class="item-1"> <img src="img/tovar/kazbek/6.jpg" alt="Енисей">
+                                            <div class="products-name">Казбек 48.2400.24</div>
+                                            <div class="products-price">106 руб.</div>
+                                            <div class="products-link">
+                                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                            </div>
+                                        </div>
+                                        <div class="item-1"> <img src="img/tovar/kazbek/7.jpg" alt="Енисей">
+                                            <div class="products-name">Казбек 96.5400.58</div>
+                                            <div class="products-price">157 руб.</div>
+                                            <div class="products-link">
+                                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                            </div>
+                                        </div>
+                                        <div class="item-1"> <img src="img/tovar/kazbek/8.jpg" alt="Енисей">
+                                            <div class="products-name">Казбек 64.3200.32</div>
+                                            <div class="products-price">141 руб.</div>
+                                            <div class="products-link">
+                                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                            </div>
+                                        </div>
+                                        <div class="item-1"> <img src="img/tovar/kazbek/9.jpg" alt="Енисей">
+                                            <div class="products-name">Казбек 128.6400.64</div>
+                                            <div class="products-price">220 руб.</div>
+                                            <div class="products-link">
+                                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                            </div>
+                                        </div>
+                                        <div class="item-1"> <img src="img/tovar/kazbek/10.jpg" alt="Енисей">
+                                            <div class="products-name">Казбек 192.10800.116</div>
+                                            <div class="products-price">331 руб.</div>
+                                            <div class="products-link">
+                                                <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </section>
+                    <!-- End - Торговые светильники-->
+                    </div>
+                    <div id="tabs-6">
+                        <!-- Start - ЖКХ светильники-->
+                        <section id="products">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="large-12 columns">
+                                        <div class="products-main" id="alt">ЖКХ и АЗС светильники</div>
+                                        <div class="owl-carousel owl-theme">
+                                            <div class="item-1"> <img src="img/img-17.jpg" alt="Алтай">
+                                                <div class="products-name">Алтай 21.800.8</div>
+                                                <div class="products-price">44 руб.</div>
+                                                <div class="products-link">
+                                                    <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                                </div>
+                                            </div>
+                                            <div class="item-1"> <img src="img/tovar/elbrus/1-azs.jpg" alt="">
+                                                <div class="products-name">Эльбрус 16.3500.30 </div>
+                                                <div class="products-price">267 руб.</div>
+                                                <div class="products-link">
+                                                    <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                                </div>
+                                            </div>
+                                            <div class="item-1"> <img src="img/tovar/elbrus/2-azs.jpg" alt="">
+                                                <div class="products-name">Эльбрус 32.7000.60 </div>
+                                                <div class="products-price">404 руб.</div>
+                                                <div class="products-link">
+                                                    <button class="md-trigger" data-modal="modal-1">Заказать</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </section>
+                        <!-- End - ЖКХ светильники-->
+                        </div>
+                    </div>
+                    
+                    <section class="raschet wow bounceInRight">
+                        <div class="head hvr-wobble-horizontal"><img src="img/img-28.png" alt="Подарок"></div>
+                        <div class="body">Индивидуальный 3D-расчет освещенности каждого проекта </div>
+                        <div class="foot">В ПОДАРОК!</div>
+                       
+                    </section>
+                    
+                    <section class="raschet-info">
+                        <div class="container ">
+                           <div class="single-item">
+                            <div class="row raschet-info-pad item">
+                               
+                                <div class="col-md-5 raschet-info-pad">
+                                <div class="head">Проект освещения 4-х этажного офисного здания</div>
+                                <div class="body">Проект освещения 4-х офисных этажей компании, в рамках которого, был составлен план расположения светильников, фиктивные цвета, рабочая плоскость.</div>
+                                <div class="foot"><button class="md-trigger" data-modal="modal-1">Заказать</button></div></div>
+                                <div class="col-md-7"><div class="raschet-info-img"><img src="img/1.jpg" alt="проект офисного здания"></div></div>
+                            </div>
+                             <div class="row raschet-info-pad">
+                               
+                                <div class="col-md-5 raschet-info-pad item">
+                                <div class="head">Проект освещения здания главпочтамта</div>
+                                <div class="body">Проект освещения здания главпочтамта, в рамках которого, был составлен план расположения светильников, фиктивные цвета, рабочая плоскость.</div>
+                                <div class="foot"><button class="md-trigger" data-modal="modal-1">Заказать</button></div></div>
+                                <div class="col-md-7"><div class="raschet-info-img"><img src="img/2.jpg" alt="проект главпочтамта"></div></div>
+                            </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!--start pobeditel full-width-->
+                    <section class="winner wow bounceInRight winner-ani" data-wow-offset="20">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 text-center bold">Только до конца февраля!</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 act-icon"><div class="hvr-buzz"><img src="img/img-27.png" alt="tools"></div></div>
+                                <div class="col-md-3 act-title">СКИДКА 15% </div>
+                                <div class="col-md-6 act-text">На монтаж светодиодных светильников
+                                <br>при покупке продукции торговой марки Дюрей! </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!--    end pobeditel full-width-->
+                    
+                    <!-- yandex map-->
+                    <div class="yandex-info"><span class="yandex-adress">Мы находимся по адресу: г.Минск, ул. Казинца д.4, оф. 102</span></div>
+                    <div class="yandex-map">
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=fE-TlW0YgcBYXLAUVnoOQ8aORZhncWOR&amp;width=100%25&amp;height=320&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=false"></script>
+                    </div>
+                    <!-- /yandex map-->
+                    <!-- footer-->
+                    <footer>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-4">ООО «АЛТЕХНОТРЕЙД»</div>
+                                <div class="col-md-4 text-center">Все права защищены © 2017</div>
+                                <div class="col-md-4 text-right">Made by <a target="_blank" href="http://vk.com/nemankov"><img src="img/vk-icon.png" alt="alexander nemankov"></a></div>
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- /footer-->
+                    <!-- MODAL WINDOW-->
+                    <div class="md-modal md-effect-1" id="modal-1">
+                        <div class="md-content">
+                            <h3>Ваш заказ</h3>
+                            <button class="md-close close"><i class="fa fa-times"></i></button>
+                            <div class="md-content-form">
+                                <form method="POST" id="feedback-form">
+                                    <input type="text" name="nameFF" required placeholder="Ваше имя" x-autocompletetype="name">
+                                    <input type="tel" name="contactFF" required placeholder="Ваш телефон" x-autocompletetype="tel">
+                                    <textarea placeholder="Сообщение" name="messageFF" required rows="5"></textarea>
+                                    <input type="submit" value="Отправить"> </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md-modal md-effect-1" id="modal-2">
+                        <div class="md-content">
+                            <h3>Карта</h3>
+                            <button class="md-close close"><i class="fa fa-times"></i></button>
+                            <section class="map">
+                                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=tL9863999gybNq3s1Ho33_IK7HFOGS5y&amp;width=630&amp;height=320&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+                            </section>
+                        </div>
+                    </div>
+                    <!-- /MODAL WINDOW-->
+                    <!--				for owlcarousel-->
+                    <script src="js/jquery.min.js"></script>
+                    <script src="js/jquery-ui.min.js"></script>
+                    <script src="js/jquery-migrate.min.js"></script>
+                    <script src="js/cbpFWTabs.js"></script>
+                    <script src="libs/owlcarousel/owl.carousel.min.js"></script>
+                    <script src="libs/bootstrap-toolkit/bootstrap-toolkit.min.js"></script>
+                    <!--				/for owlcarousel-->
+                    <!--				for modalwind-->
+                    <script src="libs/modal/classie.js"></script>
+                    <script src="libs/modal/modalEffects.js"></script>
+                    <script>
+                        // this is important for IEs
+                        var polyfilter_scriptpath = '/js/';
+                    </script>
+                    <script src="libs/modal/cssParser.js"></script>
+                    <script src="libs/modal/css-filters-polyfill.js"></script>
+                    <!--				for modalwind-->
+                    <script src="libs/wow/wow.min.js"></script>
+                    <script type="text/javascript" src="libs/slick/slick.min.js"></script>
+                    <script src="js/main.js"></script>
+                    <script>
+                        new WOW().init();
+                    </script>
+                    <script>
+                        $(document).ready(function () {
+                            $('.owl-carousel').owlCarousel({
+                                loop: true
+                                , margin: 10
+                                , responsiveClass: true
+                                , responsive: {
+                                    0: {
+                                        items: 1
+                                        , nav: false
+                                    }
+                                    , 600: {
+                                        items: 3
+                                        , nav: false
+                                    }
+                                    , 1000: {
+                                        items: 4
+                                        , nav: false
+                                        , loop: false
+                                        , margin: 20
+                                    }
+                                }
+                            })
+                        })
+                       
+                    </script>
+                    <!--Скрипт для валидации формы http://shpargalkablog.ru/2014/01/feedback-form.html-->
+                    <script>
+                        document.getElementById('feedback-form').addEventListener('submit', function (evt) {
+                            var http = new XMLHttpRequest()
+                                , f = this;
+                            evt.preventDefault();
+                            http.open("POST", "contacts.php", true);
+                            http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                            http.send("nameFF=" + f.nameFF.value + "&contactFF=" + f.contactFF.value + "&messageFF=" + f.messageFF.value);
+                            http.onreadystatechange = function () {
+                                if (http.readyState == 4 && http.status == 200) {
+                                    alert(http.responseText + ', Ваше сообщение получено.\nНаши специалисты ответят Вам в течении 2-х дней.\nБлагодарим за интерес к нашей фирме!');
+                                    f.messageFF.removeAttribute('value'); // очистить поле сообщения (две строки)
+                                    f.messageFF.value = '';
+                                }
+                            }
+                            http.onerror = function () {
+                                alert('Извините, данные не были переданы');
+                            }
+                        }, false);
+                    </script>
+                    <!--///Скрипт для валидации формы-->
+                    <!--Плавный переход по якорям (нужно подключение jQuery) http://bortvlad.ru/jquery/plavnaya-prokrutka-yakor-jquery/-->
+                    <script>
+                        //        $(document).ready(function () {
+                        //            $('a[href^="#"]').click(function () {
+                        //                var el = $(this).attr('href');
+                        //                $('body').animate({
+                        //                    scrollTop: $(el).offset().top
+                        //                }, 1000);
+                        //                return false;
+                        //            });
+                        //        });
+                    </script>
+                    <!--///Плавный переход по якорям (нужно подключение jQuery)-->
+                    <!-- HelloPreload http://hello-site.ru/preloader/ -->
+                    <!-- HelloPreload http://hello-site.ru/preloader/ -->
+                    <script>
+                        new CBPFWTabs(document.getElementById('tabs'));
+                    </script>
+                    <script>
+                        $(function () {
+                            $("#tabs").tabs();
+                        });
+                        $(function () {
+                            $("#tabs2").tabs();
+                        });
+                    </script>
+                     <script>
+    $('.single-item').slick({
+       
+         slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+    });
+  </script>
 </body>
 
 </html>
