@@ -262,11 +262,15 @@ body > section:nth-child(11) > div > div > div.col-md-6 {
     background-color: #fff;
     padding: 40px 0px;
 }
-
+.one-ben-container{
+    padding: 40px 80px;
+}
 .one-ben {
     width: 33.333%;
-    float: left;
+    display: inline-block;
+    vertical-align: top;
     padding-top: 40px;
+    margin-left: -3px;
 }
 
 .one-ben-img-1 {
@@ -359,11 +363,51 @@ body > section:nth-child(11) > div > div > div.col-md-6 {
     margin: auto;
 }
 
+/*
 .one-ben:hover .one-ben-title {
     background-color: #4ea1d3;
     color: #fff;
     transition: 0.5s;
 }
+*/
+
+
+.one-ben:hover .one-ben-img-1 {
+-webkit-transition: 0.3s;
+-o-transition: 0.3s;
+transition: 0.3s;
+    background-image: url(../img/img-6-hov.png);
+   }
+.one-ben:hover .one-ben-img-2 {
+-webkit-transition: 0.3s;
+-o-transition: 0.3s;
+transition: 0.3s;
+    background-image: url(../img/img-6-hov.png);
+   }
+.one-ben:hover .one-ben-img-3 {
+-webkit-transition: 0.3s;
+-o-transition: 0.3s;
+transition: 0.3s;
+    background-image: url(../img/img-6-hov.png);
+   }
+.one-ben:hover .one-ben-img-4 {
+-webkit-transition: 0.3s;
+-o-transition: 0.3s;
+transition: 0.3s;
+    background-image: url(../img/img-6-hov.png);
+   }
+.one-ben:hover .one-ben-img-5 {
+-webkit-transition: 0.3s;
+-o-transition: 0.3s;
+transition: 0.3s;
+    background-image: url(../img/img-6-hov.png);
+   }
+.one-ben:hover .one-ben-img-6 {
+-webkit-transition: 0.3s;
+-o-transition: 0.3s;
+transition: 0.3s;
+    background-image: url(../img/img-6-hov.png);
+   }
 
 #products .owl-carousel .item {
     height: 400px;
@@ -397,7 +441,12 @@ body > section:nth-child(11) > div > div > div.col-md-6 {
 .products-name {
     font-size: 20px;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 22px;
+}
+.products-inf {
+    font-size: 20px;
+    text-align: center;
+  
 }
 
 .products-price {
@@ -430,7 +479,34 @@ body > section:nth-child(11) > div > div > div.col-md-6 {
     color: #4fa1d3;
     outline: solid 1px #4fa1d3;
 }
+.md-modal{
+    border:none;
+}
+.md-content{
+    background-image: url(../img/form-back.jpg);
+    background-position: center;
+/*    background-size: cover;*/
+    border: none;
+}
+.md-content h3{
+    background: rgb(255, 255, 255);
+    color: #6c6e6e;
+}
+.md-content input[type="tel"],[type="text"] {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-bottom: #868484 1px solid !important;
+    font-weight: bold;
+}
 
+.md-content textarea {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-bottom: #868484 1px solid !important;
+    font-weight: bold;
+}
 .md-content button {
     background-color: #4fa1d3;
     color: #fff;
@@ -443,11 +519,13 @@ body > section:nth-child(11) > div > div > div.col-md-6 {
 
 .md-content button:hover {
     background-color: rgba(250, 250, 250, 0.7);
-    ;
     color: #4fa1d3;
     outline: solid 1px #4fa1d3;
 }
-
+.close{
+    background-color: rgba(0,0,0,0);
+    border: none;
+}
 .map {
     width: 630px;
     height: 320px;
@@ -463,12 +541,11 @@ body > section:nth-child(11) > div > div > div.col-md-6 {
 }
 
 .yandex-info {
-    height: 65px;
     color: #4fa1d3;
     font-size: 22px;
     text-align: center;
     font-weight: bold;
-    padding-top: 15px;
+    padding: 25px 0px;
     background: #fff;
 }
 
@@ -573,9 +650,9 @@ footer {
 
 .close {
     position: absolute;
-    right: 15px;
-    top: 11px;
-    padding: 10px 25px !important;
+    right: -23px;
+    top:  -22px;
+    padding: 0px 10px !important;
     font-size: 30px !important;
 }
 
@@ -1259,8 +1336,13 @@ footer .text-right img {
     text-align: center;
     background-color: #4fa1d3;
     color: #fff;
-    padding: 30px 0px;
+        padding: 50px 0px 75px 0px;
     font-weight: bold;
+    
+}
+.relat-but2 {
+    position: relative;
+    top: 20px;
 }
 .raschet .body {
        font-size: 22px;
@@ -1456,4 +1538,53 @@ footer .text-right img {
   animation-fill-mode: forwards;
   -webkit-animation-direction: normal, alternate;
   animation-direction: normal, alternate;
+}
+
+.winner button {
+    font-weight: bold;
+    background-color: rgba(250, 250, 250, 1);
+    ;
+    color: #4fa1d3;
+    border: solid 1px #4fa1d3;
+    padding: 15px 80px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    border: none;
+    font-size: 22px;
+}
+
+.winner button:hover {
+    background-color: rgba(250, 250, 250, 0.7);
+    ;
+    color:#4fa1d3;
+    outline: solid 1px #4fa1d3;
+}
+
+.winner-ani .container{
+    padding: 20px 0px;
+}
+.relat-but{
+    position: relative;
+    top: 7px;
+}
+.raschet button {
+    font-weight: bold;
+    background-color: rgba(250, 250, 250, 1);
+    ;
+    color: #4fa1d3;
+    border: solid 1px #4fa1d3;
+    padding: 15px 80px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    border: none;
+    font-size: 22px;
+}
+
+.raschet button:hover {
+    background-color: rgba(250, 250, 250, 0.7);
+    ;
+    color:#4fa1d3;
+    outline: solid 1px #4fa1d3;
 }
