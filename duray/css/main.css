@@ -1755,6 +1755,13 @@ footer .text-right img {
     .lamp img{
         padding-top: 0px;
     }
+    .slick-next{
+        display: none !important;
+    }
+    .slick-prev{
+        display: none;
+    }
+    .row{margin: 0px;}
 }
 @media screen and (max-width: 520px)  {
     .lamp img{
@@ -1764,6 +1771,6 @@ footer .text-right img {
         width: 350px;
     }
     .menu img{
-        width: 300;
+        width: 300px;
     }
 }
