@@ -1,0 +1,129 @@
+*::-webkit-input-placeholder {
+    color: #666;
+    opacity: 1;
+}
+
+*:-moz-placeholder {
+    color: #666;
+    opacity: 1;
+}
+
+*::-moz-placeholder {
+    color: #666;
+    opacity: 1;
+}
+
+*:-ms-input-placeholder {
+    color: #666;
+    opacity: 1;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {}
+
+body input:required:valid,
+body textarea:required:valid {}
+
+body {
+    font-family: "RobotoRegular", sans-serif;
+    font-size: 16px;
+    min-width: 320px;
+    position: relative;
+}
+
+.hidden {
+    display: none;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-position: 50% 0;
+    position: relative;
+}
+
+.wrapper {
+    background-image: url(../img/background-lenta.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 2000px;
+    margin-top: 100px;
+}
+
+.header {
+    text-align: center;
+    margin-top: 70px;
+}
+
+.header h1 {
+    color: #fff;
+    margin-top: -25px;
+}
+
+.first-step {
+    margin-top: 122px;
+}
+
+.red-book {
+    color: #b9003a;
+    font-size: 91px;
+}
+
+.red-book-right {
+    font-size: 19px;
+    padding-top: 25px;
+    margin-left: -45px;
+}
+
+.second-step {
+    margin-top: 115px;
+}
+
+.second-step .red-book-right {
+    margin-left: -25px;
+}
+
+.third-step {
+    margin-top: 90px;
+}
+
+.third-step .red-book-right {
+    margin-left: -25px;
+}
+
+.fourth-step {
+    margin-top: 58px;
+}
+.fourth-step .red-book-right {
+    margin-left: -25px;
+}
+
+.single-item {
+    width: 283px;
+}
+
+.slider {
+    padding: 0px 0 0 153px;
+    margin-top: -86px;
+}
+
+.slider-2 {
+    padding: 0px 0 0 241px;
+    margin-top: -14px;
+}
+
+.single-item-2 {
+    width: 229px;
+}
+h1{
+    font-weight: normal;
+    font-size: 28px;
+}
+.bold{
+    font-weight: bold;
+    font-size: 36px;
+}
