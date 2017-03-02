@@ -590,7 +590,7 @@ header .adress {
 }
     .gallery{
         text-align: center;
-        height: 622px;
+        height: 100%;
     }
     .gallery img {
     float: none;
@@ -641,4 +641,22 @@ header .adress {
         text-align: center;
     }
     
+}
+@media screen and (max-width: 480px) {
+    
+    .switch-img {
+    width: 320px;
+    margin: 40px 0;
+}
+    .hide-xs{
+        display: none;
+    }
+    .info-1-text {
+
+    height: 800px;
+  
+}
+    .additional img{
+        width: 300px;
+    }
 }
