@@ -659,4 +659,17 @@ header .adress {
     .additional img{
         width: 300px;
     }
+    a.trigger{
+        margin-top: 40px;
+        margin-bottom: 80px;
+    }
+    header .adress {
+    position: relative;
+    color: #fff;
+    line-height: 1.5em;
+    margin-top: 0px;
+    margin-left: 0;
+    left: 0;
+    top: 25px;
+}
 }
