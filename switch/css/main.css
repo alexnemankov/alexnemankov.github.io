@@ -79,6 +79,7 @@ header .left-section img {
     margin-top: 150px;
     float: right;
     margin-bottom: 40px;
+    margin-right: 50px;
 }
 
 header .right-section {
@@ -142,10 +143,11 @@ header .adress {
     line-height: 1.3em;
 }
 
-button.trigger {
+a.trigger {
+    display: inline-block;
     background-color: #fff;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     color: #f51609;
     padding: 10px 67px;
     margin-left: 35px;
@@ -307,7 +309,8 @@ h3 {
     margin: auto;
 }
 
-button.additional {
+a.additional {
+    display: inline-block;
     background: #f51609;
     border: none;
     color: #fff;
@@ -318,7 +321,7 @@ button.additional {
 }
 
 .additional {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 }
 
 .map-adress {
@@ -445,4 +448,47 @@ footer a{
 }
 .gray{
     color: #d9d9d9;
+}
+.gallery img:hover{
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    opacity: 0.6;
+}
+form{
+    text-align: center;
+}
+form ul{
+    list-style-type: none;
+    margin-left: -50px
+}
+form h1{
+    margin: 0px;
+}
+form input,textarea {
+    border: none;
+    border-bottom: 1px solid #333;
+    margin-bottom: 15px;
+    width: 390px;
+    height: 40px;
+}
+textarea {
+    
+    height: 80px;
+}
+.white-popup-block {
+    background: #FFF;
+    padding: 20px 30px;
+    text-align: center;
+    max-width: 650px;
+    margin: 40px auto;
+    position: relative;
+/*    border: 20px solid #f51609;*/
+    border-radius: 5px;
+}
+
+input[type="submit"]{
+    border: none;
+    background: #f51609;
+    color: #fff;
 }
