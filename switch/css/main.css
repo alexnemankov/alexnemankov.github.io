@@ -76,8 +76,8 @@ header .left-section {
 }
 
 header .left-section img {
+    display: inline-block;
     margin-top: 150px;
-    float: right;
     margin-bottom: 40px;
     margin-right: 50px;
 }
@@ -491,4 +491,154 @@ input[type="submit"]{
     border: none;
     background: #f51609;
     color: #fff;
+}
+.padding-right{
+    padding-right: 0px;
+}
+.padding-left{
+    padding-left: 0px;
+}
+@media screen and (max-width: 1245px) {
+    header .left-section img{
+        width: 600px;
+    }
+    
+    header {
+    height: 100%;
+}
+
+header .left-section {
+    text-align: right;
+}
+
+header .left-section img {
+    display: inline-block;
+    margin-top: 150px;
+    margin-bottom: 40px;
+    margin-right: 50px;
+}
+
+header .right-section {
+    min-height: 100%;
+    background-color: #e60012;
+    color: #fff;
+}
+
+header .right-section img {
+       width: 100px;
+    position: inherit;
+    left: 0;
+    float: left;
+    margin: auto;
+    text-align: center;
+}
+
+header .adress {
+        position: inherit;
+    color: #fff;
+    line-height: 1.5em;
+    margin-top: 25px;
+    margin-left: 0;
+    left: 0;
+}
+
+
+    .right-section .main {
+    margin-top: 135px;
+    margin-left: 35px;
+    font-size: 56px;
+    font-weight: bold;
+        margin: 135px auto 0;
+        text-align: center;
+}
+
+.right-section .description {
+    max-width: 300px;
+    margin-left: 35px;
+    font-size: 22px;
+    line-height: 1.3em;
+     margin: auto;
+    text-align: center;
+}
+    .right-section{
+        text-align: center;
+    }
+    a.trigger {
+    display: inline-block;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    color: #f51609;
+    padding: 10px 67px;
+    margin-left: 0px;
+    margin-top: 100px;
+        margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 30px;
+}
+    .switch-img{
+        width: 550px;
+        margin: 40px 0;
+    }
+    .switch{
+        margin: 20px 0px 40px;
+    }
+    .switch-title {
+    margin-top: 40px;
+    margin-right: 00px;
+    line-height: 1.8em;
+}
+    .gallery{
+        text-align: center;
+        height: 622px;
+    }
+    .gallery img {
+    float: none;
+    width: 190px;
+        margin-left: -5px;
+        
+}
+    .rezhimy-additional-text{
+        margin-bottom: 40px;
+    }
+    .date{
+    text-align: center;
+    font-weight: bold;
+    border-left: none;
+    padding-left: 4px;
+    font-size: 14px;
+}
+.date-main{
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+    .name {
+        padding-top: 0px;
+    padding-bottom: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+    .coll {
+    margin-top: 20px;
+         margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+    .advantages-description {
+
+    text-transform: uppercase;
+    width: 255px;
+    margin: 30px auto 50px;
+}
+    .rezhimy img{
+        width: 250px
+    }
+    footer {
+        text-align: center;
+    }
+    footer .right{
+        text-align: center;
+    }
+    
 }
