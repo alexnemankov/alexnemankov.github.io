@@ -22,11 +22,10 @@
     <link rel="stylesheet" href="libs/bootstrap/bootstrap-grid-3.3.1.min.css" />
     <link rel="stylesheet" href="libs/font-awesome-4.2.0/css/font-awesome.min.css" />
     <!--    <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css" />-->
-    <link rel="stylesheet" href="libs/owl-carousel/owl.carousel.css" />
-    <link rel="stylesheet" href="libs/countdown/jquery.countdown.css" />
     <link rel="stylesheet" type="text/css" href="libs/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css" />
     <link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="libs/animate/animate.min.css">
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/media.css" /> </head>
@@ -325,24 +324,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>
     <!--    <script src="libs/fancybox/jquery.fancybox.pack.js"></script>-->
-    <script src="libs/waypoints/waypoints-1.6.2.min.js"></script>
-    <script src="libs/scrollto/jquery.scrollTo.min.js"></script>
-    <script src="libs/owl-carousel/owl.carousel.min.js"></script>
-    <script src="libs/countdown/jquery.plugin.js"></script>
-    <script src="libs/countdown/jquery.countdown.min.js"></script>
-    <script src="libs/countdown/jquery.countdown-ru.js"></script>
-    <script src="libs/landing-nav/navigation.js"></script>
+    <script src="libs/waypoints/waypoints.min.js"></script>
+    <script src="libs/scroll2id/PageScroll2id.min.js"></script>
     <script src="libs/bootstrap-toolkit/bootstrap-toolkit.min.js"></script>
-    <script src="libs/maskedinput/jquery.maskedinput.min.js"></script>
-    <script src="libs/equalheight/jquery.equalheight.js"></script>
-    <script src="libs/stellar/jquery.stellar.min.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="libs/slick/slick.min.js"></script>
+    <script  src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script  src="libs/slick/slick.min.js"></script>
     <script src="libs/magnific-popup/jquery.magnific-popup.js"></script>
+    <script src="libs/animate/animate-css.js"></script>
     <script src="libs/parallax.min.js"></script>
     
     <script src="js/common.js"></script>
     <script>
+        //slick-slider
         $('.single-item').slick({
             autoplay: false
             , arrows: true
@@ -364,7 +357,9 @@
                 , fixedContentPos: false
             });
         });
+        //magnific-popup jquery
         $(document).ready(function () {
+            
             $('.popup-with-form').magnificPopup({
                 type: 'inline'
                 , preloader: false
@@ -382,11 +377,12 @@
                 }
             });
         });
+        //parallax.js - единственный способ работы
         $('.parallax-window').parallax({imageSrc: 'img/bg-2.jpg'});
         $('.parallax-window-2').parallax({imageSrc: 'img/bg-3.jpg'});
         $(document).ready(function() {
 
-	//E-mail Ajax Send
+	//E-mail Ajax Send + mail.php (обязательно должны присутствовать скрытые блоки формы, с указанием принимающего email)
 	$("form").submit(function() { //Change
 		var th = $(this);
 		$.ajax({
@@ -404,7 +400,9 @@
 	});
 
 });
+//                       $(".gallery").animated("zoomInUp", "zoomOutDown");
     </script>
+   
     <!-- Yandex.Metrika counter -->
     <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -431,6 +429,7 @@
             d.addEventListener("DOMContentLoaded", f, false);
         } else { f(); }
     })(document, window, "yandex_metrika_callbacks");
+   
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/43199824" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
