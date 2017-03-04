@@ -37,7 +37,7 @@
             <div class="row">
                 <div class="col-sm-12 right-section visible-sm visible-xs"><img src="img/logo_switch.jpg" alt="logo switch">
                     <div class="adress">ул.Шафарнянская 11, оф. 21
-                        <br> тел. +375 (44) 512 1391</div>
+                        <br> тел. +375 (44) 776 1224</div>
                     <div class="main">Nintendo Switch</div>
                     <div class="description">Домашняя консоль с возможностью играть на ходу теперь в <span class="bold">Минске!</span></div> <a class="popup-with-form hvr-bob trigger" href="#feedback-form">Заказать</a> </div>
                 <div class="col-md-7 left-section hidden-sm hidden-xs">
@@ -63,7 +63,7 @@
                 </div>
                 <div class="col-md-5 right-section hidden-sm hidden-xs"><img src="img/logo_switch.jpg" alt="logo switch">
                     <div class="adress">ул.Шафарнянская 11, оф. 21
-                        <br> тел. +375 (44) 512 1391</div>
+                        <br> тел. +375 (44) 776 1224</div>
                     <div class="main">Nintendo Switch</div>
                     <div class="description">Домашняя консоль с возможностью играть на ходу теперь в <span class="bold">Минске!</span></div> <a class="popup-with-form hvr-bob trigger" href="#feedback-form">Заказать</a> </div>
             </div>
@@ -119,10 +119,12 @@
                         <p>Наслаждайтесь играми всегда, везде и со всеми гибкими игровыми режимами.</p>
                     </div>
                 </div>
-                <div class="col-md-6 info-1-bg hide-sm hide-xs"></div>
+                <div class="col-md-6  parallax-window"></div>
             </div>
         </div>
     </section>
+<!--    <div class="main_head main_color_bg parallax-window" style="height: 770px;"></div>-->
+     
     <section class="rezhimy">
         <h2>Три игровых режима</h2>
         <div class="container">
@@ -144,7 +146,7 @@
     </section>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6 info-2-bg"></div>
+            <div class="col-md-6 parallax-window-2"></div>
             <div class="col-md-6 info-1-text">
                 <div class="info-1-text-container left">
                     <p>Делитесь весельем с
@@ -287,23 +289,29 @@
     </footer>
     <!-- link that opens popup -->
     <!-- form itself -->
-    <form id="feedback-form" class="white-popup-block mfp-hide" method="POST">
+<!--    <form id="feedback-form" class="white-popup-block mfp-hide" method="POST" action="http://formspree.io/info.mydevice@gmail.com">-->
+      <form id="feedback-form" class="white-popup-block mfp-hide" method="POST" >
+       <!-- Hidden Required Fields -->
+		<input type="hidden" name="project_name" value="Лендинг Switch">
+		<input type="hidden" name="admin_email" value="info.mydevice@gmail.com">
+		<input type="hidden" name="form_subject" value="Switch">
+		<!-- END Hidden Required Fields -->
         <h1>Ваш заказ</h1>
         <fieldset style="border:0;">
             <p>Для заказа консоли, игр или дополнительных аксессуаров, заполните форму ниже. Менеджер свяжется с вами в ближайшие минуты.</p>
             <ul>
                 <li>
-                    <input id="name" type="text" placeholder="Ваше имя" required="" name="nameFF" x-autocompletetype="name"> </li>
+                    <input id="name" type="text" placeholder="Ваше имя" required="" name="Имя" x-autocompletetype="name"> </li>
                 <li>
                     <label for="email"></label>
-                    <input id="email" name="emailFF" type="email" placeholder="Email" required=""> </li>
+                    <input id="email" name="Email" type="email" placeholder="Email" required=""> </li>
                 <li>
                     <label for="phone"></label>
-                    <input id="phone" name="contactFF" type="tel" placeholder="Телефон" required=""> </li>
+                    <input id="phone" name="Телефон" type="tel" placeholder="Телефон" required=""> </li>
                 <li>
                     <label for="textarea"></label>
                     <br>
-                    <textarea id="textarea">Сообщение</textarea>
+                    <textarea id="textarea" name="Сообщение" placeholder="Сообщение"></textarea>
                 </li>
             </ul>
         </fieldset>
@@ -331,6 +339,8 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="libs/slick/slick.min.js"></script>
     <script src="libs/magnific-popup/jquery.magnific-popup.js"></script>
+    <script src="libs/parallax.min.js"></script>
+    
     <script src="js/common.js"></script>
     <script>
         $('.single-item').slick({
@@ -372,8 +382,58 @@
                 }
             });
         });
+        $('.parallax-window').parallax({imageSrc: 'img/bg-2.jpg'});
+        $('.parallax-window-2').parallax({imageSrc: 'img/bg-3.jpg'});
+        $(document).ready(function() {
+
+	//E-mail Ajax Send
+	$("form").submit(function() { //Change
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "mail.php", //Change
+			data: th.serialize()
+		}).done(function() {
+			alert("Благодарим за покупку. С вами свяжется наш менеджер для подтверждения заказа.");
+			setTimeout(function() {
+				// Done Functions
+				th.trigger("reset");
+			}, 1000);
+		});
+		return false;
+	});
+
+});
     </script>
     <!-- Yandex.Metrika counter -->
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter43199824 = new Ya.Metrika({
+                    id:43199824,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/43199824" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
     <!-- /Yandex.Metrika counter -->
     <!-- Google Analytics counter -->
     <!-- /Google Analytics counter -->

@@ -699,3 +699,7 @@ input[type="submit"] {
         width: 200px;
     }
 }
+
+.parallax-window, .parallax-window-2{
+    height: 600px;
+}
