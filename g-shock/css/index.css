@@ -1,0 +1,393 @@
+/* ::::: http://hitwatches.ru/ladydiver/css/reset.css ::::: */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0px; padding: 0px; border: 0px none; outline: 0px none; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; }
+:focus { outline: 0px none; }
+body { line-height: 1; color: black; background: none repeat scroll 0% 0% white; }
+ol, ul { list-style: outside none none; }
+blockquote::before, blockquote::after, q::before, q::after { content: ""; }
+/* ::::: http://hitwatches.ru/ladydiver/css/fonts.css ::::: */
+
+@font-face {
+	font-family: "OpenSans";
+	font-style: normal;
+	font-weight: normal;
+	src: url('../fonts/opensans.eot')/*tpa=http://trend-today.ru/G-Shock/fonts/opensans.eot*/ format("embedded-opentype"), url('../fonts/opensans.woff')/*tpa=http://trend-today.ru/G-Shock/fonts/opensans.woff*/ format("woff"), url('../fonts/opensans.html')/*tpa=http://trend-today.ru/G-Shock/fonts/opensans.html*/ format("truetype"), url('../fonts/opensans.svg')/*tpa=http://trend-today.ru/G-Shock/fonts/opensans.svg*/ format("svg");
+}
+@font-face {
+	font-family: "PTSans-Bold";
+	font-style: normal;
+	font-weight: normal;
+	src: url('../fonts/ptsans-bold.eot')/*tpa=http://trend-today.ru/G-Shock/fonts/ptsans-bold.eot*/ format("embedded-opentype"), url('../fonts/ptsans-bold.woff')/*tpa=http://trend-today.ru/G-Shock/fonts/ptsans-bold.woff*/ format("woff"), url('../fonts/ptsans-bold.html')/*tpa=http://trend-today.ru/G-Shock/fonts/ptsans-bold.html*/ format("truetype"), url('../fonts/ptsans-bold.svg')/*tpa=http://trend-today.ru/G-Shock/fonts/ptsans-bold.svg*/ format("svg");
+}
+@font-face {
+	font-family: "PTSans-Italic";
+	font-style: normal;
+	font-weight: normal;
+	src: url('../fonts/ptsans-italic.eot')/*tpa=http://trend-today.ru/G-Shock/fonts/ptsans-italic.eot*/ format("embedded-opentype"), url('../fonts/ptsans-italic.woff')/*tpa=http://trend-today.ru/G-Shock/fonts/ptsans-italic.woff*/ format("woff"), url('../fonts/ptsans-italic.html')/*tpa=http://trend-today.ru/G-Shock/fonts/ptsans-italic.html*/ format("truetype"), url('../fonts/ptsans-italic.svg')/*tpa=http://trend-today.ru/G-Shock/fonts/ptsans-italic.svg*/ format("svg");
+}
+@font-face {
+	font-family: "PTSans-Narrow";
+	font-style: normal;
+	font-weight: normal;
+	src: url('../fonts/ptsans-narrow.eot')/*tpa=http://trend-today.ru/G-Shock/fonts/ptsans-narrow.eot*/ format("embedded-opentype"), url('../fonts/ptsans-narrow.woff')/*tpa=http://trend-today.ru/G-Shock/fonts/ptsans-narrow.woff*/ format("woff"), url('../fonts/ptsans-narrow.html')/*tpa=http://trend-today.ru/G-Shock/fonts/ptsans-narrow.html*/ format("truetype"), url('../fonts/ptsans-narrow.svg')/*tpa=http://trend-today.ru/G-Shock/fonts/ptsans-narrow.svg*/ format("svg");
+}
+@font-face {
+	font-family: "PTSans-NarrowBold";
+	font-style: normal;
+	font-weight: normal;
+	src: url('../fonts/ptsans-narrowbold.eot')/*tpa=http://trend-today.ru/G-Shock/fonts/ptsans-narrowbold.eot*/ format("embedded-opentype"), url('../fonts/ptsans-narrowbold.woff')/*tpa=http://trend-today.ru/G-Shock/fonts/ptsans-narrowbold.woff*/ format("woff"), url('../fonts/ptsans-narrowbold.html')/*tpa=http://trend-today.ru/G-Shock/fonts/ptsans-narrowbold.html*/ format("truetype"), url('../fonts/ptsans-narrowbold.svg')/*tpa=http://trend-today.ru/G-Shock/fonts/ptsans-narrowbold.svg*/ format("svg");
+}
+@font-face {
+	font-family: "PTSans-Regular";
+	font-style: normal;
+	font-weight: normal;
+	src: url('../fonts/ptsans-regular.eot')/*tpa=http://trend-today.ru/G-Shock/fonts/ptsans-regular.eot*/ format("embedded-opentype"), url('../fonts/ptsans-regular.woff')/*tpa=http://trend-today.ru/G-Shock/fonts/ptsans-regular.woff*/ format("woff"), url('../fonts/ptsans-regular.html')/*tpa=http://trend-today.ru/G-Shock/fonts/ptsans-regular.html*/ format("truetype"), url('../fonts/ptsans-regular.svg')/*tpa=http://trend-today.ru/G-Shock/fonts/ptsans-regular.svg*/ format("svg");
+}
+/* ::::: http://hitwatches.ru/ladydiver/css/style.css ::::: */
+
+a { outline: medium none; border: medium none; text-decoration: none; color: rgb(255, 255, 255); }
+#menu { width: 100%; position: fixed; min-width: 1065px; height: 85px; background: none repeat scroll 0% 0% rgba(26, 26, 26, 0.6); margin: 0px auto; z-index: 100; padding: 20px 0px 0px; }
+.menu-header { width: 1065px; height: 105px; margin: 0px auto; overflow: hidden; position: relative; }
+.header { width: 100%; min-width: 1065px; height: 772px; margin: 0px auto; background: url('../img/bg-header2.jpg')/*tpa=http://trend-today.ru/G-Shock/img/bg-header2.jpg*/ no-repeat scroll center center transparent;background-size:cover; }
+.header3 { width: 100%; min-width: 1065px; overflow: hidden; height: 667px; margin: 0px auto; background: url('../img/bg-header2.jpg')/*tpa=http://trend-today.ru/G-Shock/img/bg-header2.jpg*/ no-repeat scroll center center transparent; }
+.devushka { width: 450px; position: absolute; top: 105px; left: -100px; }
+.devushka3 { width: 450px; position: absolute; left: -100px; }
+.watch { width: 500px; position: absolute; top: 90px; left: -90px; }
+.watch3 { width: 500px; position: absolute; top: 102px; left: -110px; }
+.price { width: 183px; height: 183px; position: absolute; left: -20px; top: 150px; padding: 20px 0px 0px; background: url('../img/price.png')/*tpa=http://trend-today.ru/G-Shock/img/price.png*/ no-repeat scroll 0% 0% transparent; }
+.price p { font: 25px/1.5 "PTSans-Regular"; color: rgb(255, 255, 255); margin: 0px; text-align: center; }
+.price6 { width: 183px; height: 183px; position: absolute; left: 10px; top: 172px; padding: 20px 0px 0px; background: url('../img/price.png')/*tpa=http://trend-today.ru/G-Shock/img/price.png*/ no-repeat scroll 0% 0% transparent; }
+.price6 p { font: 25px/1.5 "PTSans-Regular"; color: rgb(255, 255, 255); margin: 0px; text-align: center; }
+.txt-price1 { text-decoration: line-through; }
+.txt-price2 { font: 50px "PTSans-Regular"; }
+.header2 { width: 1065px; margin: 0px auto; position: relative; }
+.header2 h1 { font: 30px/1.5 "PTSans-Narrow"; color: rgb(0, 0, 0); margin: 0px; text-align: center; position: absolute; top: 100px; left: 250px;    text-shadow: 1px 1px 3px #333;}
+.header6 { width: 1065px; margin: 0px auto; position: relative; }
+.header6 h1 { font: 36px/1.5 "PTSans-Narrow"; color: rgb(0, 0, 0); margin: 0px; text-align: center; position: absolute; top: 35px; left: 250px;text-shadow: 1px 1px 3px #333; }
+.header2-txt { font: 36px "PTSans-NarrowBold"; }
+#menu .logo { position: absolute; left: 60px; }
+#menu .logo p { font: 16px/1.2 "PTSans-Regular"; color: rgb(255, 255, 255); margin: 0px; text-align: left; }
+#menu ul { width: 600px; margin-left: 300px; }
+#menu ul li { font: 15px "OpenSans"; float: left; color: rgb(255, 255, 255); padding-left: 50px; padding-top: 25px; }
+#menu li a { border-bottom: 1px dashed rgb(255, 255, 255); }
+#menu .logo-menu { position: absolute; left: 60px; }
+.menu-header p { font: 14px/1.2 "OpenSans"; color: rgb(255, 255, 255); margin: 0px 3px 0px 0px; text-align: right; }
+.menu-header h2 { font: 24px/1.2 "OpenSans"; color: rgb(255, 255, 255); margin: 0px 6px 0px 0px; text-align: right; }
+.button-zv { width: 190px; padding: 4px 24px; font: 14px "OpenSans"; color: rgb(255, 255, 255); background: none repeat scroll 0% 0% rgb(255, 102, 0); border-radius: 10px; border: medium none; position: absolute; top: 42px; right: 72px; margin: 5px 0px 0px 115px; cursor: pointer; }
+.button-zv:hover { background: none repeat scroll 0% 0% rgb(230, 94, 3); }
+.button-zv, x:-moz-any-link { margin: 5px 0px 0px 115px; }
+.button-zv-txt { position: absolute; right: 70px; }
+.form { width: 272px; height: 530px; position: absolute; top: 165px; right: 0px; padding: 20px 30px 0px; background: url('../img/form-bg.png')/*tpa=http://trend-today.ru/G-Shock/img/form-bg.png*/ no-repeat scroll 0% 0% transparent; }
+.form h2 { font: 33px/1.2 "PTSans-Regular"; color: rgb(255, 255, 255); margin: 0px 0px 0px 25px; text-align: left; }
+.form button { font-size: 26px; color: rgb(255, 255, 255); font-family: "PTSans-Bold"; width: 267px; height: 46px; background: linear-gradient(to bottom, rgb(255, 211, 155) 0%, rgb(255, 80, 0) 100%) repeat scroll 0% 0% transparent; border: 1px solid red; margin-top: 17px; cursor: pointer; }
+.form input { width: 250px; height: 43px; border: medium none; margin-top: 17px; box-shadow: 2px 0px 0px rgb(221, 216, 210) inset; font-size: 15px; font-family: "PTSans-Regular"; color: rgb(102, 102, 102); padding-left: 16px; }
+.form select { width: 267px; height: 43px; border: medium none; margin-top: 17px; box-shadow: 2px 0px 0px rgb(221, 216, 210) inset; font-family: "PTSans-Regular"; color: rgb(102, 102, 102); padding-left: 16px; -moz-appearance: none; background: url('../img/arrow.png')/*tpa=http://trend-today.ru/G-Shock/img/arrow.png*/ no-repeat scroll 98% 50% rgb(255, 255, 255); cursor: pointer; }
+.form select option { padding-left: 16px; }
+.timer { width: 310px; position: absolute; top: 450px; left: 30px; }
+.form5 { width: 272px; height: 849px; position: absolute; top: 65px; right: 5px; padding: 20px 30px 0px; background: url('../img/form-bg.png')/*tpa=http://trend-today.ru/G-Shock/img/form-bg.png*/ no-repeat scroll 0% 0% transparent; }
+.form5 h2 { font: 33px/1.2 "PTSans-Regular"; color: rgb(255, 255, 255); margin: 0px 0px 0px 25px; text-align: left; }
+.form5 button { font-size: 26px; color: rgb(255, 255, 255); font-family: "PTSans-Bold"; width: 267px; height: 46px; background: linear-gradient(to bottom, rgb(255, 211, 155) 0%, rgb(255, 80, 0) 100%) repeat scroll 0% 0% transparent; border: 1px solid red; margin-top: 17px; cursor: pointer; }
+.form5 input { width: 250px; height: 37px; border: medium none; margin-top: 17px; box-shadow: 2px 0px 0px rgb(221, 216, 210) inset; font-size: 16px; font-family: "PTSans-Regular"; color: rgb(102, 102, 102); padding-left: 16px; }
+.form5 select { width: 267px; height: 37px; border: medium none; margin-top: 17px; box-shadow: 2px 0px 0px rgb(221, 216, 210) inset; font-size: 16px; font-family: "PTSans-Regular"; color: rgb(102, 102, 102); padding-left: 16px; -moz-appearance: none; background: url('../img/arrow.png')/*tpa=http://trend-today.ru/G-Shock/img/arrow.png*/ no-repeat scroll 95% 50% rgb(255, 255, 255); cursor: pointer; }
+.form5 select option { padding-left: 16px; }
+.predlogenie { width: 100%; min-width: 1065px; margin: 0px auto; padding: 50px 0px 10px; background: none repeat scroll 0% 0% rgb(234, 234, 234); }
+.predlogenie h1 { font: 35px/1.2 "PTSans-Bold"; color: rgb(51, 51, 102); margin: 0px; text-align: center; }
+.predlogenie h2 { font: 26px/2 "PTSans-Italic"; color: rgb(51, 51, 51); margin: 0px; text-align: center; }
+.pre-bg { width: 1065px; height: 262px; margin: 35px auto; position: relative; background: url('../img/pred-bg.html')/*tpa=http://trend-today.ru/G-Shock/img/pred-bg.html*/ no-repeat scroll 0% 0% transparent; }
+.txt1 { width: 195px; position: absolute; top: 140px; left: 170px; }
+.txt2 { width: 195px; position: absolute; top: 140px; left: 460px; }
+.txt3 { width: 195px; position: absolute; top: 140px; right: 120px; }
+.pre-bg p { font: 18px/2 "PTSans-Regular"; color: rgb(51, 51, 51); margin: 0px 3px 0px 0px; text-align: center; }
+.txt1-1 { font: 18px "PTSans-Regular"; text-decoration: line-through; }
+.txt1-2 { font: 24px "PTSans-Bold"; color: rgb(255, 102, 0); }
+.pred-img { position: absolute; top: -83px; right: 0px; }
+.bg-video { width: 100%; min-width: 1065px; height: 677px; background: url('../img/bg-video.jpg')/*tpa=http://trend-today.ru/G-Shock/img/bg-video.jpg*/ no-repeat scroll center center transparent; }
+.block1 { width: 1065px; margin: 0px auto; padding: 55px 0px 0px; }
+.block2 { width: 1065px; margin: 0px auto; padding: 10px 0px 0px; }
+.bg-video h1 { font: 35px/1.2 "PTSans-Regular"; color: rgb(0, 0, 0); margin: 0px; text-align: center; }
+.bg-video h2 { font: 35px/1.2 "PTSans-Bold"; color: rgb(0, 0, 0); margin: 0px; text-align: center; }
+.bg-vitrina1 { width: 100%; min-width: 1065px; height: 672px; margin: -1px 0px 0px; background: url('../img/bg-vitrina1.jpg')/*tpa=http://trend-today.ru/G-Shock/img/bg-vitrina1.jpg*/ no-repeat scroll center center transparent; }
+.bg-vitrina1 h1 { font: 35px/1.2 "PTSans-Bold"; color: rgb(0, 0, 0); margin: 0px; text-align: center; }
+.bg-vitrina2 { width: 100%; min-width: 1065px; height: 630px; margin: -1px 0px 0px; background: url('../img/bg-vitrina2.jpg')/*tpa=http://trend-today.ru/G-Shock/img/bg-vitrina2.jpg*/ no-repeat scroll center center transparent; }
+.block-video { width: 950px; height: 300px; margin: 60px auto; background: none repeat scroll 0% 0% rgba(109, 19, 20, 0.63); }
+.video1 { width: 500px; height: 300px; float: left; }
+.video-txt { width: 410px; float: left; padding: 25px 0px 0px 25px; }
+.video-txt p { font: 17px/1.5 "PTSans-Regular"; color: rgb(255, 255, 255); margin: 0px; text-align: left; }
+.watch-vitrin1 { width: 295px; height: 550px; float: left; position: relative; margin: 0px 0px 0px 50px; background: url('../img/vitrin-watch1.png')/*tpa=http://trend-today.ru/G-Shock/img/vitrin-watch1.png*/ no-repeat scroll 0% 0% transparent; }
+.watch-vitrin2 { width: 295px; height: 550px; float: left; position: relative; margin: 0px 0px 0px 38px; background: url('../img/vitrin-watch2.png')/*tpa=http://trend-today.ru/G-Shock/img/vitrin-watch2.png*/ no-repeat scroll 0% 0% transparent; }
+.watch-vitrin3 { width: 295px; height: 550px; float: left; position: relative; margin: 0px 0px 0px 38px; background: url('../img/vitrin-watch3.png')/*tpa=http://trend-today.ru/G-Shock/img/vitrin-watch3.png*/ no-repeat scroll 0% 0% transparent; }
+.watch-vitrin4 { width: 295px; height: 550px; float: left; position: relative; margin: 0px 0px 0px 50px; background: url('../img/vitrin-watch4.png')/*tpa=http://trend-today.ru/G-Shock/img/vitrin-watch4.png*/ no-repeat scroll 0% 0% transparent; }
+.watch-vitrin5 { width: 295px; height: 550px; float: left; position: relative; margin: 0px 0px 0px 38px; background: url('../img/vitrin-watch5.png')/*tpa=http://trend-today.ru/G-Shock/img/vitrin-watch5.png*/ no-repeat scroll 0% 0% transparent; }
+.watch-vitrin6 { width: 295px; height: 550px; float: left; position: relative; margin: 0px 0px 0px 38px; background: url('../img/vitrin-watch6.png')/*tpa=http://trend-today.ru/G-Shock/img/vitrin-watch6.png*/ no-repeat scroll 0% 0% transparent; }
+.block-vitrin1 { width: 1065px; margin: 0px auto; padding: 50px 0px 0px; }
+.block-vitrin2 { width: 1065px; margin: 0px auto; padding: 20px 0px 0px; }
+.bg-vitrina1 h2 { font: 20px/1.2 "PTSans-Regular"; color: rgb(51, 51, 102); margin: 0px; text-align: center; }
+.bg-vitrina1 h3 { font: 26px/1.2 "PTSans-Regular"; color: rgb(51, 51, 102); margin: 0px; text-align: center; }
+.vt-txt { font: 26px "PTSans-Bold"; color: rgb(51, 51, 102); text-decoration: none; }
+.vt-txt1 { text-decoration: line-through; color: rgb(51, 51, 51); }
+.bg-vitrina1 p { font: 20px/1.2 "PTSans-Regular"; color: rgb(51, 51, 51); margin: 0px; text-align: center; }
+.bg-vitrina2 h2 { font: 20px/1.2 "PTSans-Regular"; color: rgb(51, 51, 102); margin: 0px; text-align: center; }
+.bg-vitrina2 h3 { font: 26px/1.2 "PTSans-Regular"; color: rgb(51, 51, 51); margin: 0px; text-align: center; }
+.bg-vitrina2 p { font: 20px/1.2 "PTSans-Regular"; color: rgb(51, 51, 51); margin: 0px; text-align: center; }
+.vitrin-txt1 { top: 360px; left: 25px; position: absolute; }
+.vitrin-txt2 { top: 360px; left: 25px; position: absolute; }
+.vitrin-txt3 { top: 360px; left: 25px; position: absolute; }
+.vitrin-txt4 { top: 360px; left: 25px; position: absolute; }
+.vitrin-txt5 { top: 360px; left: 25px; position: absolute; }
+.bg-vitrina1 button { font-size: 26px; color: rgb(255, 255, 255); font-family: "PTSans-Bold"; width: 180px; height: 43px; background: linear-gradient(to bottom, rgb(255, 211, 155) 0%, rgb(255, 80, 0) 100%) repeat scroll 0% 0% transparent; border: 1px solid red; margin: 10px 0px 0px 34px; cursor: pointer; }
+.bg-vitrina2 button { font-size: 26px; color: rgb(255, 255, 255); font-family: "PTSans-Bold"; width: 180px; height: 43px; background: linear-gradient(to bottom, rgb(255, 211, 155) 0%, rgb(255, 80, 0) 100%) repeat scroll 0% 0% transparent; border: 1px solid red; margin: 10px 0px 0px 34px; cursor: pointer; }
+.button-rez { margin: 10px 0px 0px 50px; }
+.opisanie { width: 100%; min-width: 1065px; background: url('../img/bg-opisanie.jpg')/*tpa=http://trend-today.ru/G-Shock/img/bg-opisanie.jpg*/ no-repeat scroll center center transparent; }
+.opisanie-block { width: 1065px; height: 482px; margin: 0px auto; position: relative; padding: 65px 0px 0px; }
+.opisanie-block h1 { font: 35px/1.2 "PTSans-Regular"; color: rgb(51, 51, 102); margin: 0px; text-align: center; }
+.opisanie2 { width: 100%; min-width: 1065px; background: url('../img/bg-opisanie2.jpg')/*tpa=http://trend-today.ru/G-Shock/img/bg-opisanie2.jpg*/ no-repeat scroll center center transparent; }
+.opisanie2-block { width: 1065px; height: 482px; margin: 0px auto; position: relative; padding: 65px 0px 0px; }
+.opisanie2-block h1 { font: 35px/1.2 "PTSans-Regular"; color: rgb(51, 51, 102); margin: 0px; text-align: center; }
+.opisanie-txt { font: 35px "PTSans-Bold"; }
+.watch-pink { width: 497px; position: absolute; top: 145px; left: 50px; }
+.bullet-block { width: 300px; position: absolute; top: 175px; right: 210px; }
+.bullet-block ul { list-style-type: none; margin: 0px; padding: 0px; }
+.bullet-block li { font: 18px/0.8 "PTSans-Regular"; color: rgb(0, 0, 0); margin-left: 20px; margin-top: 10px; padding: 0px 0px 15px 35px; background: url('../img/bullet.png')/*tpa=http://trend-today.ru/G-Shock/img/bullet.png*/ no-repeat scroll 0% 0% transparent; }
+.six-prichin { width: 100%; min-width: 1065px; height: 585px; background: url('../img/six-bg.jpg')/*tpa=http://trend-today.ru/G-Shock/img/six-bg.jpg*/ no-repeat scroll center center transparent; }
+.six-prichin h1 { font: 35px/1.2 "PTSans-Regular"; color: rgb(255, 255, 255); margin: 0px; text-align: center; }
+.six-txt { font: 35px "PTSans-Bold"; }
+.six-prichin2 { width: 1065px; padding: 65px 0px 0px; margin: 0px auto; }
+.six-block { /*width: 950px;*/    width: 1020px; height: 356px; margin: 50px auto; position: relative; background: url('../img/six-watch.png')/*tpa=http://trend-today.ru/G-Shock/img/six-watch.png*/ no-repeat scroll 0% 0% transparent; }
+.forma2 { width: 100%; min-width: 1065px; height: 713px; background: url('../img/forma-zahvata2.jpg')/*tpa=http://trend-today.ru/G-Shock/img/forma-zahvata2.jpg*/ no-repeat scroll center center transparent; }
+.six-block p { font: 20px/1.2 "PTSans-Regular"; color: rgb(255, 255, 255); margin: 0px; text-align: left; }
+.six-txt1 { width: 436px; position: absolute; top: -5px; }
+.six-txt2 { width: 295px; position: absolute; top: 145px; left: 70px; }
+.six-txt3 { width: 340px; position: absolute; top: 265px; left: 55px; }
+.six-txt4 { width: 335px; position: absolute; top: -5px; right: -20px; }
+.six-txt5 { width: 230px; position: absolute; top: 145px; right: 35px; }
+.six-txt6 { width: 225px; position: absolute; top: 290px; right: 90px; }
+.six-txt1-1 { font: 24px "PTSans-Bold"; }
+.bg-podarok { width: 100%; min-width: 1065px; height: 514px; background: url('../img/bg-podarok.jpg')/*tpa=http://trend-today.ru/G-Shock/img/bg-podarok.jpg*/ no-repeat scroll center center transparent; }
+.forma2-2 { width: 1065px; margin: 0px auto; position: relative; padding: 48px 0px 0px; }
+.forma2-2 h1 { font: 36px/1.2 "PTSans-Narrow"; color: rgb(51, 51, 102); margin: 0px; text-align: center; }
+.forma2-txt { font: 36px "PTSans-NarrowBold"; }
+.forma2-txt2 { position: absolute; left: 55px; }
+.watch-cena { width: 628px; position: absolute; left: 38px; top: 163px; }
+.form3 { width: 272px; height: 849px; position: absolute; top: 110px; right: 70px; padding: 20px 30px 0px; background: url('../img/form-bg.png')/*tpa=http://trend-today.ru/G-Shock/img/form-bg.png*/ no-repeat scroll 0% 0% transparent; }
+.form3 h2 { font: 33px/1.2 "PTSans-Regular"; color: rgb(255, 255, 255); margin: 0px 0px 0px 25px; text-align: left; }
+.form3 button { font-size: 26px; color: rgb(255, 255, 255); font-family: "PTSans-Bold"; width: 267px; height: 46px; background: linear-gradient(to bottom, rgb(255, 211, 155) 0%, rgb(255, 80, 0) 100%) repeat scroll 0% 0% transparent; border: 1px solid red; margin-top: 17px; cursor: pointer; }
+.form3 input { width: 250px; height: 37px; border: medium none; margin-top: 17px; box-shadow: 2px 0px 0px rgb(221, 216, 210) inset; font-size: 16px; font-family: "PTSans-Regular"; color: rgb(102, 102, 102); padding-left: 16px; }
+.form3 select { width: 267px; height: 37px; border: medium none; margin-top: 17px; box-shadow: 2px 0px 0px rgb(221, 216, 210) inset; font-size: 16px; font-family: "PTSans-Regular"; color: rgb(102, 102, 102); padding-left: 16px; -moz-appearance: none; background: url('../img/arrow.png')/*tpa=http://trend-today.ru/G-Shock/img/arrow.png*/ no-repeat scroll 95% 50% rgb(255, 255, 255); cursor: pointer; }
+.form3 select option { padding-left: 16px; }
+.price2 { width: 183px; height: 183px; position: absolute; left: 425px; top: 245px; padding: 20px 0px 0px; }
+.price2 p { font: 25px/1.5 "PTSans-Regular"; color: rgb(255, 255, 255); margin: 0px; text-align: center; }
+.price3 { width: 253px; height: 103px; position: absolute; left: 387px; top: 415px; padding: 20px 0px 0px; }
+.price3 p { font: 20px/1.3 "PTSans-Narrow"; color: rgb(255, 255, 255); margin: 0px; text-align: center; }
+.price4 { width: 253px; height: 103px; position: absolute; left: 10px; top: 428px; padding: 20px 0px 0px; }
+.price4 p { font: 20px/1.3 "PTSans-Narrow"; color: rgb(255, 255, 255); margin: 0px; text-align: center; }
+.txt-price3 { font: 22px "PTSans-NarrowBold"; }
+.podarok-block { width: 1065px; margin: 0px auto; position: relative; }
+.podarok-txt { width: 500px;
+    position: absolute;
+    top: 47px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.66);
+    color: #fff;
+    padding: 20px; }
+.podarok-txt p { font: 20px/1.2 "PTSans-Regular"; color: rgb(51, 51, 51); margin: 20px 0px 0px; text-align: left; }
+.podarok-txt h1 { font: 35px/1.2 "PTSans-Bold"; color: rgb(51, 51, 102); margin: 0px; text-align: left; }
+.otzivi { width: 100%; min-width: 1065px; padding: 66px 0px 20px; background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+.otzivi2 { width: 1065px; height: 701px; margin: auto; padding: 60px 0px 0px; position: relative; background: url('../img/otzivi.html')/*tpa=http://trend-today.ru/G-Shock/img/otzivi.html*/ no-repeat scroll center center transparent; }
+.otzivi h1 { font: 35px/1.2 "PTSans-Regular"; color: rgb(51, 51, 102); margin: 0px; text-align: center; }
+.otzivi-txt { font: 35px "PTSans-Bold"; }
+.otziv-zag1 { width: 170px; position: absolute; left: 250px; top: 75px; }
+.otziv-zag2 { width: 170px; position: absolute; left: 250px; top: 435px; }
+.otziv-zag3 { width: 170px; position: absolute; right: 155px; top: 75px; }
+.otziv-zag4 { width: 250px; position: absolute; right: 93px; top: 435px; }
+.otzivi p { font: 18px/1.4 "PTSans-Regular"; color: rgb(51, 51, 51); margin: 0px; text-align: center; }
+.otzivi h3 { font: 23px/1 "PTSans-Bold"; color: rgb(46, 94, 143); margin: 0px; text-align: center; }
+.otziv-txt1 { width: 330px; position: absolute; top: 194px; left: 130px; }
+.otziv-txt1 p { font: 20px/1.2 "PTSans-Regular"; color: rgb(51, 51, 51); margin: 0px; text-align: left; }
+.otziv-txt2 { width: 330px; position: absolute; top: 555px; left: 130px; }
+.otziv-txt2 p { font: 20px/1.2 "PTSans-Regular"; color: rgb(51, 51, 51); margin: 0px; text-align: left; }
+.otziv-txt3 { width: 360px; position: absolute; top: 194px; right: 95px; }
+.otziv-txt3 p { font: 20px/1.2 "PTSans-Regular"; color: rgb(51, 51, 51); margin: 0px; text-align: left; }
+.otziv-txt4 { width: 360px; position: absolute; top: 555px; right: 95px; }
+.otziv-txt4 p { font: 20px/1.2 "PTSans-Regular"; color: rgb(51, 51, 51); margin: 0px; text-align: left; }
+footer { width: 100%; min-width: 1065px; background: none repeat scroll 0% 0% rgb(232, 232, 232); margin: 0px auto; padding: 45px 0px; }
+footer p { font: 13px/1.2 "OpenSans"; color: rgb(51, 51, 51); margin: 0px; text-align: left; }
+.footer { width: 1065px; padding-bottom: 40px; margin: 0px auto; position: relative; }
+.footertxt4 { position: absolute; left: 60px; }
+.footer-zv { width: 205px; position: absolute; right: 50px; top: 0px; }
+.footer-zv h2 { font: 24px/1.2 "PTSans-Regular"; color: rgb(51, 51, 51); margin: 0px; text-align: center; }
+.footer-zv p { font: 15px/1.2 "OpenSans"; color: rgb(51, 51, 51); margin: 0px; text-align: center; border-bottom: 1px dashed rgb(51, 51, 51); }
+.form4 {  }
+.form4 h2 { font: 24px/1.2 "PTSans-Regular"; color: rgb(0, 0, 0); margin: 0px; text-align: center; }
+.form4 h3 { font: 20px/1.5 "PTSans-Regular"; color: rgb(0, 0, 0); margin: 0px; text-align: center; }
+.form4 button { font-size: 26px; color: rgb(255, 255, 255); font-family: "PTSans-Bold"; width: 266px; height: 46px; background: linear-gradient(to bottom, rgb(255, 211, 155) 0%, rgb(255, 80, 0) 100%) repeat scroll 0% 0% transparent; border: 1px solid red; margin-top: 17px; cursor: pointer; }
+.form4 input { width: 250px; height: 37px; border: 1px solid rgb(170, 170, 170); margin-top: 17px; box-shadow: 2px 0px 0px rgb(221, 216, 210) inset; font-size: 16px; font-family: "PTSans-Regular"; color: rgb(102, 102, 102); padding-left: 16px; }
+.form4 select { width: 267px; height: 37px; border: 1px solid rgb(170, 170, 170); margin-top: 17px; box-shadow: 2px 0px 0px rgb(221, 216, 210) inset; font-size: 16px; font-family: "PTSans-Regular"; color: rgb(102, 102, 102); padding-left: 16px; -moz-appearance: none; background: url('../img/arrow.png')/*tpa=http://trend-today.ru/G-Shock/img/arrow.png*/ no-repeat scroll 95% 50% rgb(255, 255, 255); cursor: pointer; }
+.form4 select option { padding-left: 16px; }
+footer a { color: rgb(51, 51, 51); display: block; }
+#text9 p { font: 16px/1.2 "PTSans-Regular"; color: rgb(51, 51, 51); margin: 10px 0px 0px; text-align: left; }
+#text10 p { font: 16px/1.2 "PTSans-Regular"; color: rgb(51, 51, 51); margin: 10px 0px 0px; text-align: left; }
+#text10 h2 { font: 18px/1.2 "PTSans-Bold"; color: rgb(51, 51, 51); margin: 10px 0px 0px; text-align: center; }
+#text11 p { font: 16px/1.2 "PTSans-Regular"; color: rgb(51, 51, 51); margin: 10px 0px 0px; text-align: left; }
+#text11 h2 { font: 18px/1.2 "PTSans-Bold"; color: rgb(51, 51, 51); margin: 10px 0px 0px; text-align: center; }
+#text11 ul { list-style-type: none; margin: 0px; padding: 0px; }
+#text11 li { font: 16px/1 "PTSans-Regular"; color: rgb(0, 0, 0); margin-left: 20px; margin-top: 7px; padding: 0px 0px 15px 35px; background: url('../img/bullet.png')/*tpa=http://trend-today.ru/G-Shock/img/bullet.png*/ no-repeat scroll 0% 0% transparent; }
+/* ::::: http://hitwatches.ru/ladydiver/fancybox/jquery.fancybox-1.3.4.css ::::: */
+
+#fancybox-loading { position: fixed; top: 50%; left: 50%; width: 40px; height: 40px; margin-top: -20px; margin-left: -20px; cursor: pointer; overflow: hidden; z-index: 1104; display: none; }
+#fancybox-loading div { position: absolute; top: 0px; left: 0px; width: 40px; height: 480px; background-image: url('fancybox.html')/*tpa=http://trend-today.ru/G-Shock/css/fancybox.html*/; }
+#fancybox-overlay { position: absolute; top: 0px; left: 0px; width: 100%; z-index: 1100; display: none; }
+#fancybox-tmp { padding: 0px; margin: 0px; border: 0px none; overflow: auto; display: none; }
+#fancybox-wrap { position: absolute; top: 0px; left: 0px; padding: 20px; z-index: 1101; outline: medium none; display: none; }
+#fancybox-outer { position: relative; width: 100%; height: 100%; background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+#fancybox-content { width: 0px; height: 0px; padding: 0px; outline: medium none; position: relative; overflow: hidden; z-index: 1102; border: 0px solid rgb(255, 255, 255); }
+#fancybox-close { position: absolute; top: -15px; right: -15px; width: 30px; height: 30px; background: url('../img/fancybox.html')/*tpa=http://trend-today.ru/G-Shock/img/fancybox.html*/ repeat scroll -40px 0px transparent; cursor: pointer; z-index: 1103; display: none; }
+#fancybox-left, #fancybox-right { position: absolute; bottom: 0px; height: 100%; width: 35%; cursor: pointer; outline: medium none; background: url('../img/blank.gif')/*tpa=http://trend-today.ru/G-Shock/img/blank.gif*/ repeat scroll 0% 0% transparent; z-index: 1102; display: none; }
+#fancybox-left { left: 0px; }
+#fancybox-right { right: 0px; }
+#fancybox-left-ico, #fancybox-right-ico { position: absolute; top: 50%; left: -9999px; width: 30px; height: 30px; margin-top: -15px; cursor: pointer; z-index: 1102; display: block; }
+#fancybox-left-ico { background-image: url('fancybox.html')/*tpa=http://trend-today.ru/G-Shock/css/fancybox.html*/; background-position: -40px -30px; }
+#fancybox-right-ico { background-image: url('fancybox.html')/*tpa=http://trend-today.ru/G-Shock/css/fancybox.html*/; background-position: -40px -60px; }
+#fancybox-left:hover, #fancybox-right:hover { visibility: visible; }
+#fancybox-left:hover span { left: 20px; }
+#fancybox-right:hover span { left: auto; right: 20px; }
+.fancybox-bg { position: absolute; padding: 0px; margin: 0px; border: 0px none; width: 20px; height: 20px; z-index: 1001; }
+#fancybox-bg-n { top: -20px; left: 0px; width: 100%; background-image: url('fancybox-x.html')/*tpa=http://trend-today.ru/G-Shock/css/fancybox-x.html*/; }
+#fancybox-bg-ne { top: -20px; right: -20px; background-image: url('fancybox.html')/*tpa=http://trend-today.ru/G-Shock/css/fancybox.html*/; background-position: -40px -162px; }
+#fancybox-bg-e { top: 0px; right: -20px; height: 100%; background-image: url('fancybox-y.html')/*tpa=http://trend-today.ru/G-Shock/css/fancybox-y.html*/; background-position: -20px 0px; }
+#fancybox-bg-se { bottom: -20px; right: -20px; background-image: url('fancybox.html')/*tpa=http://trend-today.ru/G-Shock/css/fancybox.html*/; background-position: -40px -182px; }
+#fancybox-bg-s { bottom: -20px; left: 0px; width: 100%; background-image: url('fancybox-x.html')/*tpa=http://trend-today.ru/G-Shock/css/fancybox-x.html*/; background-position: 0px -20px; }
+#fancybox-bg-sw { bottom: -20px; left: -20px; background-image: url('fancybox.html')/*tpa=http://trend-today.ru/G-Shock/css/fancybox.html*/; background-position: -40px -142px; }
+#fancybox-bg-w { top: 0px; left: -20px; height: 100%; background-image: url('fancybox-y.html')/*tpa=http://trend-today.ru/G-Shock/css/fancybox-y.html*/; }
+#fancybox-bg-nw { top: -20px; left: -20px; background-image: url('fancybox.html')/*tpa=http://trend-today.ru/G-Shock/css/fancybox.html*/; background-position: -40px -122px; }
+#fancybox-title { font-family: Helvetica; font-size: 12px; z-index: 1102; }
+/* ::::: http://babylisswoman.ru/css/magnific-popup.css ::::: */
+
+.mfp-container::before { content: ""; display: inline-block; height: 100%; vertical-align: middle; }
+.mfp-align-top .mfp-container::before { display: none; }
+button::-moz-focus-inner { padding: 0px; border: 0px none; }
+.mfp-arrow::before, .mfp-arrow::after, .mfp-arrow .mfp-b, .mfp-arrow .mfp-a { content: ""; display: block; width: 0px; height: 0px; position: absolute; left: 0px; top: 0px; margin-top: 35px; margin-left: 35px; border: medium inset transparent; }
+.mfp-arrow::after, .mfp-arrow .mfp-a { border-top-width: 13px; border-bottom-width: 13px; top: 8px; }
+.mfp-arrow::before, .mfp-arrow .mfp-b { border-top-width: 21px; border-bottom-width: 21px; opacity: 0.7; }
+.mfp-arrow-left::after, .mfp-arrow-left .mfp-a { border-right: 17px solid white; margin-left: 31px; }
+.mfp-arrow-left::before, .mfp-arrow-left .mfp-b { margin-left: 25px; border-right: 27px solid rgb(63, 63, 63); }
+.mfp-arrow-right::after, .mfp-arrow-right .mfp-a { border-left: 17px solid white; margin-left: 39px; }
+.mfp-arrow-right::before, .mfp-arrow-right .mfp-b { border-left: 27px solid rgb(63, 63, 63); }
+.mfp-figure::after { content: ""; position: absolute; left: 0px; top: 40px; bottom: 40px; display: block; right: 0px; width: auto; height: auto; z-index: -1; box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6); background: none repeat scroll 0% 0% rgb(68, 68, 68); }
+@media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
+	.mfp-img-mobile .mfp-figure::after { top: 0px; bottom: 0px; }
+}
+@media all and (max-width: 900px) {
+}
+.eTimer .etUnit .etNumber { width: 16.7344px; }
+.eTimer { display: inline-block; line-height: normal; font-family: PTSans-Regular; color: rgb(255, 253, 253); padding: 0px; background: none repeat scroll 0% 0% transparent; border: 0px solid white; border-radius: 0px; box-shadow: 0px 0px 0px 0px transparent inset; }
+.eTimer .etTitle { margin-bottom: 10px; font-size: 12px; }
+.eTimer .etUnit { display: inline-block; }
+.eTimer .etUnit .etNumber { display: inline-block; margin: 1px; text-align: center; font-family: PTSans-NarrowBold; font-size: 35px; color: white; padding: 0px 5px; background: none repeat scroll 0% 0% rgb(51, 51, 102); border: 0px solid white; border-radius: 0px; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5) inset; }
+.eTimer .etUnit .etSign { text-align: center; font-size: 14px; }
+.eTimer .etSep { display: inline-block; vertical-align: top; font-size: 35px; padding: 0px 5px; }
+.eTimer .etSep:last-of-type { display: none; }
+.eTimer .etUnit .etNumber { width: 17px; }
+.eTimer { display: inline-block; line-height: normal; font-family: PTSans-Regular; color: rgb(255, 253, 253); padding: 0px; background: none repeat scroll 0% 0% transparent; border: 0px solid white; border-radius: 0px; box-shadow: 0px 0px 0px 0px transparent inset; }
+.eTimer .etTitle { margin-bottom: 10px; font-size: 12px; }
+.eTimer .etUnit { display: inline-block; }
+.eTimer .etUnit .etNumber { display: inline-block; margin: 1px; text-align: center; font-family: PTSans-NarrowBold; font-size: 35px; color: white; padding: 0px 5px; background: none repeat scroll 0% 0% rgb(51, 51, 102); border: 0px solid white; border-radius: 0px; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5) inset; }
+.eTimer .etUnit .etSign { text-align: center; font-size: 14px; }
+.eTimer .etSep { display: inline-block; vertical-align: top; font-size: 35px; padding: 0px 5px; }
+.eTimer .etSep:last-of-type { display: none; }
+.eTimer .etUnit .etNumber { width: 17px; }
+.eTimer { display: inline-block; line-height: normal; font-family: PTSans-Regular; color: rgb(255, 253, 253); padding: 0px; background: none repeat scroll 0% 0% transparent; border: 0px solid white; border-radius: 0px; box-shadow: 0px 0px 0px 0px transparent inset; }
+.eTimer .etTitle { margin-bottom: 10px; font-size: 12px; }
+.eTimer .etUnit { display: inline-block; }
+.eTimer .etUnit .etNumber { display: inline-block; margin: 1px; text-align: center; font-family: PTSans-NarrowBold; font-size: 35px; color: white; padding: 0px 5px; background: none repeat scroll 0% 0% rgb(51, 51, 102); border: 0px solid white; border-radius: 0px; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5) inset; }
+.eTimer .etUnit .etSign { text-align: center; font-size: 14px; }
+.eTimer .etSep { display: inline-block; vertical-align: top; font-size: 35px; padding: 0px 5px; }
+.eTimer .etSep:last-of-type { display: none; }
+.eTimer .etUnit .etNumber { width: 17px; }
+.header-form2 .form {
+    top: 60px;
+}
+#otz-box {
+margin-bottom: 20px;
+    min-height: 290px;
+    float: left;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.otz-head {
+    min-height: 130px;
+}
+.otz-head h3 {
+    padding-top: 40px;
+	    color: rgb(46, 94, 143);
+		    font-size: 23px;
+			font-weight:bold;
+			    text-align: left;
+}
+.otz-img {
+float: left;
+    margin-right: 40px;
+}
+.otz-inn {
+    background: #efefef;
+    padding: 20px 40px;
+    border-radius: 10px;
+	    min-height: 135px;
+}
+.otz-head .date {
+    font-size: 22px;
+    color: rgb(51, 51, 51);
+	text-align: left;
+}
+.otz-box {
+    max-width: 1065px;
+    margin: 20px auto;
+}
+
+
+.yvedw{}
+.yved{
+    position: fixed;
+	top: 80px;
+	right: 30px;
+	border: 5px solid rgba(160,160,160, 0.70);
+	border-radius: 12px;
+	padding: 5px;
+	background: rgba(64,64,64, 0.99);
+	color: #fff;
+	z-index: 999999;
+	font-family: "PTSans-Regular";
+	font-size: 14px;
+	    width: 310px;
+    height: 90px;
+	display: none;
+}
+.yvedi{
+    float: left;
+    width: 50px!important;
+    margin-right: 10px;
+    margin-top: 00px;
+}
+.yvedt{
+    width: 210px;
+    line-height: normal;
+    display: inline-block;
+    vertical-align: middle;
+}
+.yvedf1{
+    background-color: #A8A8A8;
+	opacity: 0.97;
+}
+.yvedf2{
+	background-color: #CD5555;
+}
+.yvedvt{
+    float: left;
+    height: 50px;
+    line-height: 90px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.block1 h1,.block1 h2{
+	color: #fff;
+}
