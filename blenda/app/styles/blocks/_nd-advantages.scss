@@ -1,0 +1,78 @@
+.nd-advantages {
+    background-color: $color--light;
+
+    &__container {
+        padding: 80px 0 40px 0;
+        max-width: 1140px;
+        margin: auto;
+
+        @include respond-to(phones) {
+            padding-top: 40px;
+            padding-bottom: 10px;
+        }
+    }
+
+    &-header {
+        background-image: url('../images/jpg/advantages.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 0 -10px;
+        text-align: center;
+
+        &__title {
+            color: $color--primary;
+            font-size: 3.6rem;
+            font-weight: bold;
+            line-height: 1.5;
+            margin: 0;
+            padding-top: 22rem;
+            padding-bottom: 5rem;
+            text-transform: uppercase;
+
+            @include respond-to(phones) {
+                padding-top: 10rem;
+                font-size: 2.4rem;
+            }
+        }
+
+        &__description {
+            font-size: 2.8rem;
+            color: $color--light;
+            line-height: 1.64;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+
+            @include respond-to(phones) {
+                font-size: 1.8rem;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+
+        &__subheader {
+            font-size: 2.4rem;
+            text-transform: uppercase;
+            display: block;
+            color: $color--light;
+            margin-top: 11rem;
+
+            @include respond-to(phones) {
+                font-size: 1.4rem;
+            }
+        }
+
+        &__scroll {
+            margin: 2rem 0 1rem;
+            $scroll-button-height: 50px;
+            @include ease-transition;
+            fill: transparent;
+            stroke: $color--primary;
+            stroke-width: 2px;
+            font-size: 3rem;
+            height: $scroll-button-height;
+            width: $scroll-button-height;
+        }
+    }
+}

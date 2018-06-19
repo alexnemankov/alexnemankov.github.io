@@ -1,0 +1,80 @@
+.nd-footer {
+    background-color: $color--footer-bg;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100vw;
+
+    &__container {
+        align-items: center;
+        color: $color--light;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 1.6rem;
+        justify-content: space-around;
+        margin: 0 auto;
+        max-width: 1140px;
+        min-height: 115px;
+        padding: 15px 0;
+    }
+
+    &__rights {
+        text-align: left;
+        width: 300px;
+
+        @include respond-to(phones) {
+            flex: 1 100%;
+            text-align: center;
+        }
+    }
+
+    &__reviews {
+        text-align: center;
+        width: 300px;
+
+        @include respond-to(phones) {
+            border-bottom: 1px dotted $color--dark;
+            flex: 1 100%;
+            margin: 0 auto 15px;
+            padding: 15px 0;
+        }
+    }
+
+    &__social {
+        text-align: center;
+        width: 250px;
+
+        @include respond-to(phones) {
+            border-bottom: 1px dotted $color--dark;
+            border-top: 1px dotted $color--dark;
+            flex: 1 100%;
+            margin: 15px auto 0;
+            padding: 15px 0;
+        }
+
+        &-icon {
+            @include ease-transition;
+
+            color: $color--light;
+            font-size: 2rem;
+            margin-right: 30px;
+
+            &:hover {
+                color: $color--primary;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__studio {
+        text-align: center;
+        width: 250px;
+
+        @include respond-to(phones) {
+            flex: 1 100%;
+            text-align: center;
+        }
+    }
+}

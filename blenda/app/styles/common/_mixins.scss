@@ -1,0 +1,28 @@
+@import "sizes";
+
+@mixin ease-transition($time: 0.2s) {
+    transition: all $time ease;
+}
+
+@mixin respond-to($media) {
+    @if $media == phones {
+        @media only screen and (max-width: $break-small) {
+            @content;
+        }
+    }
+    @else if $media == tablets {
+        @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) {
+            @content;
+        }
+    }
+    @else if $media == tablets-phones {
+        @media only screen and (max-width: $break-large - 1) {
+            @content;
+        }
+    }
+    @else if $media == screens {
+        @media only screen and (min-width: $break-large) {
+            @content;
+        }
+    }
+}

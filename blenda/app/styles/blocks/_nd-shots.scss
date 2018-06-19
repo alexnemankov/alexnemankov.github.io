@@ -1,0 +1,55 @@
+.nd-shots {
+    background: url("../images/jpg/price.jpg") no-repeat center center;
+    background-size: cover;
+    padding-bottom: 80px;
+    padding-top: 80px;
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: 1140px;
+    }
+
+    &__text {
+        flex: 8 66%;
+
+        @include respond-to(phones) {
+            flex: 1 100%;
+            padding-bottom: 50px;
+        }
+
+
+        &__header {
+            color: $color--light;
+            font-size: 3.6rem;
+            line-height: 1.6;
+            text-transform: uppercase;
+
+            @include respond-to(phones) {
+                font-size: 2.4rem;
+            }
+        }
+
+        &__subheader {
+            color: $color--light-sub;
+            font-size: 2.4rem;
+            line-height: 1.5;
+            margin: 40px 0;
+            font-weight: normal;
+
+            @include respond-to(phones) {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    &__form {
+        flex: 4 33%;
+
+        @include respond-to(phones) {
+            flex: 1 100%;
+        }
+    }
+}

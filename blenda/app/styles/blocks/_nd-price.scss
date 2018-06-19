@@ -1,0 +1,358 @@
+.nd-price {
+    $column-width: 195px;
+    $title-column-width: 390px;
+    $title-column-width-small: 200px;
+
+    background-color: $color--grey;
+    padding-bottom: 100px;
+    padding-top: 80px;
+
+    @include respond-to(phones) {
+        padding: 0 0 30px 0;
+    }
+
+    &__container {
+        margin: 0 auto;
+        max-width: 1140px;
+        overflow-x: auto;
+    }
+
+    &__hit::before {
+        content: 'Хит';
+        color: $color--primary;
+        font-size: 1.4rem;
+        display: block;
+        position: absolute;
+        top: 4.5rem;
+        left: 0;
+        width: $column-width;
+        text-align: center;
+    }
+
+    &--mobile {
+        display: none;
+        @include respond-to(phones) {
+            display: block;
+        }
+    }
+
+    &__table {
+        font-size: 1.4rem;
+        line-height: 2.6rem;
+        margin-top: 10px;
+        border-collapse: collapse;
+        border-spacing: 0;
+
+        @include respond-to(phones) {
+            margin: 10px 0 0;
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+
+        td,
+        th {
+            border: none;
+            padding: 15px 10px;
+            box-sizing: border-box;
+            max-width: $column-width;
+            width: $column-width;
+            vertical-align: top;
+            text-align: center;
+        }
+
+        td,
+        th {
+             &:nth-child(1) {
+                max-width: $title-column-width;
+                width: $title-column-width;
+                padding-right: 110px;
+                padding-left: 0;
+                text-transform: uppercase;
+                text-align: right;
+                left: 0;
+                position: absolute;
+                top: auto;
+
+                @include respond-to(phones) {
+                    padding-right: 0;
+                    padding-left: 0;
+                    max-width: $title-column-width-small;
+                    width: $title-column-width-small;
+                }
+            }
+        }
+
+        td,
+        th {
+             &:nth-child(4) {
+                background-color: $color--light;
+            }
+        }
+
+        th {
+            padding-top: 80px;
+            padding-bottom: 40px;
+            position: relative;
+        }
+
+        tr:hover td {
+            background-color: $color--light;
+        }
+    }
+
+    &__table-header {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+    }
+
+    &__table-wrapper {
+        position: relative;
+        @include respond-to(phones) {
+            display: none;
+        }
+    }
+
+    &__long-row {
+        height: 6em;
+    }
+
+    &__table-scroller {
+        margin-left: $title-column-width;
+        overflow-x: auto;
+        overflow-y: visible;
+        width: calc(100% - $title-column-width);
+
+        @include respond-to(phones) {
+            margin-left: $title-column-width-small;
+            width: calc(100% - $title-column-width-small);
+        }
+    }
+
+    &__fail-icon {
+        display: inline-block;
+        width: 1.4rem;
+        height: 1.4rem;
+        background-image: url('../images/png/fail.png');
+        background-image: url('../images/svg/fail.svg');
+        background-size: 1.4rem;
+    }
+
+    &__success-icon {
+        display: inline-block;
+        width: 2rem;
+        height: 1.4rem;
+        background-image: url('../images/png/success.png');
+        background-image: url('../images/svg/success.svg');
+        background-size: 2rem 1.4rem;
+    }
+
+    &__time-icon {
+        display: inline-block;
+        width: 1.4rem;
+        height: 1.4rem;
+        background-image: url('../images/png/clock.png');
+        background-image: url('../images/svg/clock.svg');
+        background-size: 1.4rem;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+
+    &__success-text {
+        text-transform: uppercase;
+        color: $color--primary;
+        font-size: 1.8rem;
+    }
+
+    &__weeks {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    &__hours {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    &__description {
+        font-size: 1.6rem;
+        line-height: 1.25;
+    }
+
+    &__price-row {
+        td:nth-child(1) {
+            color: $color--primary;
+        }
+    }
+
+    &__new-price {
+        font-size: 1.8rem;
+        font-variant: small-caps;
+        color: $color--primary;
+    }
+
+    &__old-price {
+        font-size: 2.2rem;
+        font-variant: small-caps;
+        margin-top: 10px;
+        position: relative;
+        display: inline-block;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 110%;
+            left: -5%;
+            top: 55%;
+            display: block;
+            height: 2px;
+            background-color: $color--primary;
+        }
+    }
+
+    &__economy {
+        font-size: 1.5rem;
+        color: #949494;
+        text-transform: uppercase;
+        margin-top: 20px;
+    }
+
+    &__discount-until {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        text-transform: uppercase;
+        margin-top: 20px;
+        vertical-align: middle;
+    }
+
+    &__btn {
+        height: 4rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 1.3rem;
+        &:active {
+            padding-top: 1.2rem;
+        }
+    }
+
+    &__table--mobile {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        margin-top: 10px;
+        border-collapse: collapse;
+        border-spacing: 0;
+
+        td {
+            border: none;
+            padding: 15px 10px;
+            box-sizing: border-box;
+            width: 50%;
+            vertical-align: middle;
+            text-align: center;
+
+            &:nth-child(1) {
+                text-transform: uppercase;
+                text-align: right;
+                padding-right: 0;
+                padding-left: 0;
+            }
+        }
+
+        .nd-price__weeks {
+            font-size: 1.4rem;
+        }
+
+        .nd-price__hours {
+            font-size: 1.2rem;
+            margin: 5px auto;
+        }
+
+        .nd-price__description {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__slide {
+        display: block;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 40px;
+    }
+
+    &__slide-header {
+        color: $color--primary;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1.6rem;
+        padding-bottom: 15px;
+        position: relative;
+
+        &-hit::before {
+            content: 'Хит';
+            color: $color--dark;
+            font-size: 1rem;
+            display: block;
+            position: absolute;
+            bottom: 4.5rem;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__slide-footer {
+        text-align: center;
+        margin: 40px auto 0;
+
+        .nd-price__btn {
+            width: 90%;
+            font-size: 1.4rem;
+            margin-top: 40px;
+        }
+    }
+
+    &__slide-controls {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__slide {
+        &-prev {
+            text-align: right;
+        }
+
+        &-next {
+            text-align: left;
+        }
+
+        &-prev, &-next {
+            @include ease-transition;
+
+            display: block;
+            width: 80px;
+            align-self: stretch;
+            cursor: pointer;
+            padding: 10px 30px;
+
+            svg {
+                width: 20px;
+                fill: $color--light-dark;
+                @include ease-transition;
+            }
+
+            &:hover {
+                background: $color--grey;
+                svg {
+                    fill: $color--primary;
+                }
+            }
+        }
+    }
+
+    &__row-top {
+        td {
+            vertical-align: top;
+        }
+    }
+}

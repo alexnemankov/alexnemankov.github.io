@@ -1,0 +1,59 @@
+.nd-contact {
+    padding: 80px 0 0;
+    background-color: $color--grey;
+
+    @include respond-to(phones) {
+        padding: 0;
+    }
+
+    &__google-map {
+        height: 520px;
+        width: 100%;
+    }
+
+    &__list {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0 auto 20px;
+        max-width: 1140px;
+
+        &__item {
+            text-align: center;
+            margin-bottom: 30px;
+            
+            &:first-child {
+                cursor: pointer;
+            }
+
+            @include respond-to(phones) {
+                flex: 1 100%;
+                margin-bottom: 20px;
+            }
+
+            &__icon {
+                color: $color--primary;
+                display: inline-block;
+                font-size: 4.5rem;
+                margin-bottom: 10px;
+
+                a {
+                    color: $color--primary;
+                }
+            }
+
+            &__text {
+                display: block;
+                font-size: 1.8rem;
+
+                &-link {
+                    text-decoration: none;
+                    color: $color--dark;
+                }
+            }
+        }
+    }
+}
+
+

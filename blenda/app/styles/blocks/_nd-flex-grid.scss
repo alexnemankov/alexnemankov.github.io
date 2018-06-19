@@ -1,0 +1,34 @@
+.nd-flex-grid {
+    align-items: top;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__item {
+        display: block;
+        max-width: 360px;
+        min-width: 330px;
+        padding: 15px 15px 40px 15px;
+
+        &__icon {
+            margin: 0 auto;
+            display: block;
+            height: 6rem;
+        }
+
+        &__title {
+            color: $color--primary;
+            font-size: 2.1rem;
+            line-height: 2.6rem;
+            margin: 25px 0 15px 0;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        &__description {
+            text-align: center;
+            padding: 0 15px;
+            line-height: 1.3333;
+        }
+    }
+}

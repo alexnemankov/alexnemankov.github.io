@@ -1,0 +1,35 @@
+.nd-social-action {
+  padding: 16px 10px 14px;
+
+  .nd-social-action__title {
+    text-align: center;
+    font-family: 'Lato', 'Open Sans', 'Arial', sans-serif;
+    font-size: 18px;
+    margin-bottom: 14px;
+    font-weight: bold;
+    color: #48d9b3;
+  }
+
+  .nd-social-action__social {
+    text-align: center;
+
+    .nd-footer__social-icon {
+      color: #4e4e4e;
+      font-size: 3rem;
+      
+      &:hover {
+        color: #48d9b3;
+      }
+    }
+
+    .icon-telegram {
+      width: 22px;
+      fill: #4e4e4e;;
+      transition: fill .3s ease;
+
+      &:hover {
+        fill: #48d9b3;
+      }
+    }
+  }
+}

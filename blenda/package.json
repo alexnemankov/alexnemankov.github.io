@@ -1,0 +1,39 @@
+{
+  "name": "babarikin-photoschool",
+  "version": "0.0.0",
+  "description": "Photo-school Landing Page (http://www.blenda.by)",
+  "main": "app/index.html",
+  "private": true,
+  "dependencies": {
+    "izimodal": "^1.4.1-d",
+    "jquery": "^3.1.1",
+    "normalize.css": "^4.2.0"
+  },
+  "devDependencies": {
+    "del": "^2.2.2",
+    "es6-promise": "^4.0.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cache-bust": "^1.1.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-if": "^2.0.1",
+    "gulp-sass": "^3.0.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-useref": "^3.1.2",
+    "gulp-util": "^3.0.7",
+    "lightbox2": "^2.10.0",
+    "magnific-popup": "^1.1.0",
+    "run-sequence": "^1.2.2",
+    "swiper": "^4.2.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MeFoDy/babarikin-photoschool.git"
+  },
+  "author": "Nikita Dubko <https://github.com/MeFoDy/>",
+  "bugs": {
+    "url": "https://github.com/MeFoDy/babarikin-photoschool/issues"
+  },
+  "homepage": "https://mefody.github.io/babarikin-photoschool"
+}

@@ -1,0 +1,91 @@
+@import "common/animations";
+@import "common/fonts";
+@import "common/colors";
+@import "common/sizes";
+@import "common/mixins";
+@import "common/button_cta";
+
+@import "blocks/block-header";
+@import "blocks/contact-form";
+@import "blocks/full-width-block";
+@import "blocks/popup";
+@import "blocks/scrollup";
+
+@import "blocks/nd-about";
+@import "blocks/nd-advantages";
+@import "blocks/nd-contact";
+@import "blocks/nd-course-standart";
+@import "blocks/nd-flex-composite-grid";
+@import "blocks/nd-flex-grid";
+@import "blocks/nd-footer";
+@import "blocks/nd-gift";
+@import "blocks/nd-header";
+@import "blocks/nd-menu-form";
+@import "blocks/nd-more";
+@import "blocks/nd-press";
+@import "blocks/nd-price";
+@import "blocks/nd-reviews";
+@import "blocks/nd-services";
+@import "blocks/nd-shots";
+@import "blocks/nd-slider";
+@import "blocks/nd-stoke";
+@import "blocks/nd-success-popup";
+@import "blocks/nd-team";
+@import "blocks/nd-terms";
+@import "blocks/nd-video";
+@import "blocks/nd-faq";
+@import "blocks/nd-social-action";
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Lato', 'Open Sans', 'Arial', sans-serif;
+    font-size: 10px;
+}
+
+body {
+    background-color: $color--body-bg;
+    color: $color--dark;
+    font-size: 1.6rem;
+    overflow-x: hidden;
+}
+
+#nd-terms,
+#nd-free-lesson-form,
+#nd-courses-form,
+#nd-call-form,
+#nd-success-form,
+#nd-success-gift-form,
+#nd-gift-form,
+#nd-more,
+#nd-menu-form {
+    display: none;
+}
+
+#nd-menu-form {
+    background: none;
+}
+
+#nd-gift-form {
+    @include respond-to(phones) {
+        .nd-block-header__subheader {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        .nd-contact-form__btn {
+            margin: 20px 10px;
+        }
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mfp-title {
+    display: none !important;
+}

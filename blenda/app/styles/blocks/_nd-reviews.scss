@@ -1,0 +1,228 @@
+.nd-reviews {
+    $size--review-body-width: 540px;
+    $size--avatar-width: 250px;
+    $size--quote-width: 70px;
+
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 80px 10px 15px;
+
+    @include respond-to(phones) {
+        padding: 0;
+    }
+
+    &__prev, &__next {
+        display: none;
+        color: $color--light-dark;
+        fill: $color--light-dark;
+        align-self: stretch;
+        width: 30px;
+        padding-top: 17%;
+        cursor: pointer;
+
+        &:hover {
+            fill: $color--primary;
+            background: $color--light;
+        }
+
+        @include ease-transition;
+
+        @include respond-to(phones) {
+            display: block;
+        }
+    }
+
+    &__next {
+        transform: scaleX(-1);
+    }
+
+    &__authors {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        margin-top: 50px;
+        flex-wrap: wrap;
+        position: relative;
+
+        @include respond-to(phones) {
+            padding: 0 10px;
+        }
+
+
+
+        .nd-reviews__prev,
+        .nd-reviews__next {
+            position: absolute;
+            padding-top: 0;
+            top: 50%;
+        }
+
+        .nd-reviews__prev {
+            left: 6%;
+        }
+
+        .nd-reviews__next {
+            right: 6%;
+        }
+
+    }
+
+    &__author {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        width: 25%;
+        padding-bottom: 25%;
+        background-size: cover;
+
+        @include respond-to(phones) {
+            display: none;
+
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 100%;
+            background-color: transparent;
+            transition: .3s;
+        }
+
+        &:hover {
+            &:before {
+                background-color: $color--primary-half-transparent;
+                left: 0;
+            }
+        }
+
+        &.active {
+            @include respond-to(phones) {
+                display: block;
+                width: 66%;
+                padding-bottom: 66%;
+            }
+        }
+
+
+
+        img {
+            max-width: 200px;
+        }
+    }
+
+    &__container {
+        margin-top: 70px;
+        text-align: center;
+
+        @include respond-to(phones) {
+            padding: 0 15px;
+            margin-top: 40px;
+        }
+    }
+}
+
+.nd-review {
+    &__body {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+
+    &__title {
+        text-decoration: none;
+        font-size: 3.2rem;
+        color: $color--primary;
+        font-weight: normal;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        display: inline-block;
+
+        @include respond-to(phones) {
+            font-size: 2rem;
+        }
+    }
+
+    &__subtitle {
+        font-size: 2rem;
+        text-transform: uppercase;
+
+        @include respond-to(phones) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__text {
+        padding: 10px 0;
+        margin: 0;
+        font-size: 1.8rem;
+        line-height: 1.333;
+    }
+
+    &__main-text {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 0;
+        line-height: 1.333;
+    }
+
+    &__portfolio {
+        .nd-review__portfolio-gallery {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            margin: 85px auto;
+
+            @include respond-to(phones) {
+                margin: 55px -15px 0;
+                width: 100vw;
+                flex-wrap: wrap;
+            }
+
+            a {
+                display: inline-block;
+                margin: 0 10px;
+            }
+        }
+
+        .nd-review__portfolio-gallery {
+            a {
+                img {
+                    max-height: 277px;
+                    max-width: 100%;
+                }
+            }
+        }
+
+    }
+
+    &__portfolio-item {
+        max-width: 260px;
+        margin: 15px;
+        max-height: 240px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include respond-to(phones) {
+            width: 50vw;
+            margin: 0;
+        }
+
+        img {
+            height: 240px;
+
+            @include respond-to(phones) {
+                height: 240px;
+            }
+        }
+    }
+}
+
+

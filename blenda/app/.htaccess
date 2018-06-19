@@ -1,0 +1,28 @@
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/javascript text/css application/javascript application/x-javascript image/svg+xml application/rss+xml
+</IfModule>
+<filesMatch ".(js|css)$">
+    Header set Cache-Control "max-age=86400, public"
+</filesMatch>
+<filesMatch ".(ico|pdf|jpg|svg|jpeg|png|gif|woff|eot|ttf|woff2)$">
+    Header set Cache-Control "max-age=604800, public"
+</filesMatch>
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^free.blenda.by
+RewriteRule (.*) http://www.free.blenda.by/$1 [R=301,L]
+
+Redirect 301 /standart/ http://www.free.blenda.by
+Redirect 301 /curs/ http://www.free.blenda.by
+Redirect 301 /basic/ http://www.free.blenda.by
+Redirect 301 /intens/ http://www.free.blenda.by
+Redirect 301 /intensmob/ http://www.free.blenda.by
+Redirect 301 /premium/ http://www.free.blenda.by
+Redirect 301 /ok.html http://www.free.blenda.by
+RewriteCond %{QUERY_STRING} ^utm_source=post18$ [NC]
+RewriteRule ^basic/$ /? [R=301,L]
+Redirect 301 /mk/ http://www.free.blenda.by
+Redirect 301 /mob/ http://www.free.blenda.by
+RewriteCond %{QUERY_STRING} ^utm_source=mk0909$ [NC]
+RewriteRule ^basic/$ /? [R=301,L]
+

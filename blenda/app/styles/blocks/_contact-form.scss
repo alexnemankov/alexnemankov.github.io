@@ -1,0 +1,103 @@
+.nd-contact-form {
+    &__confidence, &__more {
+        font-size: 1.6rem;
+        text-align: center;
+
+        a {
+            @include ease-transition;
+
+            color: $color--light-dark;
+            text-decoration: none;
+
+            &:hover {
+                color: darken($color--light-dark, 10%);
+            }
+        }
+    }
+
+    &__btn {
+        margin: 50px 10px 35px;
+        width: calc(100% - 20px);
+    }
+
+    &-group {
+        display: block;
+        margin-bottom: 10px;
+        padding-top: 20px;
+        position: relative;
+        width: 100%;
+
+        &__bar {
+            display: block;
+            position: relative;
+            width: 100%;
+
+            &::before,
+            &::after {
+                @include ease-transition;
+
+                background: $color--primary;
+                bottom: 10px;
+                content: '';
+                height: 2px;
+                position: absolute;
+                width: 0;
+            }
+
+            &::before {
+                left: 50%;
+            }
+
+            &::after {
+                right: 50%;
+            }
+        }
+
+        label {
+            @include ease-transition;
+
+            bottom: 20px;
+            color: $color--light-dark;
+            left: 10px;
+            font-size: 1.8rem;
+            position: absolute;
+        }
+
+        input {
+            background: none;
+            border: 0;
+            border-bottom: 1px solid $color--light-dark;
+            color: $color--light;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            outline: none;
+            padding: 10px;
+            width: 100%;
+
+            &:focus ~ .nd-contact-form-group__bar::before,
+            &:focus ~ .nd-contact-form-group__bar::after {
+                width: 50%;
+            }
+
+            &:focus ~ label,
+            &:valid ~ label {
+                bottom: 55px;
+                color: $color--light;
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    &--dark {
+        .nd-contact-form-group {
+            input {
+                color: $color--dark;
+
+                &:focus ~ label,
+                &:valid ~ label {
+                    color: $color--primary;
+                }
+            }
+        }
+    }
+}

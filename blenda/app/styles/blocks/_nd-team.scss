@@ -1,0 +1,135 @@
+.nd-team {
+    padding: 100px 0;
+
+    @include respond-to(phones) {
+        padding: 0 0 30px;
+    }
+
+    .nd-block-header__subheader {
+        max-width: 900px;
+    }
+
+    &__container {
+        margin: 0 auto;
+        max-width: 1140px;
+        overflow-x: auto;
+    }
+
+    &__swiper-container {
+        max-width: calc(100% - 120px);
+        margin-top: 90px;
+        overflow-x: hidden;
+
+        @include respond-to(phones) {
+            margin-top: 50px;
+        }
+    }
+
+    &__swiper {
+        width: 1260px;
+        max-width: 100vw;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__prev, &__next {
+        @include ease-transition;
+
+        display: block;
+        width: 60px;
+        align-self: stretch;
+        cursor: pointer;
+
+        svg {
+            width: 40px;
+            margin: 150px 10px 0;
+            fill: $color--light-dark;
+            @include ease-transition;
+        }
+
+        &:hover {
+            background: $color--grey;
+            svg {
+                fill: $color--primary;
+            }
+        }
+    }
+
+    &__slide {
+        display: block;
+        text-align: center;
+    }
+
+    &__photo {
+        img {
+            width: 220px;
+            border-radius: 50%;
+        }
+    }
+
+    &__title {
+        font-size: 2.2rem;
+        text-transform: uppercase;
+        color: $color--primary;
+        margin-top: 40px;
+
+        @include respond-to(phones) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__subtitle {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        text-transform: uppercase;
+        margin-top: 30px;
+    }
+
+    &__description {
+        font-size: 1.8rem;
+        line-height: 1.555;
+        margin-top: 15px;
+    }
+
+    &__works {
+        a {
+            display: block;
+            color: #545758;
+            text-transform: uppercase;
+            margin-top: 15px;
+            text-decoration: underline;
+            font-weight: bold;
+            cursor: pointer;
+            transition: .3s;
+
+            &:hover {
+                text-decoration: none;
+                color: #48d9b3;
+            }
+        }
+    }
+
+    &__accent {
+        color: $color--primary;
+        font-weight: bold;
+    }
+
+    &__btn {
+        margin: 50px auto;
+        text-align: center;
+    }
+}
+
+#google-map-zoomed-out {
+    height: 30vw;
+}
+
+.nd-adress-map-popup {
+    .close-modal-button {
+        top: -35px;
+        right: -35px;
+    }
+}
+
+

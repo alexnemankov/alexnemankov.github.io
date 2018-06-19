@@ -1,0 +1,222 @@
+.nd-about {
+    overflow-x: hidden;
+
+    &__block {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    &__container {
+        max-width: 1140px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__btn {
+        margin-top: 2rem;
+        min-width: 60%;
+    }
+
+    &__list {
+        margin: 14rem 0 0 0;
+        list-style: none;
+        padding: 0 0 0 17%;
+
+        @include respond-to(phones) {
+            padding: 0 5px;
+            margin: 0;
+        }
+
+        &-item {
+            display: block;
+            margin-top: 3rem;
+        }
+
+        &-title {
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            display: block;
+            line-height: 1.7;
+            color: $color--primary;
+            font-weight: bold;
+        }
+
+        &-description {
+            font-size: 1.6rem;
+            line-height: 1.5;
+        }
+    }
+
+    &__grey {
+        background-color: $color--grey;
+        position: relative;
+        &::before {
+            display: block;
+            content: '';
+            background-color: $color--grey;
+            width: 200vw;
+            position: absolute;
+            top: 0;
+            left: -50vw;
+            height: 100%;
+            z-index: -1;
+        }
+    }
+
+    &__breacrumb {
+        display: inline-block;
+        margin-top: 1em;
+
+        a {
+            color: $color--dark;
+            @include ease-transition;
+
+            &:hover {
+                color: $color--primary;
+            }
+        }
+    }
+
+    &__social {
+        list-style: none;
+        margin: 20px 0;
+        padding: 0;
+        display: block;
+        text-align: center;
+        font-size: 1.6rem;
+
+        &-link {
+            display: inline-block;
+
+            &::before {
+                content: ' \\ ';
+                padding: 0 0.5em;
+                display: inline-block;
+                color: $color--primary;
+            }
+
+            &:first-child::before {
+                content: '';
+                padding: 0;
+            }
+
+            a {
+                color: $color--dark;
+                @include ease-transition;
+
+                &:hover {
+                    color: $color--primary;
+                }
+            }
+        }
+    }
+
+    &__column {
+        width: 50%;
+        padding: 75px 15px;
+
+        @include respond-to(phones) {
+            width: 100%;
+            padding: 0 0 75px;
+        }
+    }
+
+    &__header {
+        text-transform: uppercase;
+        font-size: 3.6rem;
+        color: $color--primary;
+        font-weight: normal;
+        margin-top: 60px;
+        margin-bottom: 40px;
+
+        @include respond-to(phones) {
+            font-size: 2.4rem;
+            margin-top: 40px;
+        }
+    }
+
+    &__text {
+        line-height: 1.5;
+        font-size: 2rem;
+
+        @include respond-to(phones) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__media {
+        width: 100%;
+    }
+
+    &__media-column {
+        position: relative;
+
+        @include respond-to(phones) {
+            width: 100vw;
+            padding-left: 0;
+            padding-right: 0;
+            margin: 0 -10px;
+            order: 1;
+            padding-bottom: 20px;
+        }
+    }
+
+    &__text-column {
+        @include respond-to(phones) {
+            order: 2;
+        }
+    }
+
+    &__media-title {
+        position: absolute;
+        top: 12.5rem;
+        right: -40%;
+        height: 5rem;
+        line-height: 5rem;
+        color: $color--light;
+        background: $color--primary;
+        width: calc(100% - 30px);
+        text-align: right;
+        padding-right: 3rem;
+        padding-left: 3rem;
+        text-transform: uppercase;
+        font-size: 1.8rem;
+
+        @include respond-to(phones) {
+            left: 0;
+            top: auto;
+            bottom: 0;
+            text-align: left;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+
+    &--text-left {
+        .nd-about__media-title {
+            left: -40%;
+            right: auto;
+            text-align: left;
+
+            @include respond-to(phones) {
+                left: auto;
+                right: 0;
+                text-align: right;
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+        }
+
+        .nd-about__list {
+            padding: 0 17% 0 0;
+
+            @include respond-to(phones) {
+                padding: 0 5px;
+            }
+        }
+    }
+}
