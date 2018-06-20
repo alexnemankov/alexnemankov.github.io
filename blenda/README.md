@@ -1,2 +1,2 @@
-# Фотошкола Павла Бабарыкина
-Photo-school Landing Page (http://www.blenda.by)
+# Фотошкола Blenda
+Photo-school Landing Page (http://www.free.blenda.by)
