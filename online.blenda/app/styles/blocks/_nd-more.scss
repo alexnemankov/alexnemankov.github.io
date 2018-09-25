@@ -1,0 +1,11 @@
+.nd-more {
+    &__text {
+        line-height: 1.4;
+        margin: 0;
+    }
+
+    &__link {
+        padding-bottom: 5px;
+        border-bottom: 1px solid currentColor;
+    }
+}

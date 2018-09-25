@@ -1,0 +1,32 @@
+@import "sizes";
+
+@mixin ease-transition($time: 0.3s) {
+    -webkit-transition: all $time ease;
+    -moz-transition: all $time ease;
+    -ms-transition: all $time ease;
+    -o-transition: all $time ease;
+    transition: all $time ease;
+}
+
+@mixin respond-to($media) {
+    @if $media == phones {
+        @media only screen and (max-width: $break-small) {
+            @content;
+        }
+    }
+    @else if $media == tablets {
+        @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) {
+            @content;
+        }
+    }
+    @else if $media == tablets-phones {
+        @media only screen and (max-width: $break-large - 1) {
+            @content;
+        }
+    }
+    @else if $media == screens {
+        @media only screen and (min-width: $break-large) {
+            @content;
+        }
+    }
+}

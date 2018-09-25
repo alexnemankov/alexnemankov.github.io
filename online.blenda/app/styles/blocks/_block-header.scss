@@ -1,0 +1,49 @@
+.nd-block-header {
+    $block-header-bottom-line-width: 50px;
+
+    @include respond-to(phones) {
+        padding-top: 50px;
+    }
+
+    &--no-padding {
+        padding: 0;
+    }
+
+    &__header {
+        color: $color--primary;
+        font-size: 3.8rem;
+        margin: 0 auto 20px;
+        padding: 0 0 20px;
+        position: relative;
+        text-align: center;
+
+        @include respond-to(phones) {
+            font-size: 2.4rem;
+            padding: 0 0 20px 0;
+        }
+
+        &::after {
+            border-bottom: 2px solid $color--primary;
+            bottom: -1px;
+            content: '';
+            display: block;
+            height: 1px;
+            left: calc(50% - #{$block-header-bottom-line-width / 2});
+            position: absolute;
+            width: $block-header-bottom-line-width;
+        }
+    }
+
+    &__subheader {
+        font-size: 2.1rem;
+        margin: 0 auto 40px;
+        max-width: 760px;
+        text-align: center;
+        padding-top: 6px;
+        line-height: 1.5;
+
+        @include respond-to(phones) {
+            padding: 6px 15px 0 15px;
+        }
+    }
+}

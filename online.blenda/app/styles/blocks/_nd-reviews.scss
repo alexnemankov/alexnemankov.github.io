@@ -1,0 +1,180 @@
+.nd-reviews {
+    $size--review-body-width: 540px;
+    $size--avatar-width: 250px;
+    $size--quote-width: 70px;
+
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 10px;
+
+    @include respond-to(phones) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &__container {
+        align-items: top;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 1100px;
+    }
+
+    &__review {
+        display: flex;
+        justify-content: center;
+        width: 900px;
+
+        @include respond-to(tablets) {
+            min-width: #{$size--review-body-width + $size--avatar-width / 2 + $size--quote-width - 100px};
+        }
+
+        @include respond-to(phones) {
+            flex-wrap: wrap;
+            max-width: 100vw;
+            min-width: 100vw;
+        }
+    }
+
+    &__avatar {
+        background-position: center;
+        background-size: cover;
+        border-radius: 50%;
+        display: inline-block;
+        height: $size--avatar-width;
+        margin-bottom: 30px;
+        overflow: hidden;
+        text-align: center;
+        width: $size--avatar-width;
+
+        @include respond-to(phones) {
+            flex: inherit;
+        }
+
+        &-img1 {
+            background-image: url('../images/jpg/review-1.jpg');
+        }
+        &-img2 {
+            background-image: url('../images/jpg/review-2.jpg');
+        }
+        &-img3 {
+            background-image: url('../images/jpg/review-3.jpg');
+        }
+        &-img4 {
+            background-image: url('../images/jpg/review-4.jpg');
+        }
+        &-img5 {
+            background-image: url('../images/jpg/review-5.jpg');
+        }
+        &-img6 {
+            background-image: url('../images/jpg/review-6.jpg');
+        }
+        &-img7 {
+            background-image: url('../images/jpg/review-7.jpg');
+        }
+        &-img8 {
+            background-image: url('../images/jpg/review-8.jpg');
+        }
+    }
+
+    &__quote {
+        background: url("../images/png/quotes.png") no-repeat top center;
+        display: block;
+        flex: 1 $size--quote-width;
+        height: $size--quote-width;
+        width: $size--quote-width;
+
+        @include respond-to(phones) {
+            display: none;
+        }
+    }
+
+    &__review-body {
+        max-width: 540px;
+
+        @include respond-to(phones) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        &__quote {
+            background: url("../images/png/quotes.png") no-repeat top center;
+            background-size: #{$size--quote-width / 2};
+            display: none;
+            flex: 1 #{$size--quote-width / 2};
+            height: #{$size--quote-width / 2};
+            margin-right: 20px;
+            vertical-align: top;
+            width: #{$size--quote-width / 2};
+
+            @include respond-to(phones) {
+                display: inline-block;
+            }
+        }
+
+        &__title {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+
+            @include respond-to(phones) {
+                display: inline-block;
+                font-size: 2rem;
+                line-height: 1.4;
+                width: calc(100% - #{$size--quote-width / 2} - 40px);
+            }
+        }
+
+        &__text {
+            font-size: 1.8rem;
+            font-style: italic;
+            line-height: 1.4;
+
+            @include respond-to(phones) {
+                max-width: inherit;
+                width: 90vw;
+            }
+        }
+
+        &__link {
+            color: $color--light-link;
+            display: inline-block;
+            font-size: 1.8rem;
+            margin: 10px 0;
+            position: relative;
+            text-decoration: none;
+
+            &:after {
+                background: $color--light-link;
+                bottom: -3px;
+                content: '';
+                display: block;
+                height: 1px;
+                left: 0;
+                position: absolute;
+                width: 100%;
+            }
+        }
+
+        &__author {
+            display: block;
+            float: right;
+            position: relative;
+            margin-top: 40px;
+
+            @include respond-to(phones) {
+                padding-top: 20px;
+            }
+
+            &::before {
+                background-color: $color--primary;
+                bottom: .8rem;
+                content: '';
+                display: inline-block;
+                height: 2px;
+                left: -25px;
+                position: absolute;
+                width: 20px;
+            }
+        }
+    }
+}

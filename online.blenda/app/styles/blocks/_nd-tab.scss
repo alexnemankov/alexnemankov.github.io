@@ -1,0 +1,64 @@
+.nd-tab {
+    display: block;
+    width: 100vw;
+
+    &__header {
+        display: flex;
+        margin-top: 70px;
+
+        &__title {
+            cursor: pointer;
+            flex: 1 50%;
+            padding: 40px 15px 0;
+            text-align: center;
+            text-transform: uppercase;
+
+            &--active {
+                background-color: $color--primary;
+
+                .nd-tab__header__title__header {
+                    color: $color--body-bg;
+                }
+
+                .nd-tab__header__title__subheader {
+                    color: $color--body-bg;
+                }
+            }
+
+            &__header {
+                color: $color--primary;
+                font-size: 2.4rem;
+                line-height: 1;
+                margin: 0;
+
+                @include respond-to(phones) {
+                    font-size: 1.4rem;
+                    line-height: 1.5;
+                }
+            }
+
+            &__subheader {
+                font-size: 1.4rem;
+                line-height: 2.2rem;
+
+                @include respond-to(phones) {
+                    font-size: 1.2rem;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+
+    &__content {
+        &__container {
+            display: none;
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+
+            &--active {
+                display: block;
+            }
+        }
+    }
+}

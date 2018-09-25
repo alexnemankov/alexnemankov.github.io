@@ -1,0 +1,64 @@
+.nd-video {
+    background: url("../images/jpg/video.jpg") no-repeat center center;
+    background-size: cover;
+    color: $color--light;
+    padding: 150px 0;
+    text-align: center;
+
+    @include respond-to(phones) {
+        padding: 20vw 0;
+    }
+
+
+    &__block-header {
+        display: none;
+
+        @include respond-to(phones) {
+            display: block;
+        }
+    }
+
+    &__embedded {
+        background-color: $color--dark-bg;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 4.8rem;
+        text-transform: uppercase;
+
+        @include respond-to(phones) {
+            display: none;
+        }
+    }
+
+    &__subtitle {
+        font-size: 1.8rem;
+        margin: 25px auto;
+        text-transform: uppercase;
+
+        @include respond-to(phones) {
+            display: none;
+        }
+    }
+
+    &__icon {
+        cursor: pointer;
+        display: inline-block;
+        width: 11rem;
+        height: 11rem;
+        background: url() 0 0 no-repeat;
+        background-image: url("../images/png/play-white.png");
+        /* IE 8 */
+        background-image: url("../images/svg/play.svg"), none;
+        /* Modern browsers */
+        background-size: auto 100%;
+        vertical-align: middle;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}

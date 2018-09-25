@@ -1,0 +1,157 @@
+.nd-button-cta {
+    $button-corner-size: 16px;
+
+    &__btn {
+        @include ease-transition;
+
+        background-color: $color--button-cta-bg;
+        border: 0;
+        color: $color--button-cta-color;
+        cursor: pointer;
+        display: inline-block;
+        outline: none;
+        position: relative;
+
+        &:disabled {
+            background-color: lighten($color--button-cta-bg, 10%);
+            cursor: wait;
+        }
+
+        &:enabled:hover {
+            background-color: darken($color--button-cta-bg, 10%);
+
+            .nd-button-cta__btn__corners {
+                &--left {
+                    height: calc(100% + #{$button-corner-size * 2});
+                    left: -$button-corner-size;
+                    top: -$button-corner-size;
+                }
+
+                &--right {
+                    height: calc(100% + #{$button-corner-size * 2});
+                    right: -$button-corner-size;
+                    top: -$button-corner-size;
+                }
+            }
+        }
+
+        &--inversed {
+            color: $color--button-cta-bg;
+            background-color: $color--button-cta-color;
+
+            &:hover {
+                background-color: darken($color--button-cta-color, 10%);
+            }
+
+            .nd-button-cta__btn__corners {
+                &--left {
+                    &::after, &::before {
+                        border-color: $color--button-cta-color;
+                    }
+                }
+
+                &--right {
+                    &::after, &::before {
+                        border-color: $color--button-cta-color;
+                    }
+                }
+            }
+        }
+
+        &__text {
+            display: inline-block;
+            font-size: 1.6rem;
+            padding: 20px 25px;
+            text-transform: uppercase;
+
+            @include respond-to(phones) {
+                padding: 15px 20px;
+            }
+
+            &--wide {
+                padding-left: 65px;
+                padding-right: 65px;
+            }
+        }
+
+        &__corners {
+            &--left {
+                @include ease-transition;
+
+                display: block;
+                height: calc(100% + 20px);
+                left: -10px;
+                position: absolute;
+                top: -10px;
+                width: $button-corner-size;
+
+                &::after {
+                    @include ease-transition;
+
+                    border-left: 2px solid $color--primary;
+                    border-top: 2px solid $color--primary;
+                    content: '';
+                    display: block;
+                    height: $button-corner-size;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    width: $button-corner-size;
+                }
+
+                &::before {
+                    @include ease-transition;
+
+                    border-bottom: 2px solid $color--primary;
+                    border-left: 2px solid $color--primary;
+                    bottom: 0;
+                    content: '';
+                    display: block;
+                    height: $button-corner-size;
+                    left: 0;
+                    position: absolute;
+                    width: $button-corner-size;
+                }
+            }
+
+            &--right {
+                @include ease-transition;
+
+                display: block;
+                height: calc(100% + 20px);
+                position: absolute;
+                right: -10px;
+                top: -10px;
+                width: $button-corner-size;
+
+                &::after {
+                    @include ease-transition;
+
+                    border-right: 2px solid $color--primary;
+                    border-top: 2px solid $color--primary;
+                    content: '';
+                    display: block;
+                    height: $button-corner-size;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: $button-corner-size;
+                }
+
+                &::before {
+                    @include ease-transition;
+
+                    border-bottom: 2px solid $color--primary;
+                    border-right: 2px solid $color--primary;
+                    bottom: 0;
+                    content: '';
+                    display: block;
+                    height: $button-corner-size;
+                    position: absolute;
+                    right: 0;
+                    width: $button-corner-size;
+                }
+            }
+        }
+    }
+}

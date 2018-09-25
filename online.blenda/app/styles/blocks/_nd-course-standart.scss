@@ -1,0 +1,32 @@
+.nd-course-standart {
+    line-height: 1.4;
+
+    &__lesson {
+        &__title {
+            color: $color--primary;
+            font-size: 2rem;
+            margin: 0;
+
+            @include respond-to(phones) {
+                font-size: 1.8rem;
+            }
+        }
+
+        &__list {
+            padding-left: 20px;
+
+            @include respond-to(phones) {
+                font-size: 1.6rem;
+            }
+
+            li {
+                list-style-type: none;
+                &::before {
+                    color: $color--primary;
+                    content: "— ";
+                    padding-right: 5px;
+                }
+            }
+        }
+    }
+}
