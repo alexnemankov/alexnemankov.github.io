@@ -1,0 +1,188 @@
+.nd-slider {
+    position: relative;
+    padding: 80px 0;
+
+    @include respond-to(phones) {
+        padding-bottom: 0;
+    }
+
+    @include respond-to(tablets-phones) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &__show-more {
+        font-size: 1.4rem;
+        margin-top: 40px;
+        text-transform: uppercase;
+        text-align: center;
+
+        &__text {
+            border-bottom: 1px solid currentColor;
+            color: #545758;
+            cursor: pointer;
+            padding: 2px;
+
+            @include ease-transition;
+
+            &:hover {
+                color: #a4a7a8;
+            }
+        }
+    }
+
+    &__photos {
+        @include ease-transition;
+
+        padding-top: 10px;
+        background-color: $color--primary;
+
+        &::after {
+            visibility: hidden;
+            display: block;
+            content: "";
+            clear: both;
+            height: 0;
+        }
+
+        &__photo {
+            background-color: $color--dark-bg;
+            border: 0 solid $color--dark-bg;
+            box-sizing: border-box;
+            display: block;
+            float: left;
+            height: 18.75vw;
+            overflow: hidden;
+            position: relative;
+            width: 25vw;
+
+            @include ease-transition;
+            @include respond-to(phones) {
+                width: 50vw;
+                height: 37.5vw;
+            }
+
+            &:hover {
+                border-width: 0.5vw;
+            }
+
+            &--big {
+                width: 50vw;
+                height: 37.5vw;
+            }
+
+            &--right {
+                float: right;
+            }
+
+            img {
+                bottom: -9999px;
+                left: -9999px;
+                margin: auto;
+                max-height: 100%;
+                min-width: 100%;
+                position: absolute;
+                right: -9999px;
+                top: -9999px;
+            }
+        }
+    }
+}
+
+.swiper-container {
+    max-width: 1140px;
+    padding-bottom: 40px;
+}
+
+.swiper-button-next-review {
+    &.swiper-button-next {
+        background: none;
+        box-sizing: content-box;
+        height: 100%;
+        margin-top: -18px;
+        padding: 0 10px;
+        right: 0;
+        top: 0;
+        transition: 0.5s;
+        width: 40px;
+
+        @include respond-to(tablets-phones) {
+            display: none;
+        }
+
+        &:hover {
+            background: rgba(0,0,0,0.02);
+
+            .swiper-button-next-review-icon {
+                fill: $color--primary;
+            }
+        }
+
+        .swiper-button-next-review-icon {
+            display: block;
+            fill: $color--light-dark;
+            height: 35px;
+            position: absolute;
+            top: 50%;
+            transform: rotate(180deg);
+            transition: 0.5s;
+            width: 40px;
+        }
+    }
+}
+
+.swiper-button-prev-review {
+    &.swiper-button-prev {
+        background: none;
+        box-sizing: content-box;
+        height: 100%;
+        left: 0;
+        margin-top: -18px;
+        padding: 0 10px;
+        top: 0;
+        transition: 0.5s;
+        width: 40px;
+
+        @include respond-to(tablets-phones) {
+            display: none;
+        }
+
+        &:hover {
+            background: rgba(0,0,0,0.02);
+
+            .swiper-button-prev-review-icon {
+                fill: $color--primary;
+            }
+        }
+
+        .swiper-button-prev-review-icon {
+            display: block;
+            width: 40px;
+            height: 35px;
+            position: absolute;
+            top: 50%;
+            transition: 0.5s;
+            fill: $color--light-dark;
+        }
+    }
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets {
+    @include respond-to(phones) {
+        margin-left: 0;
+    }
+}
+
+.swiper-pagination-bullet {
+    box-sizing: content-box;
+    width: 20px;
+    height: 3px;
+    border-top: 5px solid $color--body-bg;
+    border-bottom: 5px solid $color--body-bg;
+    border-radius: 0;
+    background: #cecece;
+
+    &.swiper-pagination-bullet-active {
+        background: $color--primary;
+    }
+}

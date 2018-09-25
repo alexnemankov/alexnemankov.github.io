@@ -1,0 +1,9 @@
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/javascript text/css application/javascript application/x-javascript image/svg+xml application/rss+xml
+</IfModule>
+<filesMatch ".(js|css)$">
+    Header set Cache-Control "max-age=86400, public"
+</filesMatch>
+<filesMatch ".(ico|pdf|jpg|svg|jpeg|png|gif|woff|eot|ttf|woff2)$">
+    Header set Cache-Control "max-age=604800, public"
+</filesMatch>

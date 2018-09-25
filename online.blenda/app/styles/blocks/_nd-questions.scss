@@ -1,0 +1,12 @@
+.nd-questions {
+    background: $color--light;
+    background-size: cover;
+    padding: 80px 0;
+
+    &__form {
+        display: block;
+        margin: 0 auto;
+        max-width: 430px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,70 @@
+.nd-trust {
+    padding: 80px 0 40px 0;
+    background: #f0f0f0;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &__item {
+            display: block;
+            flex: 1 250px;
+            max-width: 300px;
+            margin-bottom: 40px;
+            padding: 0 30px;
+            text-align: center;
+
+            &__circle {
+                display: block;
+                height: 170px;
+                margin: 0 auto 20px;
+                padding-top: 40px;
+                position: relative;
+                width: 170px;
+
+                &::after {
+                    border: 2px solid $color--primary;
+                    border-radius: 50%;
+                    content: '';
+                    display: block;
+                    height: 170px;
+                    left: -3px;
+                    position: absolute;
+                    top: 0;
+                    width: 170px;
+                }
+
+                &::before {
+                    border: 2px solid $color--primary-half-transparent;
+                    border-radius: 50%;
+                    content: '';
+                    display: block;
+                    height: 170px;
+                    left: 3px;
+                    position: absolute;
+                    top: 0;
+                    width: 170px;
+                }
+            }
+
+            &__number {
+                display: block;
+                font-size: 6rem;
+                font-weight: bold;
+
+                &--active {
+                  opacity: 1 !important;
+                  transition: opacity 1s;
+                }
+            }
+
+            &__text {
+                display: block;
+                position: absolute;
+                bottom: 40px;
+                width: 100%;
+            }
+        }
+    }
+}

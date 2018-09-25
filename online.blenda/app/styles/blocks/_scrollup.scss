@@ -1,0 +1,22 @@
+.nd-scrollup {
+    $scrollup-button-height: 50px;
+
+    @include ease-transition;
+
+    fill: transparent;
+    stroke: $color--light-dark;
+    stroke-width: 2px;
+    bottom: 40px;
+    display: none;
+    font-size: 3rem;
+    height: $scrollup-button-height;
+    position: fixed;
+    right: 30px;
+    width: $scrollup-button-height;
+    z-index: 999;
+
+    &:hover {
+        fill: $color--light-little-transparent;
+        stroke: $color--primary;
+    }
+}

@@ -1,0 +1,142 @@
+.nd-gift {
+    background: url("../images/jpg/about.jpg") no-repeat center center;
+    background-size: cover;
+    min-height: 670px;
+    padding-top: #{$size--header-size + 90};
+    position: relative;
+
+    @include respond-to(phones) {
+        padding: 140px 15px 50px 15px;
+        background-position-x: 75%;
+    }
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 auto;
+
+        @media (max-width: 1920px) {
+            max-width: 1440px;
+        }
+
+        @media (max-width: 1440px) {
+            max-width: 1140px;
+        }
+    }
+
+    &__discount {
+        flex: 8 66%;
+
+        @include respond-to(phones) {
+            flex: 1 100%;
+            padding-bottom: 50px;
+        }
+
+        &__header h1 {
+            color: $color--light;
+            font-size: 4.2rem;
+            position: relative;
+            line-height: (60px/42px);
+
+            &:after {
+                display: block;
+                position: absolute;
+                content: '';
+                bottom: -20px;
+                left: 0;
+                width: 46px;
+                height: 2px;
+                background: $color--primary;
+            }
+
+            @include respond-to(phones) {
+                font-size: 3rem;
+            }
+        }
+
+        &__description {
+            color: $color--light;
+            font-size: 2.4rem;
+            margin-bottom: 30px;
+            margin-top: 50px;
+            line-height: (34px/24px);
+        }
+
+        &__call {
+            color: $color--light;
+            font-size: 2.4rem;
+            line-height: (34px/24px);
+            padding-top: 10px;
+        }
+
+
+        &__is {
+            color: $color--primary;
+            display: inline-block;
+            font-size: 2.8rem;
+            margin-right: 30px;
+            text-transform: uppercase;
+
+            .number {
+                font-size: 6.4rem;
+            }
+        }
+
+        &__was {
+            color: $color--light;
+            display: inline-block;
+            font-size: 2.4rem;
+            position: relative;
+            text-transform: uppercase;
+
+            .number {
+                font-size: 4.8rem;
+            }
+
+            &::after {
+                border-bottom: 3px solid $color--primary;
+                bottom: 2.1rem;
+                content: "";
+                left: 0;
+                margin-left: -5px;
+                position: absolute;
+                width: calc(100% + 10px);
+            }
+        }
+    }
+
+    &__form {
+        flex: 4 33%;
+
+        .nd-contact-form-group {
+            padding: 0;
+            margin-bottom: 22px;
+        }
+
+        @include respond-to(phones) {
+            flex: 1 100%;
+        }
+    }
+
+    &__mouse-icon {
+        position: absolute;
+        bottom: 52px;
+        left: 50%;
+        margin-left: -10px;
+        width: 20px;
+        height: 30px;
+        fill: none;
+        stroke: $color--light;
+        stroke-width: 8;
+
+        &__scroll {
+            stroke-linecap: round;
+            animation: mouse-anim 1.5s infinite ease;
+        }
+
+        @include respond-to(phones) {
+            display: none;
+        }
+    }
+}

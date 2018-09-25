@@ -1,0 +1,26 @@
+.nd-menu-form {
+    align-items: center;
+    background-color: $color--black-little-transparent;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+
+    &__list {
+        list-style: none;
+        margin: 0;
+
+        &__item {
+            padding-bottom: 2rem;
+
+            a {
+                color: $color--light;
+                font-size: 2.1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

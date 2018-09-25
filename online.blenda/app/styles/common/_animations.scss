@@ -1,0 +1,31 @@
+@keyframes mouse-anim {
+    0% {
+        transform: translateY(6px);
+    }
+    50% {
+        transform: translateY(25px);
+    }
+    100% {
+        transform: translateY(6px);
+    }
+}
+
+@keyframes nav-fadeIn {
+    0% {
+        transform: translateY(-70px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes tel-dropdown {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

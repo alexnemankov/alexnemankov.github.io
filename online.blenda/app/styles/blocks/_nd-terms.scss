@@ -1,0 +1,29 @@
+.nd-terms {
+    padding: 70px 80px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    will-change: transform;
+
+    @include respond-to(phones) {
+        padding: 30px 10px;
+    }
+
+    &__header {
+        color: $color--primary;
+    }
+
+    &__subheader {
+        color: $color--primary;
+        font-size: 2.8rem;
+
+        @include respond-to(phones) {
+            font-size: 2.1rem;
+        }
+    }
+
+    &__text {
+        line-height: 1.4;
+        margin: 0;
+    }
+}

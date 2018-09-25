@@ -1,0 +1,101 @@
+.nd-services {
+    padding: 80px 0 0 0;
+
+    &__bg-item {
+        @include ease-transition;
+
+        display: block;
+        filter: blur(2px);
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    &__darken-item {
+        @include ease-transition;
+
+        background-color: $color--black-half-transparent;
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    &__green-item {
+        @include ease-transition;
+
+        background-color: $color--primary-half-transparent;
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    &__photo {
+        background: url("../images/jpg/course-photo.jpg") no-repeat center center;
+        background-size: cover;
+    }
+
+    &__lightning {
+        background: url("../images/jpg/course-light.jpg") no-repeat center center;
+        background-size: cover;
+    }
+
+    &__photosession {
+        background: url("../images/jpg/course-macro.jpg") no-repeat center center;
+        background-size: cover;
+    }
+
+    &__macro {
+        background: url("../images/jpg/course-composition.jpg") no-repeat center center;
+        background-size: cover;
+    }
+
+    &__light {
+        background: url("../images/jpg/course-light.jpg") no-repeat center center;
+        background-size: cover;
+        background-position: top center;
+    }
+
+    &__weather {
+        background: url("../images/jpg/course-expozamer.jpg") no-repeat center center;
+        background-size: cover;
+    }
+
+    &__studio{
+        background: url("../images/png/course-studio.png") no-repeat center center;
+        background-size: cover;
+    }
+
+    &__people {
+        background: url("../images/jpg/course-report.jpg") no-repeat top center;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__models {
+        background: url("../images/jpg/course-models.jpg") no-repeat center center;
+        background-size: cover;
+    }
+
+    &__project {
+        background: url("../images/jpg/course-travel.jpg") no-repeat center center;
+        background-size: cover;
+    }
+
+    &__family {
+        background: url("../images/jpg/course-family.jpg") no-repeat center center;
+        background-size: cover;
+    }
+
+    &__travelling {
+        background: url("../images/jpg/course-travelling.jpg") no-repeat center center;
+        background-size: cover;
+    }
+}
