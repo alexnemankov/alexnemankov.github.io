@@ -225,8 +225,15 @@
     .nd-contact-form__confidence a:hover, .nd-contact-form__more a:hover {
       color: #a5a5a5; }
 
+.nd-contact-form__info {
+  padding: 0 20px;
+  font-size: 12px;
+  margin-bottom: 35px;
+  color: #bebebe;
+  text-align: center; }
+
 .nd-contact-form__btn {
-  margin: 50px 10px 35px;
+  margin: 50px 10px 20px;
   width: calc(100% - 20px); }
 
 .nd-contact-form-group {

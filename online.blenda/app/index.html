@@ -40,7 +40,7 @@
 		<script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=Qe*pSBoM448WMmL8zCTTDxlDTw9ZldVlEfHa6mIg3Z4fDY2Rw/0*Av31zXVbNwsxRl6Rsidz5iStbP5HvWhzKF28Sh4kuQPsn14MDns6sNzjgTNwg81TMTefGPP9aMxdAjMXmu0XogUqLFEgnoJruyrYxOIsdDGtyA5QCz5/d0Q-&pixel_id=1000063992'; </script>
 	</head>
 
-	<body lang="ru">
+	<body lang="ru" data-country="<?php echo strtolower(geoip_country_code_by_name($_SERVER['REMOTE_ADDR'])); ?>">
 		<header class="nd-header">
 			<div class="nd-header__logo">
 				<a href="#">
@@ -114,11 +114,14 @@
 						<div class="nd-contact-form-group__bar"></div>
 						<label for="nd-gift__form__email">Введите ваш Email</label>
 					</div>
-					<button type="button" class="nd-button-cta__btn nd-contact-form__btn nd-submit" data-theme="Скидка 40%">
+					<button type="button" class="nd-button-cta__btn nd-contact-form__btn nd-submit-and-pay" data-theme="Скидка 40%">
 						<span class="nd-button-cta__btn__corners--left"></span>
 						<span class="nd-button-cta__btn__text">Записаться со скидкой</span>
 						<span class="nd-button-cta__btn__corners--right"></span>
 					</button>
+					<div class="nd-contact-form__info">
+						* после подтвержения пользовательских данных, вы автоматически будете перенаправлены на безопасную страницу оплаты
+					</div>
 					<div class="nd-contact-form__more">
 						<a href="#" class="nd-course-standart__trigger nd-more__link">
 							Подробная программа курса
@@ -411,11 +414,14 @@
 						<div class="nd-contact-form-group__bar"></div>
 						<label for="nd-contact__form__email">Введите ваш Email</label>
 					</div>
-					<button type="button" class="nd-button-cta__btn nd-contact-form__btn nd-submit" data-theme="Заявка на два курса">
+					<button type="button" class="nd-button-cta__btn nd-contact-form__btn nd-submit-and-pay-two" data-theme="Заявка на два курса">
 						<span class="nd-button-cta__btn__corners--left"></span>
 						<span class="nd-button-cta__btn__text">Записаться со скидкой</span>
 						<span class="nd-button-cta__btn__corners--right"></span>
 					</button>
+					<div class="nd-contact-form__info">
+						* после подтвержения пользовательских данных, вы автоматически будете перенаправлены на безопасную страницу оплаты
+					</div>
 					<div class="nd-contact-form__confidence">
 						<a href="#" class="nd-terms__trigger">
 							<i class="icon-lock"></i> Политика конфиденциальности
@@ -958,11 +964,14 @@
 						<div class="nd-contact-form-group__bar"></div>
 						<label for="nd-courses-form__form__email">Введите ваш Email</label>
 					</div>
-					<button type="button" class="nd-button-cta__btn nd-contact-form__btn nd-submit" data-theme="Записаться на курс">
+					<button type="button" class="nd-button-cta__btn nd-contact-form__btn nd-submit-and-pay" data-theme="Записаться на курс">
 						<span class="nd-button-cta__btn__corners--left"></span>
 						<span class="nd-button-cta__btn__text">Отправить заявку</span>
 						<span class="nd-button-cta__btn__corners--right"></span>
 					</button>
+					<div class="nd-contact-form__info">
+						* после подтвержения пользовательских данных, вы автоматически будете перенаправлены на безопасную страницу оплаты
+					</div>
 					<div class="nd-contact-form__confidence">
 						<a href="#" class="nd-terms__trigger">
 							<i class="icon-lock"></i> Политика конфиденциальности

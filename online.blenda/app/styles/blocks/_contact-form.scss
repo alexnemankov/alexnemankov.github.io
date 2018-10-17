@@ -15,8 +15,16 @@
         }
     }
 
+    &__info {
+        padding: 0 20px;
+        font-size: 12px;
+        margin-bottom: 35px;
+        color: $color--light-dark;
+        text-align: center;
+    }
+
     &__btn {
-        margin: 50px 10px 35px;
+        margin: 50px 10px 20px;
         width: calc(100% - 20px);
     }
 
