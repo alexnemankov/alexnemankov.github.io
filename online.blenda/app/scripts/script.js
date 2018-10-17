@@ -29,6 +29,20 @@ $(function () {
         selector: '.nd-price-economy',
         value: window.statSettings.economyLightroom
     }];
+
+    //change prices for russians
+    if($('body').data('country') == 'ru') {
+        $.getJSON("https://www.cbr-xml-daily.ru/daily_json.js", function(data) {
+            var rubCourse = data.Valute.BYN.Value;
+
+            $('.number').each(function() {
+                $( this ).html(Math.round($( this ).html() * rubCourse));
+            });
+
+            $('.nd-price-economy').html($('.nd-price-price-old').html() - $('.nd-price-price-new').html());
+        });
+    }
+
     prices.forEach(function (price) {
         $(price.selector).text(price.value);
         $(price.selector + '-text')
@@ -239,19 +253,19 @@ $(function () {
     });
 
     // Auto open free gift popup after delay
-    (function openGiftFormAfterDelay(delay) {
-        setTimeout(function () {
-            var someFormIsOpened = iziForms.some(function (iziForm) {
-                var state = $(iziForm.target).iziModal('getState');
-                return state == "opened" || state == "opening";
-            });
-            if (!someFormIsOpened) {
-                $("#nd-free-gift-form").iziModal("open");
-            } else {
-                openGiftFormAfterDelay(5000);
-            }
-        }, delay);
-    })(90000);
+    // (function openGiftFormAfterDelay(delay) {
+    //     setTimeout(function () {
+    //         var someFormIsOpened = iziForms.some(function (iziForm) {
+    //             var state = $(iziForm.target).iziModal('getState');
+    //             return state == "opened" || state == "opening";
+    //         });
+    //         if (!someFormIsOpened) {
+    //             $("#nd-free-gift-form").iziModal("open");
+    //         } else {
+    //             openGiftFormAfterDelay(5000);
+    //         }
+    //     }, delay);
+    // })(90000);
 
     $(document).on('click', '.nd-menu-form__list__item', function (event) {
         $('#nd-menu-form').iziModal('close');
@@ -331,6 +345,102 @@ $(function () {
         }
     });
 
+    // Submit button handler for pay
+    $(document).on('click', '.nd-submit-and-pay', function (event) {
+        if ($(this).hasClass('gift__btn')) {
+            return;
+        }
+        var $container = $(this).closest('.nd-contact-form');
+        var phone = $container.find('input[id$="__phone"]').val();
+        var name = $container.find('input[id$="__name"]').val();
+        var email = $container.find('input[id$="__email"]').val();
+        var theme = $(this).attr('data-theme');
+        if (name) {
+            $('input[id$="__name"]').val(name);
+        }
+        if (email) {
+            $('input[id$="__email"]').val(email);
+        }
+        if (phone) {
+            $('input[id$="__phone"]').val(phone);
+            submitForm(theme || 'Заявка на обратный звонок', name, phone, email);
+        }
+
+        function submitForm(theme, name, phone, email) {
+            storeToLocalstorage(name, phone, email);
+            $.post("/backend/submit.php", {
+                theme: theme,
+                name: name,
+                phone: phone,
+                email: email
+            }).done(function (data) {
+                if (data == "OK") {
+                    iziForms.forEach(function (iziForm) {
+                        $(iziForm.target).iziModal('close');
+                    });
+                    // $('#nd-success-gift-form').iziModal('open');
+                    location.href = 'https://api.bepaid.by/products/prd_e656e2c648e29019/pay';
+                    gaTrack('/success.html');
+                    yaHit('/success.html');
+                    fbq('track', 'success', {
+                        name: name,
+                        phone: phone,
+                        email: email
+                    });
+                }
+                // window.open('https://api.bepaid.by/products/prd_6b5698d781ad1a5c/pay', '_blank');
+
+            });
+        }
+    });
+
+    // Submit button handler for pay
+    $(document).on('click', '.nd-submit-and-pay-two', function (event) {
+        if ($(this).hasClass('gift__btn')) {
+            return;
+        }
+        var $container = $(this).closest('.nd-contact-form');
+        var phone = $container.find('input[id$="__phone"]').val();
+        var name = $container.find('input[id$="__name"]').val();
+        var email = $container.find('input[id$="__email"]').val();
+        var theme = $(this).attr('data-theme');
+        if (name) {
+            $('input[id$="__name"]').val(name);
+        }
+        if (email) {
+            $('input[id$="__email"]').val(email);
+        }
+        if (phone) {
+            $('input[id$="__phone"]').val(phone);
+            submitForm(theme || 'Заявка на обратный звонок', name, phone, email);
+        }
+
+        function submitForm(theme, name, phone, email) {
+            storeToLocalstorage(name, phone, email);
+            $.post("/backend/submit.php", {
+                theme: theme,
+                name: name,
+                phone: phone,
+                email: email
+            }).done(function (data) {
+                if (data == "OK") {
+                    iziForms.forEach(function (iziForm) {
+                        $(iziForm.target).iziModal('close');
+                    });
+                    // $('#nd-success-gift-form').iziModal('open');
+                    location.href = 'https://api.bepaid.by/products/prd_65a4e6567b7b25da/pay';
+                    gaTrack('/success.html');
+                    yaHit('/success.html');
+                    fbq('track', 'success', {
+                        name: name,
+                        phone: phone,
+                        email: email
+                    });
+                }
+            });
+        }
+    });
+
     // Youtube video block
     $(document).on('click', '.nd-video__icon', function (event) {
         var height = $('.nd-video').outerHeight();
@@ -391,8 +501,10 @@ $(function () {
     });
 
     $(".current-year").text(new Date().getFullYear());
-
     loadFromLocalstorage();
+
+
+
 });
 
 function storeToLocalstorage(name, phone, email) {

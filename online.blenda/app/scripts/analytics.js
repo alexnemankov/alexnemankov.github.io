@@ -63,8 +63,8 @@ function yaGoal(form) {
 }
 
 // Jivosite
-(function() {
-    var widget_id = 'MGHy3mZknZ';
+(function () {
+    var widget_id = 'cmkNBgPmXP';
     var d = document;
     var w = window;
 
@@ -76,6 +76,7 @@ function yaGoal(form) {
         var ss = document.getElementsByTagName('script')[0];
         ss.parentNode.insertBefore(s, ss);
     }
+
     if (d.readyState == 'complete') {
         l();
     } else {
