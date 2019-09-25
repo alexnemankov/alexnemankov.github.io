@@ -1,22 +1,29 @@
 window.statSettings = {
 
     // Интенсив
-    intensivePrice: 159, // новая цена
-    intensiveOldPrice: 289, // старая цена
-    intensiveEndDate: '14 июня', // дата конца скидки
+    intensivePrice: 229, // новая цена
+    intensiveOldPrice: 300, // старая цена
+    intensiveEndDate: '25 сентября', // дата конца скидки
 
     // Базовый курс
-    basePrice: 239, // новая цена
-    baseOldPrice: 310, // старая цена
-    baseEndDate: '14 июня', // дата конца скидки
+    basePrice: 289, // новая цена
+    baseOldPrice: 350, // старая цена
+    baseEndDate: '25 сентября', // дата конца скидки
 
     // Стандартный курс
-    standartPrice: 369, // новая цена
-    standartOldPrice: 490, // старая цена
-    standartEndDate: '14 июня', // дата конца скидки
+    standartPrice: 429, // новая цена
+    standartOldPrice: 570, // старая цена
+    standartEndDate: '25 сентября', // дата конца скидки
 
     // Премиум-курс
-    premiumPrice: 539 // цена
+    premiumPrice: 599, // цена
+    premiumOldPrice: 700, // старая цена
+    premiumEndDate: '25 сентября', // дата конца скидки
+
+    // Ультрапремиум-курс
+    ultraPremiumPrice: 990, // цена
+    ultraPremiumOldPrice: 1400, // старая цена
+    ultraPremiumEndDate: '25 сентября', // дата конца скидки
 };
 
 (function () {
@@ -24,4 +31,6 @@ window.statSettings = {
     s.intensiveEconomy = s.intensiveOldPrice - s.intensivePrice;
     s.baseEconomy = s.baseOldPrice - s.basePrice;
     s.standartEconomy = s.standartOldPrice - s.standartPrice;
+    s.premiumEconomy = s.premiumOldPrice - s.premiumPrice;
+    s.ultraPremiumEconomy = s.ultraPremiumOldPrice - s.ultraPremiumPrice;
 })();

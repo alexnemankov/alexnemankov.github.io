@@ -25,5 +25,12 @@ $(function () {
     $('.price__standart-date').html(ws.standartEndDate);
 
     $('.price__premium-new').html(ws.premiumPrice + "&nbsp;" + getNumEnding(ws.premiumPrice, rubleForms));
+    $('.price__premium-old').html(ws.premiumOldPrice + "&nbsp;" + getNumEnding(ws.premiumOldPrice, rubleForms));
+    $('.price__premium-economy').html(ws.premiumEconomy);
+    $('.price__premium-date').html(ws.premiumEndDate);
 
+    $('.price__ultrapremium-new').html(ws.ultraPremiumPrice + "&nbsp;" + getNumEnding(ws.ultraPremiumPrice, rubleForms));
+    $('.price__ultrapremium-old').html(ws.ultraPremiumOldPrice + "&nbsp;" + getNumEnding(ws.ultraPremiumOldPrice, rubleForms));
+    $('.price__ultrapremium-economy').html(ws.ultraPremiumEconomy);
+    $('.price__ultrapremium-date').html(ws.ultraPremiumEndDate);
 });

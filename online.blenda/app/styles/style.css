@@ -727,7 +727,8 @@
         position: absolute;
         width: calc(100% + 10px); }
   .nd-gift__form {
-    flex: 4 33%; }
+    flex: 4 33%;
+    z-index: 2; }
     .nd-gift__form .nd-contact-form-group {
       padding: 0;
       margin-bottom: 22px; }
