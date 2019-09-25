@@ -1,5 +1,5 @@
 .nd-price {
-    $column-width: 195px;
+    $column-width: 225px;
     $title-column-width: 390px;
     $title-column-width-small: 200px;
 
@@ -24,8 +24,8 @@
         display: block;
         position: absolute;
         top: 4.5rem;
-        left: 0;
-        width: $column-width;
+        left: 50%;
+        transform: translateX(-50%);
         text-align: center;
     }
 
