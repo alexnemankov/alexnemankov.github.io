@@ -6,7 +6,7 @@
   "private": true,
   "dependencies": {
     "izimodal": "^1.4.1-d",
-    "jquery": "^3.1.1",
+    "jquery": "^3.5.0",
     "natives": "^1.1.6",
     "normalize.css": "^4.2.0"
   },
